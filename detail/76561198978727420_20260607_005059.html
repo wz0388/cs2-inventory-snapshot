@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam 库存快照 - 带饰品估值</title>
+    <style>
+        :root {
+            --steam-dark: #1b2838;
+            --steam-blue: #2a475e;
+            --steam-text: #c7d5e0;
+            --rarity-rare: #4b69ff;
+            --rarity-mythical: #8847ff;
+            --rarity-legendary: #d32ce6;
+            --rarity-ancient: #eb4b4b;
+            --rarity-common: #b0c3d9;
+        }
+        body {
+            font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+            background-color: var(--steam-dark);
+            color: var(--steam-text);
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--steam-blue);
+            padding-bottom: 20px;
+        }
+        .stats-panel {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 12px 20px;
+            margin: 15px auto;
+            max-width: 500px;
+            display: inline-block;
+        }
+        .total-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d2d500;
+        }
+        .price-status {
+            font-size: 12px;
+            color: #ffaa66;
+            margin-top: 5px;
+        }
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .item-card {
+            background: linear-gradient(135deg, #2a475e 0%, #16202d 100%);
+            border-radius: 4px;
+            padding: 15px;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border-color: rgba(255,255,255,0.2);
+        }
+        .rarity-bar {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            border-radius: 4px 4px 0 0;
+        }
+        .item-img-container {
+            height: 160px;
+            display: flex; align-items: center; justify-content: center;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            margin-bottom: 10px;
+        }
+        .item-img {
+            max-width: 100%; max-height: 100%;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+        }
+        .item-name {
+            font-size: 14px; font-weight: bold; margin-bottom: 5px;
+            line-height: 1.4; height: 40px; overflow: hidden;
+        }
+        .item-type {
+            font-size: 12px; color: #8b929a; margin-bottom: 10px;
+        }
+        .item-meta {
+            margin-top: auto; font-size: 11px;
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;
+        }
+        .wear-badge {
+            display: inline-block; padding: 2px 6px; border-radius: 2px;
+            background: rgba(0,0,0,0.3); margin-bottom: 5px;
+        }
+        .float-val {
+            color: #57cbff; font-family: monospace;
+        }
+        .price-info {
+            color: #ffd966;
+            font-weight: bold;
+            margin-top: 4px;
+        }
+        .tag-container {
+            display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px;
+        }
+        .tag {
+            background: #3d4448; color: #fff; padding: 1px 4px;
+            font-size: 10px; border-radius: 2px;
+        }
+        .merge-btn {
+            margin: 5px; padding: 6px 12px;
+            background: #4b69ff; color: white; border: none; border-radius: 4px;
+            cursor: pointer; font-size: 14px;
+        }
+        .merge-btn:hover { background: #3a53cc; }
+        select {
+            padding: 6px 12px; border-radius: 4px; border: none;
+            background: #2a475e; color: white; font-size: 14px;
+            margin: 0 4px;
+        }
+        label { font-size: 14px; margin: 0 2px; }
+        .error-notice {
+            background: rgba(220, 40, 40, 0.2);
+            border-left: 4px solid #ff6666;
+            padding: 8px 12px;
+            margin: 10px auto;
+            max-width: 600px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Steam 库存快照 (CS:GO / CS2)</h1>
+    <p><strong>Steam ID:</strong> <span id="steam-id">76561198978727420</span></p>
+    <p><strong>快照时间:</strong> <span id="snapshot-time">2026-06-07 00:50:59 CST</span></p>
+    <div id="stat-info" style="margin:10px 0;">正在加载库存数据...</div>
+    <div class="stats-panel">
+        <div>💰 库存总价值 (根据 YYyp 价格参考)</div>
+        <div class="total-price" id="total-price-display">¥ --</div>
+        <div id="price-source-status" class="price-status"></div>
+    </div>
+    <div style="margin-top:10px;">
+        <label>品质：</label>
+        <select id="rarity-filter">
+            <option value="">全部品质</option>
+        </select>
+        <label>类型：</label>
+        <select id="weapon-filter">
+            <option value="">全部类型</option>
+        </select>
+        <button class="merge-btn" onclick="toggleMerge()">
+            🧩 合并相同物品
+        </button>
+    </div>
+</header>
+
+<div id="inventory" class="inventory-grid"></div>
+
+<script>
+    // ======================== 原始库存数据 (由后端注入) ========================
+    const inventoryData = {"assets": [{"appid": 730, "contextid": "2", "assetid": "51772195612", "classid": "6360313113", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51772195611", "classid": "6360313113", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51768664849", "classid": "6360313113", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51768664848", "classid": "6360313113", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51029579000", "classid": "4614639269", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51029578992", "classid": "4614639269", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51029578983", "classid": "4614639269", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51029578971", "classid": "4614639269", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51029578962", "classid": "4614639269", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51023727047", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51023727041", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51014685939", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51014685902", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51014685870", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51014685860", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51014685846", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51014685822", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51014685801", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51009327031", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51009327019", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51009327013", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51009327001", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51009326989", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51009326981", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51009326974", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51009326965", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51009326952", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51009326930", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51008452871", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51008012573", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007715517", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007715508", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007715503", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007715495", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007531973", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007096011", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007096002", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007095988", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007095977", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007095966", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007095961", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007095954", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007095945", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007095936", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51007095924", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51006613299", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51005164109", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51005164101", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51005164084", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51005164074", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51005164060", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51005164048", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51005164036", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51004826816", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51004826808", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51004427173", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51003720017", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51003720007", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51003719999", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51003719991", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51003719982", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51003719976", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51003719957", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51003719931", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51003719919", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51003719906", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51003508936", "classid": "4614639269", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002899890", "classid": "4614639269", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002788094", "classid": "4614639230", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002176428", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002176352", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002176279", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002176177", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002176100", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002165783", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002165636", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002165513", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002165413", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002165310", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002152611", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002152237", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002152029", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002151932", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002151827", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002151753", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002151659", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002131516", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002131445", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002131364", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002131303", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002131243", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002131166", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002131083", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002131013", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002130916", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002130831", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002130742", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002130647", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002130544", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002130384", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002130279", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002130215", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002130136", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002120221", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002120117", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002120007", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002119931", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51002119825", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51001092895", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51001092810", "classid": "4614639224", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51810693222", "classid": "7993040681", "instanceid": "480085569", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51780203968", "classid": "7993040581", "instanceid": "519977179", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51780203967", "classid": "7993040581", "instanceid": "519977179", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "48155993975", "classid": "7993037606", "instanceid": "6504029728", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51772240158", "classid": "6360313113", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "51772240157", "classid": "6360313113", "instanceid": "188530139", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "41759642322", "classid": "5537026493", "instanceid": "0", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "41759642321", "classid": "5537026494", "instanceid": "0", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "41759642320", "classid": "778383679", "instanceid": "0", "amount": "1"}], "descriptions": [{"appid": 730, "classid": "7993040681", "instanceid": "480085569", "currency": 0, "background_color": "342c42", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3n5vh7h1a4s2gfadhJfGBMXSb1OJ6o7NWSSi-lA4YvzSCkpu3cnuTawR0DMMkF-RZ50PqldPiY-jh5g2Pi94UyymtjSMdvHw_tuYHVr1lpPNpFsXzIQ", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "给手头紧的玩家的一个廉价选择，法玛斯有效地填补了昂贵的步枪和杀伤力较低的微型冲锋枪之间的空缺。 这把武器在镀铬后附上了半透明的核子颅骨和骨头的花纹图案。", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "死城之谜收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "法玛斯 | 冥界之憎", "name_color": "8847ff", "type": "受限级 步枪", "market_name": "法玛斯 | 冥界之憎 (崭新出厂)", "market_hash_name": "FAMAS | Styx (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_famas", "localized_category_name": "武器", "localized_tag_name": "法玛斯"}, {"category": "ItemSet", "internal_name": "set_cache", "localized_category_name": "收藏品", "localized_tag_name": "死城之谜收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Mythical_Weapon", "localized_category_name": "品质", "localized_tag_name": "受限级", "color": "8847ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}], "sealed": 0, "market_bucket_group_name": "法玛斯 | 冥界之憎", "market_bucket_group_id": "G180A20F3023004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993040581", "instanceid": "519977179", "currency": 0, "background_color": "393b3e", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3n5vh7h1I_82lZqt5M8-RAnKV_uJ_t-l9AXHrxEV-sT-Ez9j7eHuVPQQgXpIhEOQPtxa_wd3gZbnm4QHXi49FxCXgznQeEWoLaGo", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "给手头紧的玩家的一个廉价选择，法玛斯有效地填补了昂贵的步枪和杀伤力较低的微型冲锋枪之间的空缺。 枪身喷涂有挪威人所崇尚的紧密相连蓝色圆环图案。\n\n<i>“宁可战死沙场，也不要苟活于世”</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "挪威人收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "法玛斯 | 暗夜锁链", "name_color": "b0c3d9", "type": "消费级 步枪", "market_name": "法玛斯 | 暗夜锁链 (崭新出厂)", "market_hash_name": "FAMAS | Night Borre (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_famas", "localized_category_name": "武器", "localized_tag_name": "法玛斯"}, {"category": "ItemSet", "internal_name": "set_norse", "localized_category_name": "收藏品", "localized_tag_name": "挪威人收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Common_Weapon", "localized_category_name": "品质", "localized_tag_name": "消费级", "color": "b0c3d9"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}], "sealed": 0, "market_bucket_group_name": "法玛斯 | 暗夜锁链", "market_bucket_group_id": "G180A20DF063004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "6360313113", "instanceid": "188530139", "currency": 0, "background_color": "3d293f", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjNmpNCnHtwI68pbL4lbrTlOmzZSw-XsLuqSqMaFscajDXj7JlO0v4LExSn-1lhgh4mqAzYv4d3rBcEZ-XS6OMYYO", "descriptions": [{"type": "html", "value": "该物品用于纪念 2024年 完美世界 上海 CS 锦标赛。", "color": "ffd700", "name": "attribute"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "这张印花可以应用在您所拥有的任何武器上，您也可以刮掉它，使其显得更为老旧。您可以多次刮除同一张印花，刮得次数越多，磨损程度越大。直到您将其完全从武器上刮去为止。", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%201E0E1E06A7173E1E361B2E1A7C1B161E0ED820761E6E16BD1A1B3B", "name": "在游戏中检视…"}], "name": "印花 | FlyQuest（全息）| 2024年上海锦标赛", "name_color": "d32ce6", "type": "奇异 印花", "market_name": "印花 | FlyQuest（全息）| 2024年上海锦标赛", "market_hash_name": "Sticker | FlyQuest (Holo) | Shanghai 2024", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%201E0E1E06A7173E1E361B2E1A7C1B161E0ED820761E6E16BD1A1B3B", "name": "在游戏中检视…"}], "commodity": 1, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Tool_Sticker", "localized_category_name": "类型", "localized_tag_name": "印花"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Legendary", "localized_category_name": "品质", "localized_tag_name": "奇异", "color": "d32ce6"}, {"category": "StickerCategory", "internal_name": "TeamLogo", "localized_category_name": "印花类型", "localized_tag_name": "战队队标"}, {"category": "Tournament", "internal_name": "Tournament23", "localized_category_name": "锦标赛", "localized_tag_name": "2024年 完美世界 上海"}, {"category": "TournamentTeam", "internal_name": "Team132", "localized_category_name": "战队", "localized_tag_name": "Flyquest"}, {"category": "StickerCapsule", "internal_name": "crate_sticker_pack_sha2024_contenders_collection", "localized_category_name": "印花收藏品", "localized_tag_name": "2024年上海锦标赛竞争组印花"}], "sealed": 0, "market_bucket_group_name": "印花 | FlyQuest（全息）| 2024年上海锦标赛", "market_bucket_group_id": "G18B90930046205080010C63E", "sealed_type": 0, "market_name_inside_group": "印花"}, {"appid": 730, "classid": "4614639269", "instanceid": "188530139", "currency": 0, "background_color": "342c42", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjNm1Onic7QQlpta77Fj9RCL5kZrvs3cCu6D3aaE4dfbCWGPEwugl6bI5HXzrl0l04WTRwtygJ3yVZwchDZZuBbldUGehGvU", "descriptions": [{"type": "html", "value": "该物品用于纪念 2021年 PGL 斯德哥尔摩 CS:GO 锦标赛。", "color": "ffd700", "name": "attribute"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "这张印花可以应用在您所拥有的任何武器上，您也可以刮掉它，使其显得更为老旧。您可以多次刮除同一张印花，刮得次数越多，磨损程度越大。直到您将其完全从武器上刮去为止。", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%203B2B3B2382321B3B133F0B3F593E333B2B8C1C533B4B33F68FC05C", "name": "在游戏中检视…"}], "name": "印花 | FaZe Clan （全息） | 2021年斯德哥尔摩锦标赛", "name_color": "8847ff", "type": "卓越 印花", "market_name": "印花 | FaZe Clan （全息） | 2021年斯德哥尔摩锦标赛", "market_hash_name": "Sticker | FaZe Clan (Holo) | Stockholm 2021", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%203B2B3B2382321B3B133F0B3F593E333B2B8C1C533B4B33F68FC05C", "name": "在游戏中检视…"}], "commodity": 1, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Tool_Sticker", "localized_category_name": "类型", "localized_tag_name": "印花"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Mythical", "localized_category_name": "品质", "localized_tag_name": "卓越", "color": "8847ff"}, {"category": "StickerCategory", "internal_name": "TeamLogo", "localized_category_name": "印花类型", "localized_tag_name": "战队队标"}, {"category": "Tournament", "internal_name": "Tournament18", "localized_category_name": "锦标赛", "localized_tag_name": "2021年 PGL 斯德哥尔摩"}, {"category": "TournamentTeam", "internal_name": "Team61", "localized_category_name": "战队", "localized_tag_name": "FaZe Clan"}, {"category": "StickerCapsule", "internal_name": "crate_sticker_pack_stockh2021_contenders_collection", "localized_category_name": "印花收藏品", "localized_tag_name": "2021年斯德哥尔摩锦标赛竞争组印花"}], "sealed": 0, "market_bucket_group_name": "印花 | FaZe Clan （全息） | 2021年斯德哥尔摩锦标赛", "market_bucket_group_id": "G18B90930046205080010B727", "sealed_type": 0, "market_name_inside_group": "印花"}, {"appid": 730, "classid": "4614639230", "instanceid": "188530139", "currency": 0, "background_color": "342c42", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjNm1Onic7QQlpta75FjxSCL5kZrvsyFa66r-PfM7dPbGWGORwr0k6bA-HnDnk00h62zUyNz8eSmUbg4mXJJuBbldnDdt3dE", "descriptions": [{"type": "html", "value": "该物品用于纪念 2021年 PGL 斯德哥尔摩 CS:GO 锦标赛。", "color": "ffd700", "name": "attribute"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "这张印花可以应用在您所拥有的任何武器上，您也可以刮掉它，使其显得更为老旧。您可以多次刮除同一张印花，刮得次数越多，磨损程度越大。直到您将其完全从武器上刮去为止。", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20B9A9B9A100B099B991BD89BDDBBCB1B9A95A9FD1B9C9B12698EC36", "name": "在游戏中检视…"}], "name": "印花 | Natus Vincere （全息） | 2021年斯德哥尔摩锦标赛", "name_color": "8847ff", "type": "卓越 印花", "market_name": "印花 | Natus Vincere （全息） | 2021年斯德哥尔摩锦标赛", "market_hash_name": "Sticker | Natus Vincere (Holo) | Stockholm 2021", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20B9A9B9A100B099B991BD89BDDBBCB1B9A95A9FD1B9C9B12698EC36", "name": "在游戏中检视…"}], "commodity": 1, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Tool_Sticker", "localized_category_name": "类型", "localized_tag_name": "印花"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Mythical", "localized_category_name": "品质", "localized_tag_name": "卓越", "color": "8847ff"}, {"category": "StickerCategory", "internal_name": "TeamLogo", "localized_category_name": "印花类型", "localized_tag_name": "战队队标"}, {"category": "Tournament", "internal_name": "Tournament18", "localized_category_name": "锦标赛", "localized_tag_name": "2021年 PGL 斯德哥尔摩"}, {"category": "TournamentTeam", "internal_name": "Team12", "localized_category_name": "战队", "localized_tag_name": "Natus Vincere"}, {"category": "StickerCapsule", "internal_name": "crate_sticker_pack_stockh2021_legends_collection", "localized_category_name": "印花收藏品", "localized_tag_name": "2021年斯德哥尔摩锦标赛传奇组印花"}], "sealed": 0, "market_bucket_group_name": "印花 | Natus Vincere （全息） | 2021年斯德哥尔摩锦标赛", "market_bucket_group_id": "G18B90930046205080010E326", "sealed_type": 0, "market_name_inside_group": "印花"}, {"appid": 730, "classid": "4614639224", "instanceid": "188530139", "currency": 0, "background_color": "342c42", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai0ki7VeTHjNm1Onic7QQlpta75FD3fhX-kpmupCRY66WrOqI_dfOXW2bHmbols7A8Sn61kBsh5jzRydn_dn7DZ1VxC4wwG7BjjpxeSg", "descriptions": [{"type": "html", "value": "该物品用于纪念 2021年 PGL 斯德哥尔摩 CS:GO 锦标赛。", "color": "ffd700", "name": "attribute"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "这张印花可以应用在您所拥有的任何武器上，您也可以刮掉它，使其显得更为老旧。您可以多次刮除同一张印花，刮得次数越多，磨损程度越大。直到您将其完全从武器上刮去为止。", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%204555455DFC4C65456D41754127404D45559E632D45354DE43BAFAD", "name": "在游戏中检视…"}], "name": "印花 | Ninjas in Pyjamas （全息） | 2021年斯德哥尔摩锦标赛", "name_color": "8847ff", "type": "卓越 印花", "market_name": "印花 | Ninjas in Pyjamas （全息） | 2021年斯德哥尔摩锦标赛", "market_hash_name": "Sticker | Ninjas in Pyjamas (Holo) | Stockholm 2021", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%204555455DFC4C65456D41754127404D45559E632D45354DE43BAFAD", "name": "在游戏中检视…"}], "commodity": 1, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Tool_Sticker", "localized_category_name": "类型", "localized_tag_name": "印花"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Mythical", "localized_category_name": "品质", "localized_tag_name": "卓越", "color": "8847ff"}, {"category": "StickerCategory", "internal_name": "TeamLogo", "localized_category_name": "印花类型", "localized_tag_name": "战队队标"}, {"category": "Tournament", "internal_name": "Tournament18", "localized_category_name": "锦标赛", "localized_tag_name": "2021年 PGL 斯德哥尔摩"}, {"category": "TournamentTeam", "internal_name": "Team1", "localized_category_name": "战队", "localized_tag_name": "Ninjas in Pyjamas"}, {"category": "StickerCapsule", "internal_name": "crate_sticker_pack_stockh2021_legends_collection", "localized_category_name": "印花收藏品", "localized_tag_name": "2021年斯德哥尔摩锦标赛传奇组印花"}], "sealed": 0, "market_bucket_group_name": "印花 | Ninjas in Pyjamas （全息） | 2021年斯德哥尔摩锦标赛", "market_bucket_group_id": "G18B90930046205080010DB26", "sealed_type": 0, "market_name_inside_group": "印花"}, {"appid": 730, "classid": "7993037606", "instanceid": "6504029728", "currency": 0, "background_color": "3d293f", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wiFO0POlPPNSI_-RHGavzedxuPUnFniykEtzsWWBzoyuIiifaAchDZUjTOZe4RC_w4buM-6z7wzbgokUyzK-0H08hRGDMA", "descriptions": [{"type": "html", "value": "外观： 略有磨损", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把武器使用碳素纤维的花纹和红色细条纹风格的干式转印贴花进行了涂装。\n\n<i>别顾忌，将威力发挥到极致</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "凤凰收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/eslkatowice2015/lgb_holo.5176eeed6246c8a7ee4787aef599ed88992f0ee5.png\" title=\"印花: LGB eSports（全息）| 2015年卡托维兹锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/eslkatowice2015/lgb_holo.5176eeed6246c8a7ee4787aef599ed88992f0ee5.png\" title=\"印花: LGB eSports（全息）| 2015年卡托维兹锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/eslkatowice2015/lgb_holo.5176eeed6246c8a7ee4787aef599ed88992f0ee5.png\" title=\"印花: LGB eSports（全息）| 2015年卡托维兹锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/eslkatowice2015/lgb_holo.5176eeed6246c8a7ee4787aef599ed88992f0ee5.png\" title=\"印花: LGB eSports（全息）| 2015年卡托维兹锦标赛\"><br>印花: LGB eSports（全息）| 2015年卡托维兹锦标赛, LGB eSports（全息）| 2015年卡托维兹锦标赛, LGB eSports（全息）| 2015年卡托维兹锦标赛, LGB eSports（全息）| 2015年卡托维兹锦标赛</center></div>", "name": "sticker_info"}, {"type": "html", "value": "<br><div id=\"keychain_info\" class=\"keychain_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/keychains/weapon_1/kc_wpn_ak_jelly.6829bd12f132b597a5ad13e12700d1fb84e688c0.png\" title=\"挂件: 压铸AK\"><br>挂件: 压铸AK</center></div>", "name": "keychain_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 红线", "name_color": "d32ce6", "type": "保密级 步枪", "market_name": "AK-47 | 红线 (略有磨损)", "market_hash_name": "AK-47 | Redline (Minimal Wear)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_community_2", "localized_category_name": "收藏品", "localized_tag_name": "凤凰收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Legendary_Weapon", "localized_category_name": "品质", "localized_tag_name": "保密级", "color": "d32ce6"}, {"category": "Exterior", "internal_name": "WearCategory1", "localized_category_name": "外观", "localized_tag_name": "略有磨损"}, {"category": "Tournament", "internal_name": "Tournament6", "localized_category_name": "锦标赛", "localized_tag_name": "2015年 ESL One 卡托维兹锦标赛"}, {"category": "TournamentTeam", "internal_name": "Team9", "localized_category_name": "战队", "localized_tag_name": "LGB eSports"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 红线", "market_bucket_group_id": "G1807209A023004", "sealed_type": 0, "market_name_inside_group": "略有磨损"}, {"appid": 730, "classid": "5537026493", "instanceid": "0", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIijyEKzb_3d19nuI3qb81NKpNa66wu1Qx-mm8Kx-CYC6aD2bv0-IfPFWGHIkegh5LY4GXzlxU905W7UwsHpLywWgep6oQ", "descriptions": [{"type": "html", "value": "这个音乐盒将替换游戏中的所有音乐，并且能和与您一起游戏的所有玩家分享。当您成为 MVP 时，音乐盒将向比赛中的所有玩家高奏 MVP 凯歌。\n\n音乐盒将替换以下音乐：\n- 主菜单\n- 回合开始和结束\n- 地图目标\n- 十秒警告\n- 死亡视角", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "默认的《反恐精英：全球攻势》音乐盒，随 2012 年《反恐精英：全球攻势》发布而推出。", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}], "tradable": 0, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%201505150DB71F35153D1625117D1565159D14538C95DBF9", "name": "在游戏中检视…"}], "name": "音乐盒 | Valve，反恐精英：全球攻势", "name_color": "4b69ff", "type": "高级 音乐盒", "market_name": "音乐盒 | Valve，反恐精英：全球攻势", "market_hash_name": "Music Kit | Valve, CS:GO", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%201505150DB71F35153D1625117D1565159D14538C95DBF9", "name": "在游戏中检视…"}], "commodity": 1, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 0, "tags": [{"category": "Type", "internal_name": "CSGO_Type_MusicKit", "localized_category_name": "类型", "localized_tag_name": "音乐盒"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare", "localized_category_name": "品质", "localized_tag_name": "高级", "color": "4b69ff"}], "sealed": 0, "market_bucket_group_name": "音乐盒 | Valve，反恐精英：全球攻势", "market_bucket_group_id": "G18A20A3004880146", "sealed_type": 0, "market_name_inside_group": "普通"}, {"appid": 730, "classid": "5537026494", "instanceid": "0", "currency": 0, "background_color": "402d2d", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai2l-lQ8ndwMWvJjSU6l97y4Tn7VapFB6kzsLmrXcP7vSvMfY_d6jAWTfHlLZ34rA4GXrnlkh052_TwomvdWXXMFHAFOJ0XQ", "descriptions": [{"type": "html", "value": "此徽章旨在纪念游戏更新前您已在《反恐精英：全球攻势》社区拥有的忠实会员资格。\n\n<i>传奇永不消逝。</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}], "tradable": 0, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "全球攻势徽章", "name_color": "eb4b4b", "type": "非凡 收藏品", "market_name": "全球攻势徽章", "market_hash_name": "Global Offensive Badge", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 0, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Collectible", "localized_category_name": "类型", "localized_tag_name": "收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Ancient", "localized_category_name": "品质", "localized_tag_name": "非凡", "color": "eb4b4b"}], "sealed": 0, "market_bucket_group_name": "全球攻势徽章", "market_bucket_group_id": "G18E4073004", "sealed_type": 0, "market_name_inside_group": "普通"}, {"appid": 730, "classid": "778383679", "instanceid": "0", "currency": 0, "background_color": "402d2d", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGJai2l-lQ8ndwMWvJjTC_FN05oT741epGR73mMHmpXEO7aT2bfE9I_KVCDTGx7gj4LE5F3iykU504TvVnN7_JWXXMFEPozcG1w", "descriptions": [{"type": "html", "value": "已在 反恐精英 社区服役超过 5 年。", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}], "tradable": 0, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "5 年老兵硬币", "name_color": "eb4b4b", "type": "非凡 收藏品", "market_name": "5 年老兵硬币", "market_hash_name": "5 Year Veteran Coin", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 0, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Collectible", "localized_category_name": "类型", "localized_tag_name": "收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Ancient", "localized_category_name": "品质", "localized_tag_name": "非凡", "color": "eb4b4b"}], "sealed": 0, "market_bucket_group_name": "5 年老兵硬币", "market_bucket_group_id": "G18EA063004", "sealed_type": 0, "market_name_inside_group": "普通"}], "asset_properties": []};
+    const IMG_BASE = "https://community.cloudflare.steamstatic.com/economy/image/";
+    
+    // 磨损率判定函数 (保持不变)
+    function getWearLabel(f) {
+        const float = parseFloat(f);
+        if (isNaN(float)) return null;
+        if (float < 0.07) return "崭新出厂 (WearCategory0)";
+        if (float < 0.15) return "略有磨损 (WearCategory1)";
+        if (float < 0.38) return "久经沙场 (WearCategory2)";
+        if (float < 0.45) return "破损不堪 (WearCategory3)";
+        return "战痕累累 (WearCategory4)";
+    }
+
+    function extractWearFromName(detail) {
+        if (!detail) return null;
+        const name = detail.market_name || detail.market_hash_name || '';
+        const match = name.match(/\(([^)]+)\)$/);
+        if (match && match[1]) {
+            const raw = match[1].trim();
+            if (/[\u4e00-\u9fa5]/.test(raw)) return raw;
+            const wearMapEN = {
+                'Factory New': '崭新出厂',
+                'Minimal Wear': '略有磨损',
+                'Field-Tested': '久经沙场',
+                'Well-Worn': '破损不堪',
+                'Battle-Scarred': '战痕累累'
+            };
+            if (wearMapEN[raw]) return wearMapEN[raw];
+            const stMatch = name.match(/StatTrak™\s*(.*)/);
+            if (stMatch) return extractWearFromName({ market_name: stMatch[1] });
+        }
+        return null;
+    }
+
+    // 解析 "type" 字段为稀有度和武器类型
+    function parseType(fullType) {
+        if (!fullType) return { rarity: '', weapon: '' };
+        let cleaned = fullType.replace(/^StatTrak™\s*/, '').replace(/^★\s*/, '').replace(/^纪念品\s*/, '').trim();
+        const parts = cleaned.split(/\s+/);
+        if (parts.length === 0) return { rarity: '', weapon: '' };
+        const weapon = parts[parts.length - 1];
+        const rarity = parts.slice(0, -1).join(' ');
+        if (parts.length === 1) {
+            return { rarity: '普通级', weapon: weapon };
+        }
+        return { rarity: rarity || '普通级', weapon: weapon };
+    }
+
+    // 构建描述映射
+    const descMap = {};
+    inventoryData.descriptions.forEach(d => {
+        descMap[`${d.classid}_${d.instanceid}`] = d;
+    });
+
+    // 磨损率映射
+    const wearMap = {};
+    inventoryData.asset_properties.forEach(ap => {
+        const wearObj = ap.properties.find(p => p.name === "磨损率");
+        if (wearObj) wearMap[ap.assetid] = wearObj.float_value;
+    });
+
+    // 收集所有稀有度和武器类型用于下拉筛选
+    const raritySet = new Set();
+    const weaponSet = new Set();
+    inventoryData.assets.forEach(asset => {
+        const detail = descMap[`${asset.classid}_${asset.instanceid}`];
+        if (!detail || !detail.type) return;
+        const { rarity, weapon } = parseType(detail.type);
+        if (rarity) raritySet.add(rarity);
+        if (weapon) weaponSet.add(weapon);
+    });
+
+    const rarityDropdown = document.getElementById('rarity-filter');
+    const weaponDropdown = document.getElementById('weapon-filter');
+    [...raritySet].sort().forEach(r => {
+        const opt = document.createElement('option');
+        opt.value = r;
+        opt.textContent = r;
+        rarityDropdown.appendChild(opt);
+    });
+    [...weaponSet].sort().forEach(w => {
+        const opt = document.createElement('option');
+        opt.value = w;
+        opt.textContent = w;
+        weaponDropdown.appendChild(opt);
+    });
+
+    let mergeMode = false;
+    rarityDropdown.addEventListener('change', () => renderInventory(mergeMode));
+    weaponDropdown.addEventListener('change', () => renderInventory(mergeMode));
+
+    function toggleMerge() {
+        mergeMode = !mergeMode;
+        renderInventory(mergeMode);
+    }
+
+    function getCurrentFilters() {
+        return {
+            rarity: rarityDropdown.value,
+            weapon: weaponDropdown.value
+        };
+    }
+
+    // ======================== 价格集成模块 ========================
+    let priceData = [];           // 存储从 price.json 获取的数据
+    let priceMap = new Map();     // key: market_hash_name, value: 价格
+    let totalInventoryValue = 0;
+    let isPriceLoaded = false;
+    let priceFetchError = null;
+    let currentItemsList = [];     // 存储当前筛选后的物品 (用于价格统计)
+
+    // 获取价格数据 (支持重试、超时、CORS 友好)
+    async function fetchPriceData() {
+        const PRICE_URL = "https://inventory.050820.xyz/price.json";
+        // 备用代理列表 (如果直接请求失败，尝试 CORS 代理)
+        const PROXY_URLS = [
+            `https://api.allorigins.win/raw?url=${encodeURIComponent(PRICE_URL)}`,
+            `https://cors-anywhere.herokuapp.com/${PRICE_URL}`,
+            `https://cors-proxy.htmr.workers.dev/?url=${encodeURIComponent(PRICE_URL)}`
+        ];
+        
+        // 超时控制器
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 8000);
+        
+        const fetchWithTimeout = (url, options = {}) => {
+            return fetch(url, { ...options, signal: controller.signal });
+        };
+        
+        // 尝试直接获取
+        try {
+            const response = await fetchWithTimeout(PRICE_URL);
+            if (response.ok) {
+                const data = await response.json();
+                clearTimeout(timeoutId);
+                return data;
+            }
+        } catch (err) {
+            console.warn(`直连失败 (${err.message}), 尝试代理...`);
+        }
+        
+        // 尝试代理列表
+        for (const proxyUrl of PROXY_URLS) {
+            try {
+                const response = await fetchWithTimeout(proxyUrl);
+                if (response.ok) {
+                    const text = await response.text();
+                    // 某些代理可能返回包装数据，需要提取真正的 JSON
+                    let jsonData;
+                    try {
+                        jsonData = JSON.parse(text);
+                    } catch (e) {
+                        // 如果 text 外层还有 escape，尝试提取
+                        const match = text.match(/^[\s\S]*?(\[.*\])[\s\S]*$/);
+                        if (match && match[1]) {
+                            jsonData = JSON.parse(match[1]);
+                        } else {
+                            throw new Error("无法解析JSON结构");
+                        }
+                    }
+                    clearTimeout(timeoutId);
+                    return jsonData;
+                }
+            } catch (err) {
+                console.warn(`代理 ${proxyUrl} 失败: ${err.message}`);
+            }
+        }
+        
+        clearTimeout(timeoutId);
+        throw new Error("所有价格源均不可用，请检查网络或稍后刷新");
+    }
+
+    // 构建 market_hash_name -> price 映射
+    function buildPriceMap(priceArray) {
+        const map = new Map();
+        if (!Array.isArray(priceArray)) return map;
+        for (const item of priceArray) {
+            if (item.marketHashName && typeof item.yyypSellPrice === 'number') {
+                // 标准化 market_hash_name (去除前后空格，并保留原始大小写用于匹配)
+                const key = item.marketHashName.trim();
+                map.set(key, item.yyypSellPrice);
+            }
+        }
+        return map;
+    }
+
+    // 获取某个物品的单价 (通过 market_hash_name)
+    function getItemPrice(detail, asset) {
+        if (!isPriceLoaded || priceMap.size === 0) return null;
+        // 优先使用 market_hash_name (最准确)
+        let marketName = detail?.market_hash_name || detail?.market_name || detail?.name;
+        if (!marketName) return null;
+        
+        // 直接匹配
+        if (priceMap.has(marketName)) {
+            return priceMap.get(marketName);
+        }
+        
+        // 尝试去除 StatTrak 前缀再进行匹配 (有些价格库不带 StatTrak™)
+        let cleanName = marketName.replace(/^StatTrak™\s*/, '').trim();
+        if (cleanName !== marketName && priceMap.has(cleanName)) {
+            return priceMap.get(cleanName);
+        }
+        
+        // 尝试去除 ★ 符号
+        cleanName = cleanName.replace(/^★\s*/, '').trim();
+        if (priceMap.has(cleanName)) {
+            return priceMap.get(cleanName);
+        }
+        return null;
+    }
+
+    // 计算总价值并更新显示，同时将价格附加到 DOM 展示
+    function updateTotalPriceAndRender() {
+        // 收集当前显示的物品 (已过滤后的 assets，可能合并或单独)
+        let itemsToCount = [];
+        const { rarity: filterRarity, weapon: filterWeapon } = getCurrentFilters();
+        
+        // 辅助判断是否通过筛选
+        function isAssetFiltered(asset) {
+            const detail = descMap[`${asset.classid}_${asset.instanceid}`];
+            if (!detail || !detail.type) return false;
+            const { rarity, weapon } = parseType(detail.type);
+            if (filterRarity && rarity !== filterRarity) return false;
+            if (filterWeapon && weapon !== filterWeapon) return false;
+            return true;
+        }
+        
+        if (mergeMode) {
+            // 合并模式下，统计 groups 的数量 (未合并前先收集)
+            const groups = new Map();
+            inventoryData.assets.forEach(asset => {
+                if (!isAssetFiltered(asset)) return;
+                const detail = descMap[`${asset.classid}_${asset.instanceid}`];
+                const name = detail.name;
+                if (!groups.has(name)) {
+                    groups.set(name, { detail, assets: [], totalCount: 0 });
+                }
+                const group = groups.get(name);
+                group.assets.push(asset);
+                group.totalCount++;
+            });
+            // 将每个 group 视为一个聚合项 (计入总价按数量×单价)
+            groups.forEach(group => {
+                const detail = group.detail;
+                const sampleAsset = group.assets[0];
+                const price = getItemPrice(detail, sampleAsset);
+                if (price && typeof price === 'number') {
+                    const groupValue = price * group.totalCount;
+                    itemsToCount.push({ value: groupValue, count: group.totalCount, price: price });
+                } else {
+                    itemsToCount.push({ value: 0, count: group.totalCount, price: null });
+                }
+            });
+        } else {
+            // 单独模式下每个 asset 单独统计
+            inventoryData.assets.forEach(asset => {
+                if (!isAssetFiltered(asset)) return;
+                const detail = descMap[`${asset.classid}_${asset.instanceid}`];
+                const price = getItemPrice(detail, asset);
+                if (price && typeof price === 'number') {
+                    itemsToCount.push({ value: price, count: 1, price: price });
+                } else {
+                    itemsToCount.push({ value: 0, count: 1, price: null });
+                }
+            });
+        }
+        
+        const totalValue = itemsToCount.reduce((sum, item) => sum + item.value, 0);
+        totalInventoryValue = totalValue;
+        const totalPriceFormatted = totalValue.toFixed(2);
+        document.getElementById('total-price-display').innerHTML = `¥ ${totalPriceFormatted}`;
+        
+        // 状态提示
+        const priceStatusDiv = document.getElementById('price-source-status');
+        if (!isPriceLoaded) {
+            if (priceFetchError) {
+                priceStatusDiv.innerHTML = `⚠️ 价格加载失败: ${priceFetchError}，总价无法计算`;
+            } else {
+                priceStatusDiv.innerHTML = `⏳ 正在获取最新价格...`;
+            }
+        } else {
+            const matchedCount = itemsToCount.filter(item => item.price !== null).length;
+            const totalItemsCount = itemsToCount.length;
+            priceStatusDiv.innerHTML = `✅ 已匹配 ${matchedCount}/${totalItemsCount} 种物品，总计值参考 YYyp`;
+        }
+        
+        // 重新渲染 DOM 以便每张卡片显示价格 (保证信息一致)
+        renderInventory(mergeMode);
+    }
+    
+    // 增强原始 renderInventory 以展示价格信息
+    const originalRender = renderInventory;
+    window.renderInventory = function(merged) {
+        const container = document.getElementById('inventory');
+        container.innerHTML = '';
+        let itemCount = 0;
+        const { rarity: filterRarity, weapon: filterWeapon } = getCurrentFilters();
+        
+        const filterAsset = (asset) => {
+            const detail = descMap[`${asset.classid}_${asset.instanceid}`];
+            if (!detail || !detail.type) return false;
+            const { rarity, weapon } = parseType(detail.type);
+            if (filterRarity && rarity !== filterRarity) return false;
+            if (filterWeapon && weapon !== filterWeapon) return false;
+            return true;
+        };
+        
+        if (merged) {
+            const groups = new Map();
+            inventoryData.assets.forEach(asset => {
+                if (!filterAsset(asset)) return;
+                const detail = descMap[`${asset.classid}_${asset.instanceid}`];
+                const name = detail.name;
+                if (!groups.has(name)) {
+                    groups.set(name, { detail, assets: [], totalCount: 0 });
+                }
+                const group = groups.get(name);
+                group.assets.push(asset);
+                group.totalCount++;
+            });
+            
+            groups.forEach((group, name) => {
+                const detail = group.detail;
+                const firstAsset = group.assets[0];
+                const floatValue = wearMap[firstAsset.assetid];
+                const wearLabel = floatValue ? getWearLabel(floatValue) : null;
+                const fallbackWear = (!floatValue && !wearLabel) ? extractWearFromName(detail) : null;
+                const itemPrice = getItemPrice(detail, firstAsset);
+                const groupValue = itemPrice ? (itemPrice * group.totalCount).toFixed(2) : null;
+                
+                const card = document.createElement('div');
+                card.className = 'item-card';
+                let priceHtml = '';
+                if (isPriceLoaded && priceMap.size > 0) {
+                    if (itemPrice !== null) {
+                        priceHtml = `<div class="price-info">💰 单价: ¥${itemPrice.toFixed(2)} | 总价值: ¥${groupValue}</div>`;
+                    } else {
+                        priceHtml = `<div class="price-info" style="color:#a0a0a0;">💰 暂无匹配价格</div>`;
+                    }
+                } else if (priceFetchError) {
+                    priceHtml = `<div class="price-info" style="color:#ff8866;">⚠️ 价格数据不可用</div>`;
+                } else if (!isPriceLoaded) {
+                    priceHtml = `<div class="price-info">⏳ 价格加载中...</div>`;
+                }
+                
+                card.innerHTML = `
+                    <div class="rarity-bar" style="background-color: #${detail.name_color}"></div>
+                    <div class="item-img-container">
+                        <img class="item-img" src="${IMG_BASE}${detail.icon_url}" alt="${name}">
+                    </div>
+                    <div class="item-name" style="color: #${detail.name_color}">${name} ${'×' + group.totalCount}</div>
+                    <div class="item-type">${detail.type}</div>
+                    <div class="item-meta">
+                        ${wearLabel ? `<div class="wear-badge">${wearLabel}</div>` : (fallbackWear ? `<div class="wear-badge">${fallbackWear}</div>` : '<div class="wear-badge">无磨损数据</div>')}
+                        ${floatValue ? `<div class="float-val">Float: ${floatValue}</div>` : ''}
+                        ${priceHtml}
+                        <div class="tag-container">
+                            <span class="tag">数量: ${group.totalCount}</span>
+                            <span class="tag">AppID: ${firstAsset.appid}</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+                itemCount += group.totalCount;
+            });
+        } else {
+            inventoryData.assets.forEach(asset => {
+                if (!filterAsset(asset)) return;
+                const detail = descMap[`${asset.classid}_${asset.instanceid}`];
+                itemCount++;
+                const floatValue = wearMap[asset.assetid];
+                const wearLabel = floatValue ? getWearLabel(floatValue) : null;
+                const fallbackWear = (!floatValue && !wearLabel) ? extractWearFromName(detail) : null;
+                const itemPrice = getItemPrice(detail, asset);
+                
+                let priceHtml = '';
+                if (isPriceLoaded && priceMap.size > 0) {
+                    if (itemPrice !== null) {
+                        priceHtml = `<div class="price-info">💰 估价: ¥${itemPrice.toFixed(2)}</div>`;
+                    } else {
+                        priceHtml = `<div class="price-info" style="color:#a0a0a0;">💰 暂无匹配价格</div>`;
+                    }
+                } else if (priceFetchError) {
+                    priceHtml = `<div class="price-info" style="color:#ff8866;">⚠️ 价格数据不可用</div>`;
+                } else if (!isPriceLoaded) {
+                    priceHtml = `<div class="price-info">⏳ 价格加载中...</div>`;
+                }
+                
+                const card = document.createElement('div');
+                card.className = 'item-card';
+                card.innerHTML = `
+                    <div class="rarity-bar" style="background-color: #${detail.name_color}"></div>
+                    <div class="item-img-container">
+                        <img class="item-img" src="${IMG_BASE}${detail.icon_url}" alt="${detail.name}">
+                    </div>
+                    <div class="item-name" style="color: #${detail.name_color}">${detail.name}</div>
+                    <div class="item-type">${detail.type}</div>
+                    <div class="item-meta">
+                        ${wearLabel ? `<div class="wear-badge">${wearLabel}</div>` : (fallbackWear ? `<div class="wear-badge">${fallbackWear}</div>` : '<div class="wear-badge">无磨损数据</div>')}
+                        ${floatValue ? `<div class="float-val">Float: ${floatValue}</div>` : ''}
+                        ${priceHtml}
+                        <div class="tag-container">
+                            <span class="tag">ID: ${asset.assetid.slice(-6)}</span>
+                            <span class="tag">AppID: ${asset.appid}</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+                itemCount++;
+            });
+        }
+        
+        document.getElementById('stat-info').textContent = `共检测到 ${itemCount} 件饰品`;
+    };
+    
+    // 重写全局 render 引用
+    window.renderInventory = window.renderInventory.bind(window);
+    window.renderInventory(mergeMode);
+    
+    // 价格加载异步流程
+    async function initPriceSystem() {
+        try {
+            const rawPriceArray = await fetchPriceData();
+            priceData = rawPriceArray;
+            priceMap = buildPriceMap(priceData);
+            isPriceLoaded = true;
+            priceFetchError = null;
+            console.log(`价格数据加载成功，共 ${priceMap.size} 条价格记录`);
+        } catch (err) {
+            isPriceLoaded = false;
+            priceFetchError = err.message || "无法获取价格数据";
+            console.error("价格加载失败:", priceFetchError);
+        } finally {
+            // 无论成功与否都要刷新页面价格显示
+            updateTotalPriceAndRender();
+        }
+    }
+    
+    // 初始化，将重写的 render 绑定到原作用域上
+    window.originalRenderRef = renderInventory;
+    renderInventory = function(merged) {
+        window.renderInventory(merged);
+    };
+    window.toggleMerge = toggleMerge;
+    
+    // 初始渲染并开启价格获取
+    renderInventory(false);
+    initPriceSystem();
+    
+    // 监听筛选器变化，重新计算总价和渲染 (同时更新价格显示)
+    const originalRarityEvent = rarityDropdown.onchange;
+    const originalWeaponEvent = weaponDropdown.onchange;
+    rarityDropdown.addEventListener('change', () => {
+        updateTotalPriceAndRender();
+    });
+    weaponDropdown.addEventListener('change', () => {
+        updateTotalPriceAndRender();
+    });
+    
+    // 重写合并模式的切换函数，确保价格更新
+    window.toggleMerge = function() {
+        mergeMode = !mergeMode;
+        updateTotalPriceAndRender();
+    };
+    
+    // 手动暴露用于调试
+    window.inventoryPriceSystem = { priceMap, totalInventoryValue };
+</script>
+</body>
+</html>
