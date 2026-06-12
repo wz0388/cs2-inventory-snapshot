@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam 库存快照</title>
+    <style>
+        :root {
+            --steam-dark: #1b2838;
+            --steam-blue: #2a475e;
+            --steam-text: #c7d5e0;
+            --rarity-rare: #4b69ff;
+            --rarity-mythical: #8847ff;
+            --rarity-legendary: #d32ce6;
+            --rarity-ancient: #eb4b4b;
+            --rarity-common: #b0c3d9;
+        }
+        body {
+            font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+            background-color: var(--steam-dark);
+            color: var(--steam-text);
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--steam-blue);
+            padding-bottom: 20px;
+        }
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        .item-card {
+            background: linear-gradient(135deg, #2a475e 0%, #16202d 100%);
+            border-radius: 4px;
+            padding: 15px;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border-color: rgba(255,255,255,0.2);
+        }
+        .rarity-bar {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            border-radius: 4px 4px 0 0;
+        }
+        .item-img-container {
+            height: 160px;
+            display: flex; align-items: center; justify-content: center;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            margin-bottom: 10px;
+        }
+        .item-img {
+            max-width: 100%; max-height: 100%;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+        }
+        .item-name {
+            font-size: 14px; font-weight: bold; margin-bottom: 5px;
+            line-height: 1.4; min-height: 40px; overflow: hidden;
+        }
+        .item-type {
+            font-size: 12px; color: #8b929a; margin-bottom: 8px;
+        }
+        .item-meta {
+            margin-top: auto; font-size: 11px;
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;
+        }
+        .wear-badge {
+            display: inline-block; padding: 2px 6px; border-radius: 2px;
+            background: rgba(0,0,0,0.3); margin-bottom: 4px;
+        }
+        .float-val {
+            color: #57cbff; font-family: monospace;
+        }
+        .price-val {
+            color: #a5d6a5; font-weight: bold; margin-top: 4px;
+        }
+        .tag-container {
+            display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px;
+        }
+        .tag {
+            background: #3d4448; color: #fff; padding: 1px 4px;
+            font-size: 10px; border-radius: 2px;
+        }
+        .merge-btn {
+            margin: 5px; padding: 6px 12px;
+            background: #4b69ff; color: white; border: none; border-radius: 4px;
+            cursor: pointer; font-size: 14px;
+        }
+        .merge-btn:hover { background: #3a53cc; }
+        select {
+            padding: 6px 12px; border-radius: 4px; border: none;
+            background: #2a475e; color: white; font-size: 14px;
+            margin: 0 4px;
+        }
+        label { font-size: 14px; margin: 0 2px; }
+        #total-value { font-size: 18px; color: #ffd700; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Steam 库存快照 (CS:GO / CS2)</h1>
+    <p><strong>Steam ID:</strong> <span id="steam-id">76561199718549343</span></p>
+    <p><strong>快照时间:</strong> <span id="snapshot-time">2026-06-13 05:24:59 CST</span></p>
+    <p><strong>库存总价:</strong> <span id="total-value">计算中...</span></p>
+    <p id="stat-info">正在加载库存数据...</p>
+    <div style="margin-top:10px;">
+        <label>品质：</label>
+        <select id="rarity-filter">
+            <option value="">全部品质</option>
+        </select>
+        <label>类型：</label>
+        <select id="weapon-filter">
+            <option value="">全部类型</option>
+        </select>
+        <button class="merge-btn" onclick="toggleMerge()">
+            🧩 合并相同物品
+        </button>
+    </div>
+</header>
+
+<div id="inventory" class="inventory-grid"></div>
+
+<script>
+    const inventoryData = {"assets": [{"appid": 730, "contextid": "2", "assetid": "50321357807", "classid": "7993038513", "instanceid": "7209933008", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304915555", "classid": "7993038513", "instanceid": "6686548710", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304915534", "classid": "7993038513", "instanceid": "6278398259", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304312993", "classid": "7993038513", "instanceid": "7755504551", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304312974", "classid": "7993038513", "instanceid": "6276433689", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304221593", "classid": "7993038513", "instanceid": "480085569", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304221582", "classid": "7993038513", "instanceid": "6276305245", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304146340", "classid": "7993038513", "instanceid": "480085569", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304139662", "classid": "7993038513", "instanceid": "480085569", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304135064", "classid": "7993038513", "instanceid": "7575093783", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304134087", "classid": "7993038513", "instanceid": "7123768198", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304078389", "classid": "7993038513", "instanceid": "480085569", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304077468", "classid": "7993038513", "instanceid": "6280370940", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304053118", "classid": "7993038513", "instanceid": "6958080107", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304052354", "classid": "7993038513", "instanceid": "519977179", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50304052333", "classid": "7993038513", "instanceid": "480085569", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50303971515", "classid": "7993038513", "instanceid": "6316398404", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50336072807", "classid": "7993038513", "instanceid": "6368325928", "amount": "1"}, {"appid": 730, "contextid": "2", "assetid": "50336072790", "classid": "7993038513", "instanceid": "480085569", "amount": "1"}], "descriptions": [{"appid": 730, "classid": "7993038513", "instanceid": "6368325928", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/sig_s1mple_holo.4ecc068f96c0ac6a531e5f187c98ee403077cf9b.png\" title=\"印花: s1mple （全息） | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/sig_boombl4.f3f185ccdd8da4c127c33026dfd737a2b8efec8f.png\" title=\"印花: Boombl4 | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/sig_b1t_holo.d32d610ee5b1540723d4eafa7e8b4e513e461873.png\" title=\"印花: b1t （全息） | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/sig_perfecto_holo.55b32b5962cf1d48e94a16a0d8d43ff2787c2283.png\" title=\"印花: Perfecto （全息） | 2021年斯德哥尔摩锦标赛\"><br>印花: s1mple （全息） | 2021年斯德哥尔摩锦标赛, Boombl4 | 2021年斯德哥尔摩锦标赛, b1t （全息） | 2021年斯德哥尔摩锦标赛, Perfecto （全息） | 2021年斯德哥尔摩锦标赛</center></div>", "name": "sticker_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}, {"category": "Tournament", "internal_name": "Tournament18", "localized_category_name": "锦标赛", "localized_tag_name": "2021年 PGL 斯德哥尔摩"}, {"category": "TournamentTeam", "internal_name": "Team12", "localized_category_name": "战队", "localized_tag_name": "Natus Vincere"}, {"category": "ProPlayer", "internal_name": "s1mple", "localized_category_name": "职业选手", "localized_tag_name": "s1mple（Oleksandr Kostyliev）"}, {"category": "ProPlayer", "internal_name": "boombl4", "localized_category_name": "职业选手", "localized_tag_name": "Boombl4（Kirill Mikhailov）"}, {"category": "ProPlayer", "internal_name": "b1t", "localized_category_name": "职业选手", "localized_tag_name": "b1t（Valerii Vakhovskyi）"}, {"category": "ProPlayer", "internal_name": "perfecto", "localized_category_name": "职业选手", "localized_tag_name": "Perfecto（Ilya Zalutskiy）"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "480085569", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "7209933008", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/aus2025/fal_foil.6efc402bf04bc1792bf8850dd8e91ba1593844b7.png\" title=\"印花: Falcons（闪亮）| 2025年奥斯汀锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/aus2025/fal_foil.6efc402bf04bc1792bf8850dd8e91ba1593844b7.png\" title=\"印花: Falcons（闪亮）| 2025年奥斯汀锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/aus2025/fal_foil.6efc402bf04bc1792bf8850dd8e91ba1593844b7.png\" title=\"印花: Falcons（闪亮）| 2025年奥斯汀锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/aus2025/fal_foil.6efc402bf04bc1792bf8850dd8e91ba1593844b7.png\" title=\"印花: Falcons（闪亮）| 2025年奥斯汀锦标赛\"><br>印花: Falcons（闪亮）| 2025年奥斯汀锦标赛, Falcons（闪亮）| 2025年奥斯汀锦标赛, Falcons（闪亮）| 2025年奥斯汀锦标赛, Falcons（闪亮）| 2025年奥斯汀锦标赛</center></div>", "name": "sticker_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}, {"category": "Tournament", "internal_name": "Tournament24", "localized_category_name": "锦标赛", "localized_tag_name": "2025年 BLAST.tv 奥斯汀"}, {"category": "TournamentTeam", "internal_name": "Team139", "localized_category_name": "战队", "localized_tag_name": "Falcons"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "6686548710", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/rio2022/spr_glitter.3b0d473dd28ca0814f3057bfc3e62cd7c0f5d660.png\" title=\"印花: Sprout Esports（闪耀）| 2022年里约热内卢锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/rio2022/spr_glitter.3b0d473dd28ca0814f3057bfc3e62cd7c0f5d660.png\" title=\"印花: Sprout Esports（闪耀）| 2022年里约热内卢锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/rio2022/spr_glitter.3b0d473dd28ca0814f3057bfc3e62cd7c0f5d660.png\" title=\"印花: Sprout Esports（闪耀）| 2022年里约热内卢锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/rio2022/spr_glitter.3b0d473dd28ca0814f3057bfc3e62cd7c0f5d660.png\" title=\"印花: Sprout Esports（闪耀）| 2022年里约热内卢锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/sha2024/sig_vini.85f09ee6001d00ae386326bdd8227c9b74912f7d.png\" title=\"印花: VINI | 2024年上海锦标赛\"><br>印花: Sprout Esports（闪耀）| 2022年里约热内卢锦标赛, Sprout Esports（闪耀）| 2022年里约热内卢锦标赛, Sprout Esports（闪耀）| 2022年里约热内卢锦标赛, Sprout Esports（闪耀）| 2022年里约热内卢锦标赛, VINI | 2024年上海锦标赛</center></div>", "name": "sticker_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}, {"category": "Tournament", "internal_name": "Tournament20", "localized_category_name": "锦标赛", "localized_tag_name": "2022年 IEM 里约锦标赛"}, {"category": "Tournament", "internal_name": "Tournament23", "localized_category_name": "锦标赛", "localized_tag_name": "2024年 完美世界 上海"}, {"category": "TournamentTeam", "internal_name": "Team72", "localized_category_name": "战队", "localized_tag_name": "Sprout Esports"}, {"category": "TournamentTeam", "internal_name": "Team113", "localized_category_name": "战队", "localized_tag_name": "Imperial Esports"}, {"category": "ProPlayer", "internal_name": "vini", "localized_category_name": "职业选手", "localized_tag_name": "VINI（Vinicius Figueiredo）"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "6278398259", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/nip_holo.9fcd7e2f25cd5a7843c15e7feff5a436f75d9ca1.png\" title=\"印花: Ninjas in Pyjamas （全息） | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/nip_holo.9fcd7e2f25cd5a7843c15e7feff5a436f75d9ca1.png\" title=\"印花: Ninjas in Pyjamas （全息） | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/nip_holo.9fcd7e2f25cd5a7843c15e7feff5a436f75d9ca1.png\" title=\"印花: Ninjas in Pyjamas （全息） | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/sig_rez_holo.b6fbc414e71a48bda30ce8df609db26490912aa0.png\" title=\"印花: REZ （全息） | 2021年斯德哥尔摩锦标赛\"><br>印花: Ninjas in Pyjamas （全息） | 2021年斯德哥尔摩锦标赛, Ninjas in Pyjamas （全息） | 2021年斯德哥尔摩锦标赛, Ninjas in Pyjamas （全息） | 2021年斯德哥尔摩锦标赛, REZ （全息） | 2021年斯德哥尔摩锦标赛</center></div>", "name": "sticker_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}, {"category": "Tournament", "internal_name": "Tournament18", "localized_category_name": "锦标赛", "localized_tag_name": "2021年 PGL 斯德哥尔摩"}, {"category": "TournamentTeam", "internal_name": "Team1", "localized_category_name": "战队", "localized_tag_name": "Ninjas in Pyjamas"}, {"category": "ProPlayer", "internal_name": "rez", "localized_category_name": "职业选手", "localized_tag_name": "REZ（Fredrik Sterner）"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "7755504551", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/cologne2015/sig_xyp9x.539a67e38776f19e5d9234fea9e8cac146dcce0b.png\" title=\"印花: Xyp9x | 2015年科隆锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/cologne2015/sig_xyp9x.539a67e38776f19e5d9234fea9e8cac146dcce0b.png\" title=\"印花: Xyp9x | 2015年科隆锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/cologne2015/sig_xyp9x.539a67e38776f19e5d9234fea9e8cac146dcce0b.png\" title=\"印花: Xyp9x | 2015年科隆锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/cologne2015/sig_xyp9x.539a67e38776f19e5d9234fea9e8cac146dcce0b.png\" title=\"印花: Xyp9x | 2015年科隆锦标赛\"><br>印花: Xyp9x | 2015年科隆锦标赛, Xyp9x | 2015年科隆锦标赛, Xyp9x | 2015年科隆锦标赛, Xyp9x | 2015年科隆锦标赛</center></div>", "name": "sticker_info"}, {"type": "html", "value": "<br><div id=\"keychain_info\" class=\"keychain_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/keychains/weapon_1/kc_wpn_mac10_glitter.10e3afd47acec2dbd8a519cc7a4b24ae3b855743.png\" title=\"挂件: 迪斯科MAC\"><br>挂件: 迪斯科MAC</center></div>", "name": "keychain_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}, {"category": "Tournament", "internal_name": "Tournament7", "localized_category_name": "锦标赛", "localized_tag_name": "2015年 ESL One 科隆锦标赛"}, {"category": "TournamentTeam", "internal_name": "Team58", "localized_category_name": "战队", "localized_tag_name": "Team SoloMid"}, {"category": "ProPlayer", "internal_name": "xyp9x", "localized_category_name": "职业选手", "localized_tag_name": "Xyp9x（Andreas Højsleth）"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "6276433689", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/ent.30b310f221740d8ef9e750b9cf3a25e0c18c439d.png\" title=\"印花: Entropiq | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/ent.30b310f221740d8ef9e750b9cf3a25e0c18c439d.png\" title=\"印花: Entropiq | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/ent.30b310f221740d8ef9e750b9cf3a25e0c18c439d.png\" title=\"印花: Entropiq | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/ent.30b310f221740d8ef9e750b9cf3a25e0c18c439d.png\" title=\"印花: Entropiq | 2021年斯德哥尔摩锦标赛\"><br>印花: Entropiq | 2021年斯德哥尔摩锦标赛, Entropiq | 2021年斯德哥尔摩锦标赛, Entropiq | 2021年斯德哥尔摩锦标赛, Entropiq | 2021年斯德哥尔摩锦标赛</center></div>", "name": "sticker_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}, {"category": "Tournament", "internal_name": "Tournament18", "localized_category_name": "锦标赛", "localized_tag_name": "2021年 PGL 斯德哥尔摩"}, {"category": "TournamentTeam", "internal_name": "Team105", "localized_category_name": "战队", "localized_tag_name": "Entropiq"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "6276305245", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/ent_holo.8aa5c94cc00819f918a38b2e1f8b1d668cba15c9.png\" title=\"印花: Entropiq （全息） | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/ent_holo.8aa5c94cc00819f918a38b2e1f8b1d668cba15c9.png\" title=\"印花: Entropiq （全息） | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/ent_holo.8aa5c94cc00819f918a38b2e1f8b1d668cba15c9.png\" title=\"印花: Entropiq （全息） | 2021年斯德哥尔摩锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/stockh2021/ent_holo.8aa5c94cc00819f918a38b2e1f8b1d668cba15c9.png\" title=\"印花: Entropiq （全息） | 2021年斯德哥尔摩锦标赛\"><br>印花: Entropiq （全息） | 2021年斯德哥尔摩锦标赛, Entropiq （全息） | 2021年斯德哥尔摩锦标赛, Entropiq （全息） | 2021年斯德哥尔摩锦标赛, Entropiq （全息） | 2021年斯德哥尔摩锦标赛</center></div>", "name": "sticker_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}, {"category": "Tournament", "internal_name": "Tournament18", "localized_category_name": "锦标赛", "localized_tag_name": "2021年 PGL 斯德哥尔摩"}, {"category": "TournamentTeam", "internal_name": "Team105", "localized_category_name": "战队", "localized_tag_name": "Entropiq"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "7575093783", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/antwerp2022/imp_holo.ad686903bf9d73a65dc571bfabcd50d957cd8d51.png\" title=\"印花: Imperial Esports（全息）| 2022年安特卫普锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/antwerp2022/imp_holo.ad686903bf9d73a65dc571bfabcd50d957cd8d51.png\" title=\"印花: Imperial Esports（全息）| 2022年安特卫普锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/antwerp2022/imp_holo.ad686903bf9d73a65dc571bfabcd50d957cd8d51.png\" title=\"印花: Imperial Esports（全息）| 2022年安特卫普锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/antwerp2022/imp_holo.ad686903bf9d73a65dc571bfabcd50d957cd8d51.png\" title=\"印花: Imperial Esports（全息）| 2022年安特卫普锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/rio2022/sig_fallen.803bc593da316955902c2ccfef6695d295f5d9c0.png\" title=\"印花: FalleN | 2022年里约热内卢锦标赛\"><br>印花: Imperial Esports（全息）| 2022年安特卫普锦标赛, Imperial Esports（全息）| 2022年安特卫普锦标赛, Imperial Esports（全息）| 2022年安特卫普锦标赛, Imperial Esports（全息）| 2022年安特卫普锦标赛, FalleN | 2022年里约热内卢锦标赛</center></div>", "name": "sticker_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}, {"category": "Tournament", "internal_name": "Tournament19", "localized_category_name": "锦标赛", "localized_tag_name": "2022 PGL 安特卫普"}, {"category": "Tournament", "internal_name": "Tournament20", "localized_category_name": "锦标赛", "localized_tag_name": "2022年 IEM 里约锦标赛"}, {"category": "TournamentTeam", "internal_name": "Team113", "localized_category_name": "战队", "localized_tag_name": "Imperial Esports"}, {"category": "ProPlayer", "internal_name": "fallen", "localized_category_name": "职业选手", "localized_tag_name": "FalleN（Gabriel Toledo）"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "7123768198", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/antwerp2022/imp_glitter.5e0bce21bcce9226af0018ba8820af28d8d1878d.png\" title=\"印花: Imperial Esports（闪耀）| 2022年安特卫普锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/antwerp2022/imp_glitter.5e0bce21bcce9226af0018ba8820af28d8d1878d.png\" title=\"印花: Imperial Esports（闪耀）| 2022年安特卫普锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/antwerp2022/imp_glitter.5e0bce21bcce9226af0018ba8820af28d8d1878d.png\" title=\"印花: Imperial Esports（闪耀）| 2022年安特卫普锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/antwerp2022/imp_glitter.5e0bce21bcce9226af0018ba8820af28d8d1878d.png\" title=\"印花: Imperial Esports（闪耀）| 2022年安特卫普锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/sha2024/sig_dexter.16694f9f83f7482524410baeaaed2596facad192.png\" title=\"印花: dexter | 2024年上海锦标赛\"><br>印花: Imperial Esports（闪耀）| 2022年安特卫普锦标赛, Imperial Esports（闪耀）| 2022年安特卫普锦标赛, Imperial Esports（闪耀）| 2022年安特卫普锦标赛, Imperial Esports（闪耀）| 2022年安特卫普锦标赛, dexter | 2024年上海锦标赛</center></div>", "name": "sticker_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}, {"category": "Tournament", "internal_name": "Tournament19", "localized_category_name": "锦标赛", "localized_tag_name": "2022 PGL 安特卫普"}, {"category": "Tournament", "internal_name": "Tournament23", "localized_category_name": "锦标赛", "localized_tag_name": "2024年 完美世界 上海"}, {"category": "TournamentTeam", "internal_name": "Team113", "localized_category_name": "战队", "localized_tag_name": "Imperial Esports"}, {"category": "TournamentTeam", "internal_name": "Team132", "localized_category_name": "战队", "localized_tag_name": "Flyquest"}, {"category": "ProPlayer", "internal_name": "dexter", "localized_category_name": "职业选手", "localized_tag_name": "dexter（Christopher Nong）"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "6280370940", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/shattered_web/gold_web_normal.6bfa09ec7177996ca6fa3c15b04aa76af9222a37.png\" title=\"印花: 黄金网（闪亮）\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/shattered_web/gold_web_normal.6bfa09ec7177996ca6fa3c15b04aa76af9222a37.png\" title=\"印花: 黄金网（闪亮）\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/cph2024/imp_glitter.b7a659ddd6ebb5bb2ab03f57674701f0189a688e.png\" title=\"印花: Imperial Esports（闪耀）| 2024年哥本哈根锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/cph2024/imp_glitter.b7a659ddd6ebb5bb2ab03f57674701f0189a688e.png\" title=\"印花: Imperial Esports（闪耀）| 2024年哥本哈根锦标赛\"><br>印花: 黄金网（闪亮）, 黄金网（闪亮）, Imperial Esports（闪耀）| 2024年哥本哈根锦标赛, Imperial Esports（闪耀）| 2024年哥本哈根锦标赛</center></div>", "name": "sticker_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}, {"category": "Tournament", "internal_name": "Tournament22", "localized_category_name": "锦标赛", "localized_tag_name": "2024年 PGL 哥本哈根"}, {"category": "TournamentTeam", "internal_name": "Team113", "localized_category_name": "战队", "localized_tag_name": "Imperial Esports"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "6958080107", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/cph2024/imp.e45d54d6a31e29747165692d1ccd1ca0c9a57c5a.png\" title=\"印花: Imperial Esports | 2024年哥本哈根锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/cph2024/sig_decenty.7daf3181adf9f2952d77f61df3bbcdf9f3d40b47.png\" title=\"印花: decenty | 2024年哥本哈根锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/cph2024/imp.e45d54d6a31e29747165692d1ccd1ca0c9a57c5a.png\" title=\"印花: Imperial Esports | 2024年哥本哈根锦标赛\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/cph2024/imp.e45d54d6a31e29747165692d1ccd1ca0c9a57c5a.png\" title=\"印花: Imperial Esports | 2024年哥本哈根锦标赛\"><br>印花: Imperial Esports | 2024年哥本哈根锦标赛, decenty | 2024年哥本哈根锦标赛, Imperial Esports | 2024年哥本哈根锦标赛, Imperial Esports | 2024年哥本哈根锦标赛</center></div>", "name": "sticker_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}, {"category": "Tournament", "internal_name": "Tournament22", "localized_category_name": "锦标赛", "localized_tag_name": "2024年 PGL 哥本哈根"}, {"category": "TournamentTeam", "internal_name": "Team113", "localized_category_name": "战队", "localized_tag_name": "Imperial Esports"}, {"category": "ProPlayer", "internal_name": "decenty", "localized_category_name": "职业选手", "localized_tag_name": "decenty（Lucas Bacelar）"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "519977179", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}, {"appid": 730, "classid": "7993038513", "instanceid": "6316398404", "currency": 0, "background_color": "2d3042", "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sCXWVxOBJvOhuRz39xUgj4WmByIuqInLCag8jWZJ3F-AL4xi6wd22Ne3rtQLZjYNEnHj92zQJsHgD_GLtVg", "descriptions": [{"type": "html", "value": "外观： 崭新出厂", "name": "exterior_wear"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "强大又可靠，AK-47 是世上最流行的突击步枪之一。近距离内控制好的短点射极为致命。 这把AK的枪托、握把和护木都采用了绿色层压材料。\n\n<i>事情就是如此简单</i>", "name": "description"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "2021 殒命大厦收藏品", "color": "9da1a9", "name": "itemset_name"}, {"type": "html", "value": " ", "name": "blank"}, {"type": "html", "value": "<br><div id=\"sticker_info\" class=\"sticker_info\" style=\"border: 2px solid rgb(102, 102, 102); border-radius: 6px; width=100; margin:4px; padding:8px;\"><center><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/riptide_surfshop/lethal_02.fa91718956d24acba3eb817649ca940b6908bbc8.png\" title=\"印花: 致命（绿色）\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/riptide_surfshop/lethal_02.fa91718956d24acba3eb817649ca940b6908bbc8.png\" title=\"印花: 致命（绿色）\"><img width=64 height=48 src=\"https://cdn.steamstatic.com/apps/730/icons/econ/stickers/riptide_surfshop/lethal_02.fa91718956d24acba3eb817649ca940b6908bbc8.png\" title=\"印花: 致命（绿色）\"><br>印花: 致命（绿色）, 致命（绿色）, 致命（绿色）</center></div>", "name": "sticker_info"}], "tradable": 1, "actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "name": "AK-47 | 绿色层压板", "name_color": "4b69ff", "type": "军规级 步枪", "market_name": "AK-47 | 绿色层压板 (崭新出厂)", "market_hash_name": "AK-47 | Green Laminate (Factory New)", "market_actions": [{"link": "steam://run/730//+csgo_econ_action_preview%20%propid:6%", "name": "在游戏中检视…"}], "commodity": 0, "market_tradable_restriction": 7, "market_marketable_restriction": 7, "marketable": 1, "tags": [{"category": "Type", "internal_name": "CSGO_Type_Rifle", "localized_category_name": "类型", "localized_tag_name": "步枪"}, {"category": "Weapon", "internal_name": "weapon_ak47", "localized_category_name": "武器", "localized_tag_name": "AK-47"}, {"category": "ItemSet", "internal_name": "set_vertigo_2021", "localized_category_name": "收藏品", "localized_tag_name": "2021 殒命大厦收藏品"}, {"category": "Quality", "internal_name": "normal", "localized_category_name": "类别", "localized_tag_name": "普通"}, {"category": "Rarity", "internal_name": "Rarity_Rare_Weapon", "localized_category_name": "品质", "localized_tag_name": "军规级", "color": "4b69ff"}, {"category": "Exterior", "internal_name": "WearCategory0", "localized_category_name": "外观", "localized_tag_name": "崭新出厂"}], "sealed": 0, "market_bucket_group_name": "AK-47 | 绿色层压板", "market_bucket_group_id": "G180720AE083004", "sealed_type": 0, "market_name_inside_group": "崭新出厂"}], "asset_properties": []};
+    const IMG_BASE = "https://community.cloudflare.steamstatic.com/economy/image/";
+
+    // 磨损等级判定
+    function getWearLabel(f) {
+        const float = parseFloat(f);
+        if (isNaN(float)) return null;
+        if (float < 0.07) return "崭新出厂 (WearCategory0)";
+        if (float < 0.15) return "略有磨损 (WearCategory1)";
+        if (float < 0.38) return "久经沙场 (WearCategory2)";
+        if (float < 0.45) return "破损不堪 (WearCategory3)";
+        return "战痕累累 (WearCategory4)";
+    }
+
+    function extractWearFromName(detail) {
+        if (!detail) return null;
+        const name = detail.market_name || detail.market_hash_name || '';
+        const match = name.match(/\(([^)]+)\)$/);
+        if (match && match[1]) {
+            const raw = match[1].trim();
+            if (/[\u4e00-\u9fa5]/.test(raw)) return raw;
+            const wearMapEN = {
+                'Factory New': '崭新出厂',
+                'Minimal Wear': '略有磨损',
+                'Field-Tested': '久经沙场',
+                'Well-Worn': '破损不堪',
+                'Battle-Scarred': '战痕累累'
+            };
+            if (wearMapEN[raw]) return wearMapEN[raw];
+            const stMatch = name.match(/StatTrak™\s*(.*)/);
+            if (stMatch) return extractWearFromName({ market_name: stMatch[1] });
+        }
+        return null;
+    }
+
+    function parseType(fullType) {
+        if (!fullType) return { rarity: '', weapon: '' };
+        let cleaned = fullType.replace(/^StatTrak™\s*/, '').replace(/^★\s*/, '').replace(/^纪念品\s*/, '').trim();
+        const parts = cleaned.split(/\s+/);
+        if (parts.length === 0) return { rarity: '', weapon: '' };
+        const weapon = parts[parts.length - 1];
+        const rarity = parts.slice(0, -1).join(' ');
+        if (parts.length === 1) return { rarity: '普通级', weapon: weapon };
+        return { rarity: rarity || '普通级', weapon: weapon };
+    }
+
+    const descMap = {};
+    inventoryData.descriptions.forEach(d => {
+        descMap[`${d.classid}_${d.instanceid}`] = d;
+    });
+
+    const wearMap = {};
+    inventoryData.asset_properties.forEach(ap => {
+        const wearObj = ap.properties.find(p => p.name === "磨损率");
+        if (wearObj) wearMap[ap.assetid] = wearObj.float_value;
+    });
+
+    // 收集所有稀有度和武器类型
+    const raritySet = new Set();
+    const weaponSet = new Set();
+    inventoryData.assets.forEach(asset => {
+        const detail = descMap[`${asset.classid}_${asset.instanceid}`];
+        if (!detail || !detail.type) return;
+        const { rarity, weapon } = parseType(detail.type);
+        if (rarity) raritySet.add(rarity);
+        if (weapon) weaponSet.add(weapon);
+    });
+
+    // 填充下拉列表
+    const rarityDropdown = document.getElementById('rarity-filter');
+    const weaponDropdown = document.getElementById('weapon-filter');
+    [...raritySet].sort().forEach(r => {
+        const opt = document.createElement('option');
+        opt.value = r; opt.textContent = r;
+        rarityDropdown.appendChild(opt);
+    });
+    [...weaponSet].sort().forEach(w => {
+        const opt = document.createElement('option');
+        opt.value = w; opt.textContent = w;
+        weaponDropdown.appendChild(opt);
+    });
+
+    let mergeMode = false;
+    rarityDropdown.addEventListener('change', () => renderInventory(mergeMode));
+    weaponDropdown.addEventListener('change', () => renderInventory(mergeMode));
+
+    function toggleMerge() {
+        mergeMode = !mergeMode;
+        renderInventory(mergeMode);
+    }
+
+    function getCurrentFilters() {
+        return {
+            rarity: rarityDropdown.value,
+            weapon: weaponDropdown.value
+        };
+    }
+
+    // 价格数据
+    let priceMap = {};
+    async function loadPrices() {
+        try {
+            const resp = await fetch('https://inventory.050820.xyz/price.json');
+            if (!resp.ok) throw new Error('价格数据请求失败');
+            const data = await resp.json();
+            data.forEach(item => {
+                priceMap[item.marketHashName] = item.yyypSellPrice;
+            });
+        } catch (e) {
+            console.warn('价格数据加载失败，物品将不显示价格', e);
+        }
+        // 无论是否成功，都执行首次渲染
+        renderInventory(false);
+    }
+
+    function renderInventory(merged) {
+        const container = document.getElementById('inventory');
+        container.innerHTML = '';
+        let itemCount = 0;
+        let totalValue = 0;
+        const { rarity: filterRarity, weapon: filterWeapon } = getCurrentFilters();
+
+        const filterAsset = (asset) => {
+            const detail = descMap[`${asset.classid}_${asset.instanceid}`];
+            if (!detail || !detail.type) return false;
+            const { rarity, weapon } = parseType(detail.type);
+            if (filterRarity && rarity !== filterRarity) return false;
+            if (filterWeapon && weapon !== filterWeapon) return false;
+            return true;
+        };
+
+        if (merged) {
+            const groups = new Map();
+            inventoryData.assets.forEach(asset => {
+                if (!filterAsset(asset)) return;
+                const detail = descMap[`${asset.classid}_${asset.instanceid}`];
+                const key = detail.market_hash_name;
+
+                if (!groups.has(key)) {
+                    groups.set(key, {
+                        detail,
+                        assets: [],
+                        totalCount: 0
+                    });
+                }
+
+                const group = groups.get(key);
+                group.assets.push(asset);
+                group.totalCount++;
+            });
+
+            groups.forEach((group, key) => {
+                const detail = group.detail;
+                const displayName =
+                    detail.market_name ||
+                    detail.name ||
+                    detail.market_hash_name;
+                const firstAsset = group.assets[0];
+                const floatValue = wearMap[firstAsset.assetid];
+                const wearLabel = floatValue ? getWearLabel(floatValue) : null;
+                const fallbackWear = (!floatValue && !wearLabel) ? extractWearFromName(detail) : null;
+
+                // 价格获取（使用第一个物品的 market_hash_name）
+                const priceKey = detail.market_hash_name;
+                const unitPrice = priceMap[priceKey] !== undefined ? priceMap[priceKey] : null;
+                const groupTotalPrice = unitPrice !== null ? unitPrice * group.totalCount : null;
+                if (groupTotalPrice !== null) totalValue += groupTotalPrice;
+
+                const card = document.createElement('div');
+                card.className = 'item-card';
+                card.innerHTML = `
+                    <div class="rarity-bar" style="background-color: #${detail.name_color}"></div>
+                    <div class="item-img-container">
+                        <img class="item-img" src="${IMG_BASE}${detail.icon_url}" alt="${displayName}">
+                    </div>
+                    <div class="item-name" style="color:#${detail.name_color}"> ${displayName} ×${group.totalCount} </div>
+                    <div class="item-type">${detail.type}</div>
+                    <div class="item-meta">
+                        ${wearLabel ? `<div class="wear-badge">${wearLabel}</div>` : (fallbackWear ? `<div class="wear-badge">${fallbackWear}</div>` : '<div class="wear-badge">无磨损数据</div>')}
+                        ${floatValue ? `<div class="float-val">Float: ${floatValue}</div>` : ''}
+                        ${unitPrice !== null ? `<div class="price-val">单价 ¥${unitPrice.toFixed(2)} | 总价 ¥${groupTotalPrice.toFixed(2)}</div>` : '<div class="price-val">暂无价格</div>'}
+                        <div class="tag-container">
+                            <span class="tag">数量: ${group.totalCount}</span>
+                            <span class="tag">AppID: ${firstAsset.appid}</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+                itemCount += group.totalCount;
+            });
+        } else {
+            inventoryData.assets.forEach(asset => {
+                if (!filterAsset(asset)) return;
+                const detail = descMap[`${asset.classid}_${asset.instanceid}`];
+                itemCount++;
+                const floatValue = wearMap[asset.assetid];
+                const wearLabel = floatValue ? getWearLabel(floatValue) : null;
+                const fallbackWear = (!floatValue && !wearLabel) ? extractWearFromName(detail) : null;
+
+                const priceKey = detail.market_hash_name;
+                const price = priceMap[priceKey] !== undefined ? priceMap[priceKey] : null;
+                if (price !== null) totalValue += price;
+
+                const card = document.createElement('div');
+                card.className = 'item-card';
+                card.innerHTML = `
+                    <div class="rarity-bar" style="background-color: #${detail.name_color}"></div>
+                    <div class="item-img-container">
+                        <img class="item-img" src="${IMG_BASE}${detail.icon_url}" alt="${detail.name}">
+                    </div>
+                    <div class="item-name" style="color: #${detail.name_color}">${detail.name}</div>
+                    <div class="item-type">${detail.type}</div>
+                    <div class="item-meta">
+                        ${wearLabel ? `<div class="wear-badge">${wearLabel}</div>` : (fallbackWear ? `<div class="wear-badge">${fallbackWear}</div>` : '<div class="wear-badge">无磨损数据</div>')}
+                        ${floatValue ? `<div class="float-val">Float: ${floatValue}</div>` : ''}
+                        ${price !== null ? `<div class="price-val">¥${price.toFixed(2)}</div>` : '<div class="price-val">暂无价格</div>'}
+                        <div class="tag-container">
+                            <span class="tag">ID: ${asset.assetid.slice(-6)}</span>
+                            <span class="tag">AppID: ${asset.appid}</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        document.getElementById('stat-info').textContent = `共检测到 ${itemCount} 件饰品`;
+        document.getElementById('total-value').textContent = `¥${totalValue.toFixed(2)}`;
+    }
+
+    // 启动时先加载价格，再渲染
+    loadPrices();
+</script>
+</body>
+</html>
