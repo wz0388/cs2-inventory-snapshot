@@ -192,7 +192,7 @@
   {
     "goodId": 39,
     "marketHashName": "AK-47 | Aquamarine Revenge (Field-Tested)",
-    "yyypSellPrice": 269.89
+    "yyypSellPrice": 270.39
   },
   {
     "goodId": 40,
@@ -227,7 +227,7 @@
   {
     "goodId": 46,
     "marketHashName": "AK-47 | Bloodsport (Factory New)",
-    "yyypSellPrice": 1207.5
+    "yyypSellPrice": 1208.0
   },
   {
     "goodId": 47,
@@ -242,7 +242,7 @@
   {
     "goodId": 49,
     "marketHashName": "AK-47 | Bloodsport (Well-Worn)",
-    "yyypSellPrice": 910.5
+    "yyypSellPrice": 910.0
   },
   {
     "goodId": 50,
@@ -672,7 +672,7 @@
   {
     "goodId": 135,
     "marketHashName": "AK-47 | Redline (Field-Tested)",
-    "yyypSellPrice": 214.3
+    "yyypSellPrice": 214.0
   },
   {
     "goodId": 136,
@@ -1097,7 +1097,7 @@
   {
     "goodId": 220,
     "marketHashName": "AUG | Syd Mead (Field-Tested)",
-    "yyypSellPrice": 77.67
+    "yyypSellPrice": 77.57
   },
   {
     "goodId": 221,
@@ -2272,7 +2272,7 @@
   {
     "goodId": 455,
     "marketHashName": "CZ75-Auto | Imprint (Field-Tested)",
-    "yyypSellPrice": 2.74
+    "yyypSellPrice": 2.73
   },
   {
     "goodId": 456,
@@ -2727,7 +2727,7 @@
   {
     "goodId": 546,
     "marketHashName": "Desert Eagle | Conspiracy (Minimal Wear)",
-    "yyypSellPrice": 131.41
+    "yyypSellPrice": 131.98
   },
   {
     "goodId": 547,
@@ -3917,7 +3917,7 @@
   {
     "goodId": 784,
     "marketHashName": "FAMAS | Roll Cage (Field-Tested)",
-    "yyypSellPrice": 744.7
+    "yyypSellPrice": 743.7
   },
   {
     "goodId": 785,
@@ -6252,7 +6252,7 @@
   {
     "goodId": 1251,
     "marketHashName": "M4A1-S | Hot Rod (Factory New)",
-    "yyypSellPrice": 12569.5
+    "yyypSellPrice": 12500.0
   },
   {
     "goodId": 1252,
@@ -86998,6 +86998,256 @@
     "goodId": 17400,
     "marketHashName": "Sustenance! Pin",
     "yyypSellPrice": 39.76
+  },
+  {
+    "goodId": 17401,
+    "marketHashName": "Office Pin",
+    "yyypSellPrice": 76.0
+  },
+  {
+    "goodId": 17402,
+    "marketHashName": "Operation Bloodhound Access Pass",
+    "yyypSellPrice": 245.39
+  },
+  {
+    "goodId": 17403,
+    "marketHashName": "Operation Hydra Access Pass",
+    "yyypSellPrice": 169.0
+  },
+  {
+    "goodId": 17404,
+    "marketHashName": "Operation Breakout All Access Pass",
+    "yyypSellPrice": 548.41
+  },
+  {
+    "goodId": 17405,
+    "marketHashName": "Operation Broken Fang Premium Pass",
+    "yyypSellPrice": 151.35
+  },
+  {
+    "goodId": 17406,
+    "marketHashName": "Katowice 2019 Viewer Pass",
+    "yyypSellPrice": 755.55
+  },
+  {
+    "goodId": 17407,
+    "marketHashName": "Operation Shattered Web Premium Pass",
+    "yyypSellPrice": 348.35
+  },
+  {
+    "goodId": 17408,
+    "marketHashName": "Antwerp 2022 Viewer Pass",
+    "yyypSellPrice": 194.5
+  },
+  {
+    "goodId": 17409,
+    "marketHashName": "Berlin 2019 Viewer Pass",
+    "yyypSellPrice": 145.38
+  },
+  {
+    "goodId": 17410,
+    "marketHashName": "Operation Wildfire Access Pass",
+    "yyypSellPrice": 2300.0
+  },
+  {
+    "goodId": 17411,
+    "marketHashName": "Rio 2022 Viewer Pass + 3 Souvenir Tokens",
+    "yyypSellPrice": 287.97
+  },
+  {
+    "goodId": 17412,
+    "marketHashName": "Berlin 2019 Viewer Pass + 3 Souvenir Tokens",
+    "yyypSellPrice": 487.99
+  },
+  {
+    "goodId": 17413,
+    "marketHashName": "Antwerp 2022 Viewer Pass + 3 Souvenir Tokens",
+    "yyypSellPrice": 240.0
+  },
+  {
+    "goodId": 17414,
+    "marketHashName": "Stockholm 2021 Viewer Pass + 3 Souvenir Tokens",
+    "yyypSellPrice": 286.49
+  },
+  {
+    "goodId": 17415,
+    "marketHashName": "Stockholm 2021 Viewer Pass",
+    "yyypSellPrice": 0.0
+  },
+  {
+    "goodId": 17416,
+    "marketHashName": "Operation Payback Pass",
+    "yyypSellPrice": 4000.0
+  },
+  {
+    "goodId": 17417,
+    "marketHashName": "Operation Riptide Premium Pass",
+    "yyypSellPrice": 466.0
+  },
+  {
+    "goodId": 17418,
+    "marketHashName": "Rio 2022 Viewer Pass",
+    "yyypSellPrice": 365.79
+  },
+  {
+    "goodId": 17419,
+    "marketHashName": "Operation Vanguard Access Pass",
+    "yyypSellPrice": 2240.0
+  },
+  {
+    "goodId": 17420,
+    "marketHashName": "Operation Bravo Pass",
+    "yyypSellPrice": 2900.0
+  },
+  {
+    "goodId": 17421,
+    "marketHashName": "Operation Phoenix Pass",
+    "yyypSellPrice": 1335.34
+  },
+  {
+    "goodId": 17422,
+    "marketHashName": "Name Tag",
+    "yyypSellPrice": 19.58
+  },
+  {
+    "goodId": 17423,
+    "marketHashName": "StatTrak™ Swap Tool",
+    "yyypSellPrice": 4.89
+  },
+  {
+    "goodId": 17424,
+    "marketHashName": "XM1014 | Zombie Offensive (Factory New)",
+    "yyypSellPrice": 9.61
+  },
+  {
+    "goodId": 17425,
+    "marketHashName": "XM1014 | Black Tie (Field-Tested)",
+    "yyypSellPrice": 7.11
+  },
+  {
+    "goodId": 17426,
+    "marketHashName": "StatTrak™ XM1014 | Zombie Offensive (Factory New)",
+    "yyypSellPrice": 8.98
+  },
+  {
+    "goodId": 17427,
+    "marketHashName": "XM1014 | Entombed (Field-Tested)",
+    "yyypSellPrice": 24.9
+  },
+  {
+    "goodId": 17428,
+    "marketHashName": "StatTrak™ XM1014 | Black Tie (Field-Tested)",
+    "yyypSellPrice": 9.99
+  },
+  {
+    "goodId": 17429,
+    "marketHashName": "XM1014 | Zombie Offensive (Field-Tested)",
+    "yyypSellPrice": 4.18
+  },
+  {
+    "goodId": 17430,
+    "marketHashName": "XM1014 | CaliCamo (Factory New)",
+    "yyypSellPrice": 2.29
+  },
+  {
+    "goodId": 17431,
+    "marketHashName": "StatTrak™ XM1014 | Entombed (Well-Worn)",
+    "yyypSellPrice": 34.38
+  },
+  {
+    "goodId": 17432,
+    "marketHashName": "XM1014 | Blue Spruce (Factory New)",
+    "yyypSellPrice": 10.48
+  },
+  {
+    "goodId": 17433,
+    "marketHashName": "XM1014 | Oxide Blaze (Factory New)",
+    "yyypSellPrice": 2.98
+  },
+  {
+    "goodId": 17434,
+    "marketHashName": "XM1014 | XOXO (Minimal Wear)",
+    "yyypSellPrice": 35.44
+  },
+  {
+    "goodId": 17435,
+    "marketHashName": "StatTrak™ XM1014 | Ziggy (Minimal Wear)",
+    "yyypSellPrice": 13.3
+  },
+  {
+    "goodId": 17436,
+    "marketHashName": "StatTrak™ XM1014 | Teclu Burner (Field-Tested)",
+    "yyypSellPrice": 21.6
+  },
+  {
+    "goodId": 17437,
+    "marketHashName": "Souvenir XM1014 | Elegant Vines (Factory New)",
+    "yyypSellPrice": 224.5
+  },
+  {
+    "goodId": 17438,
+    "marketHashName": "XM1014 | Watchdog (Battle-Scarred)",
+    "yyypSellPrice": 7.94
+  },
+  {
+    "goodId": 17439,
+    "marketHashName": "XM1014 | Elegant Vines (Factory New)",
+    "yyypSellPrice": 219.9
+  },
+  {
+    "goodId": 17440,
+    "marketHashName": "StatTrak™ XM1014 | Watchdog (Minimal Wear)",
+    "yyypSellPrice": 34.99
+  },
+  {
+    "goodId": 17441,
+    "marketHashName": "XM1014 | Blue Steel (Factory New)",
+    "yyypSellPrice": 5.97
+  },
+  {
+    "goodId": 17442,
+    "marketHashName": "XM1014 | Black Tie (Minimal Wear)",
+    "yyypSellPrice": 12.86
+  },
+  {
+    "goodId": 17443,
+    "marketHashName": "XM1014 | Zombie Offensive (Minimal Wear)",
+    "yyypSellPrice": 4.44
+  },
+  {
+    "goodId": 17444,
+    "marketHashName": "XM1014 | Ziggy (Minimal Wear)",
+    "yyypSellPrice": 8.0
+  },
+  {
+    "goodId": 17445,
+    "marketHashName": "XM1014 | Scumbria (Minimal Wear)",
+    "yyypSellPrice": 3.97
+  },
+  {
+    "goodId": 17446,
+    "marketHashName": "Souvenir XM1014 | Elegant Vines (Field-Tested)",
+    "yyypSellPrice": 108.8
+  },
+  {
+    "goodId": 17447,
+    "marketHashName": "XM1014 | Ziggy (Field-Tested)",
+    "yyypSellPrice": 6.18
+  },
+  {
+    "goodId": 17448,
+    "marketHashName": "XM1014 | XOXO (Field-Tested)",
+    "yyypSellPrice": 25.26
+  },
+  {
+    "goodId": 17449,
+    "marketHashName": "XM1014 | Teclu Burner (Field-Tested)",
+    "yyypSellPrice": 7.48
+  },
+  {
+    "goodId": 17450,
+    "marketHashName": "XM1014 | Slipstream (Factory New)",
+    "yyypSellPrice": 4.57
   },
   {
     "goodId": 17451,
