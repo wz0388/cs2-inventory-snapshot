@@ -36250,6 +36250,256 @@
     "yyypSellPrice": 2933.0
   },
   {
+    "goodId": 7251,
+    "marketHashName": "★ Karambit | Safari Mesh (Well-Worn)",
+    "yyypSellPrice": 2734.0
+  },
+  {
+    "goodId": 7252,
+    "marketHashName": "★ Karambit | Scorched (Minimal Wear)",
+    "yyypSellPrice": 3332.5
+  },
+  {
+    "goodId": 7253,
+    "marketHashName": "★ Karambit | Scorched (Well-Worn)",
+    "yyypSellPrice": 2928.5
+  },
+  {
+    "goodId": 7254,
+    "marketHashName": "★ Karambit | Slaughter (Factory New)",
+    "yyypSellPrice": 7950.0
+  },
+  {
+    "goodId": 7255,
+    "marketHashName": "★ Karambit | Slaughter (Field-Tested)",
+    "yyypSellPrice": 6200.0
+  },
+  {
+    "goodId": 7256,
+    "marketHashName": "★ Karambit | Slaughter (Minimal Wear)",
+    "yyypSellPrice": 6600.0
+  },
+  {
+    "goodId": 7257,
+    "marketHashName": "★ Karambit | Stained (Battle-Scarred)",
+    "yyypSellPrice": 3499.0
+  },
+  {
+    "goodId": 7258,
+    "marketHashName": "★ Karambit | Stained (Factory New)",
+    "yyypSellPrice": 5788.0
+  },
+  {
+    "goodId": 7259,
+    "marketHashName": "★ Karambit | Stained (Field-Tested)",
+    "yyypSellPrice": 3874.49
+  },
+  {
+    "goodId": 7260,
+    "marketHashName": "★ Karambit | Stained (Minimal Wear)",
+    "yyypSellPrice": 4266.0
+  },
+  {
+    "goodId": 7261,
+    "marketHashName": "★ Karambit | Tiger Tooth (Factory New)",
+    "yyypSellPrice": 6389.0
+  },
+  {
+    "goodId": 7262,
+    "marketHashName": "★ Karambit | Tiger Tooth (Minimal Wear)",
+    "yyypSellPrice": 6999.0
+  },
+  {
+    "goodId": 7263,
+    "marketHashName": "★ Karambit | Ultraviolet (Battle-Scarred)",
+    "yyypSellPrice": 3226.0
+  },
+  {
+    "goodId": 7264,
+    "marketHashName": "★ Karambit | Ultraviolet (Factory New)",
+    "yyypSellPrice": 13888.0
+  },
+  {
+    "goodId": 7265,
+    "marketHashName": "★ Karambit | Ultraviolet (Field-Tested)",
+    "yyypSellPrice": 3570.0
+  },
+  {
+    "goodId": 7266,
+    "marketHashName": "★ Karambit | Ultraviolet (Minimal Wear)",
+    "yyypSellPrice": 4499.0
+  },
+  {
+    "goodId": 7267,
+    "marketHashName": "★ Karambit | Ultraviolet (Well-Worn)",
+    "yyypSellPrice": 3299.0
+  },
+  {
+    "goodId": 7268,
+    "marketHashName": "★ Karambit | Urban Masked (Battle-Scarred)",
+    "yyypSellPrice": 2820.0
+  },
+  {
+    "goodId": 7269,
+    "marketHashName": "★ Karambit | Urban Masked (Minimal Wear)",
+    "yyypSellPrice": 3350.0
+  },
+  {
+    "goodId": 7270,
+    "marketHashName": "★ Karambit | Urban Masked (Well-Worn)",
+    "yyypSellPrice": 2849.91
+  },
+  {
+    "goodId": 7271,
+    "marketHashName": "★ M9 Bayonet",
+    "yyypSellPrice": 5338.5
+  },
+  {
+    "goodId": 7272,
+    "marketHashName": "★ M9 Bayonet | Autotronic (Battle-Scarred)",
+    "yyypSellPrice": 3999.5
+  },
+  {
+    "goodId": 7273,
+    "marketHashName": "★ M9 Bayonet | Autotronic (Factory New)",
+    "yyypSellPrice": 8200.0
+  },
+  {
+    "goodId": 7274,
+    "marketHashName": "★ M9 Bayonet | Autotronic (Field-Tested)",
+    "yyypSellPrice": 4770.0
+  },
+  {
+    "goodId": 7275,
+    "marketHashName": "★ M9 Bayonet | Autotronic (Minimal Wear)",
+    "yyypSellPrice": 5699.0
+  },
+  {
+    "goodId": 7276,
+    "marketHashName": "★ M9 Bayonet | Autotronic (Well-Worn)",
+    "yyypSellPrice": 4399.0
+  },
+  {
+    "goodId": 7277,
+    "marketHashName": "★ M9 Bayonet | Black Laminate (Battle-Scarred)",
+    "yyypSellPrice": 3299.0
+  },
+  {
+    "goodId": 7278,
+    "marketHashName": "★ M9 Bayonet | Black Laminate (Factory New)",
+    "yyypSellPrice": 4850.0
+  },
+  {
+    "goodId": 7279,
+    "marketHashName": "★ M9 Bayonet | Black Laminate (Field-Tested)",
+    "yyypSellPrice": 3494.5
+  },
+  {
+    "goodId": 7280,
+    "marketHashName": "★ M9 Bayonet | Black Laminate (Minimal Wear)",
+    "yyypSellPrice": 3750.0
+  },
+  {
+    "goodId": 7281,
+    "marketHashName": "★ M9 Bayonet | Black Laminate (Well-Worn)",
+    "yyypSellPrice": 3210.0
+  },
+  {
+    "goodId": 7282,
+    "marketHashName": "★ M9 Bayonet | Blue Steel (Battle-Scarred)",
+    "yyypSellPrice": 3350.0
+  },
+  {
+    "goodId": 7283,
+    "marketHashName": "★ M9 Bayonet | Blue Steel (Factory New)",
+    "yyypSellPrice": 5168.0
+  },
+  {
+    "goodId": 7284,
+    "marketHashName": "★ M9 Bayonet | Blue Steel (Field-Tested)",
+    "yyypSellPrice": 3580.0
+  },
+  {
+    "goodId": 7285,
+    "marketHashName": "★ M9 Bayonet | Blue Steel (Minimal Wear)",
+    "yyypSellPrice": 3780.0
+  },
+  {
+    "goodId": 7286,
+    "marketHashName": "★ M9 Bayonet | Blue Steel (Well-Worn)",
+    "yyypSellPrice": 3298.5
+  },
+  {
+    "goodId": 7287,
+    "marketHashName": "★ M9 Bayonet | Boreal Forest (Battle-Scarred)",
+    "yyypSellPrice": 2018.0
+  },
+  {
+    "goodId": 7288,
+    "marketHashName": "★ M9 Bayonet | Boreal Forest (Field-Tested)",
+    "yyypSellPrice": 2031.5
+  },
+  {
+    "goodId": 7289,
+    "marketHashName": "★ M9 Bayonet | Boreal Forest (Minimal Wear)",
+    "yyypSellPrice": 2169.0
+  },
+  {
+    "goodId": 7290,
+    "marketHashName": "★ M9 Bayonet | Boreal Forest (Well-Worn)",
+    "yyypSellPrice": 2020.0
+  },
+  {
+    "goodId": 7291,
+    "marketHashName": "★ M9 Bayonet | Bright Water (Battle-Scarred)",
+    "yyypSellPrice": 2215.5
+  },
+  {
+    "goodId": 7292,
+    "marketHashName": "★ M9 Bayonet | Bright Water (Factory New)",
+    "yyypSellPrice": 2908.0
+  },
+  {
+    "goodId": 7293,
+    "marketHashName": "★ M9 Bayonet | Bright Water (Field-Tested)",
+    "yyypSellPrice": 2503.0
+  },
+  {
+    "goodId": 7294,
+    "marketHashName": "★ M9 Bayonet | Bright Water (Minimal Wear)",
+    "yyypSellPrice": 2699.0
+  },
+  {
+    "goodId": 7295,
+    "marketHashName": "★ M9 Bayonet | Bright Water (Well-Worn)",
+    "yyypSellPrice": 2488.0
+  },
+  {
+    "goodId": 7296,
+    "marketHashName": "★ M9 Bayonet | Case Hardened (Battle-Scarred)",
+    "yyypSellPrice": 3099.0
+  },
+  {
+    "goodId": 7297,
+    "marketHashName": "★ M9 Bayonet | Case Hardened (Factory New)",
+    "yyypSellPrice": 7499.5
+  },
+  {
+    "goodId": 7298,
+    "marketHashName": "★ M9 Bayonet | Case Hardened (Field-Tested)",
+    "yyypSellPrice": 3388.0
+  },
+  {
+    "goodId": 7299,
+    "marketHashName": "★ M9 Bayonet | Case Hardened (Minimal Wear)",
+    "yyypSellPrice": 3858.49
+  },
+  {
+    "goodId": 7300,
+    "marketHashName": "★ M9 Bayonet | Case Hardened (Well-Worn)",
+    "yyypSellPrice": 3199.5
+  },
+  {
     "goodId": 7301,
     "marketHashName": "★ M9 Bayonet | Crimson Web (Battle-Scarred)",
     "yyypSellPrice": 2988.91
