@@ -36250,256 +36250,6 @@
     "yyypSellPrice": 2933.0
   },
   {
-    "goodId": 7251,
-    "marketHashName": "★ Karambit | Safari Mesh (Well-Worn)",
-    "yyypSellPrice": 2734.0
-  },
-  {
-    "goodId": 7252,
-    "marketHashName": "★ Karambit | Scorched (Minimal Wear)",
-    "yyypSellPrice": 3332.5
-  },
-  {
-    "goodId": 7253,
-    "marketHashName": "★ Karambit | Scorched (Well-Worn)",
-    "yyypSellPrice": 2928.5
-  },
-  {
-    "goodId": 7254,
-    "marketHashName": "★ Karambit | Slaughter (Factory New)",
-    "yyypSellPrice": 7950.0
-  },
-  {
-    "goodId": 7255,
-    "marketHashName": "★ Karambit | Slaughter (Field-Tested)",
-    "yyypSellPrice": 6200.0
-  },
-  {
-    "goodId": 7256,
-    "marketHashName": "★ Karambit | Slaughter (Minimal Wear)",
-    "yyypSellPrice": 6600.0
-  },
-  {
-    "goodId": 7257,
-    "marketHashName": "★ Karambit | Stained (Battle-Scarred)",
-    "yyypSellPrice": 3499.0
-  },
-  {
-    "goodId": 7258,
-    "marketHashName": "★ Karambit | Stained (Factory New)",
-    "yyypSellPrice": 5788.0
-  },
-  {
-    "goodId": 7259,
-    "marketHashName": "★ Karambit | Stained (Field-Tested)",
-    "yyypSellPrice": 3874.49
-  },
-  {
-    "goodId": 7260,
-    "marketHashName": "★ Karambit | Stained (Minimal Wear)",
-    "yyypSellPrice": 4266.0
-  },
-  {
-    "goodId": 7261,
-    "marketHashName": "★ Karambit | Tiger Tooth (Factory New)",
-    "yyypSellPrice": 6389.0
-  },
-  {
-    "goodId": 7262,
-    "marketHashName": "★ Karambit | Tiger Tooth (Minimal Wear)",
-    "yyypSellPrice": 6999.0
-  },
-  {
-    "goodId": 7263,
-    "marketHashName": "★ Karambit | Ultraviolet (Battle-Scarred)",
-    "yyypSellPrice": 3226.0
-  },
-  {
-    "goodId": 7264,
-    "marketHashName": "★ Karambit | Ultraviolet (Factory New)",
-    "yyypSellPrice": 13888.0
-  },
-  {
-    "goodId": 7265,
-    "marketHashName": "★ Karambit | Ultraviolet (Field-Tested)",
-    "yyypSellPrice": 3570.0
-  },
-  {
-    "goodId": 7266,
-    "marketHashName": "★ Karambit | Ultraviolet (Minimal Wear)",
-    "yyypSellPrice": 4499.0
-  },
-  {
-    "goodId": 7267,
-    "marketHashName": "★ Karambit | Ultraviolet (Well-Worn)",
-    "yyypSellPrice": 3299.0
-  },
-  {
-    "goodId": 7268,
-    "marketHashName": "★ Karambit | Urban Masked (Battle-Scarred)",
-    "yyypSellPrice": 2820.0
-  },
-  {
-    "goodId": 7269,
-    "marketHashName": "★ Karambit | Urban Masked (Minimal Wear)",
-    "yyypSellPrice": 3350.0
-  },
-  {
-    "goodId": 7270,
-    "marketHashName": "★ Karambit | Urban Masked (Well-Worn)",
-    "yyypSellPrice": 2849.91
-  },
-  {
-    "goodId": 7271,
-    "marketHashName": "★ M9 Bayonet",
-    "yyypSellPrice": 5338.5
-  },
-  {
-    "goodId": 7272,
-    "marketHashName": "★ M9 Bayonet | Autotronic (Battle-Scarred)",
-    "yyypSellPrice": 3999.5
-  },
-  {
-    "goodId": 7273,
-    "marketHashName": "★ M9 Bayonet | Autotronic (Factory New)",
-    "yyypSellPrice": 8200.0
-  },
-  {
-    "goodId": 7274,
-    "marketHashName": "★ M9 Bayonet | Autotronic (Field-Tested)",
-    "yyypSellPrice": 4770.0
-  },
-  {
-    "goodId": 7275,
-    "marketHashName": "★ M9 Bayonet | Autotronic (Minimal Wear)",
-    "yyypSellPrice": 5699.0
-  },
-  {
-    "goodId": 7276,
-    "marketHashName": "★ M9 Bayonet | Autotronic (Well-Worn)",
-    "yyypSellPrice": 4399.0
-  },
-  {
-    "goodId": 7277,
-    "marketHashName": "★ M9 Bayonet | Black Laminate (Battle-Scarred)",
-    "yyypSellPrice": 3299.0
-  },
-  {
-    "goodId": 7278,
-    "marketHashName": "★ M9 Bayonet | Black Laminate (Factory New)",
-    "yyypSellPrice": 4850.0
-  },
-  {
-    "goodId": 7279,
-    "marketHashName": "★ M9 Bayonet | Black Laminate (Field-Tested)",
-    "yyypSellPrice": 3494.5
-  },
-  {
-    "goodId": 7280,
-    "marketHashName": "★ M9 Bayonet | Black Laminate (Minimal Wear)",
-    "yyypSellPrice": 3750.0
-  },
-  {
-    "goodId": 7281,
-    "marketHashName": "★ M9 Bayonet | Black Laminate (Well-Worn)",
-    "yyypSellPrice": 3210.0
-  },
-  {
-    "goodId": 7282,
-    "marketHashName": "★ M9 Bayonet | Blue Steel (Battle-Scarred)",
-    "yyypSellPrice": 3350.0
-  },
-  {
-    "goodId": 7283,
-    "marketHashName": "★ M9 Bayonet | Blue Steel (Factory New)",
-    "yyypSellPrice": 5168.0
-  },
-  {
-    "goodId": 7284,
-    "marketHashName": "★ M9 Bayonet | Blue Steel (Field-Tested)",
-    "yyypSellPrice": 3580.0
-  },
-  {
-    "goodId": 7285,
-    "marketHashName": "★ M9 Bayonet | Blue Steel (Minimal Wear)",
-    "yyypSellPrice": 3780.0
-  },
-  {
-    "goodId": 7286,
-    "marketHashName": "★ M9 Bayonet | Blue Steel (Well-Worn)",
-    "yyypSellPrice": 3298.5
-  },
-  {
-    "goodId": 7287,
-    "marketHashName": "★ M9 Bayonet | Boreal Forest (Battle-Scarred)",
-    "yyypSellPrice": 2018.0
-  },
-  {
-    "goodId": 7288,
-    "marketHashName": "★ M9 Bayonet | Boreal Forest (Field-Tested)",
-    "yyypSellPrice": 2031.5
-  },
-  {
-    "goodId": 7289,
-    "marketHashName": "★ M9 Bayonet | Boreal Forest (Minimal Wear)",
-    "yyypSellPrice": 2169.0
-  },
-  {
-    "goodId": 7290,
-    "marketHashName": "★ M9 Bayonet | Boreal Forest (Well-Worn)",
-    "yyypSellPrice": 2020.0
-  },
-  {
-    "goodId": 7291,
-    "marketHashName": "★ M9 Bayonet | Bright Water (Battle-Scarred)",
-    "yyypSellPrice": 2215.5
-  },
-  {
-    "goodId": 7292,
-    "marketHashName": "★ M9 Bayonet | Bright Water (Factory New)",
-    "yyypSellPrice": 2908.0
-  },
-  {
-    "goodId": 7293,
-    "marketHashName": "★ M9 Bayonet | Bright Water (Field-Tested)",
-    "yyypSellPrice": 2503.0
-  },
-  {
-    "goodId": 7294,
-    "marketHashName": "★ M9 Bayonet | Bright Water (Minimal Wear)",
-    "yyypSellPrice": 2699.0
-  },
-  {
-    "goodId": 7295,
-    "marketHashName": "★ M9 Bayonet | Bright Water (Well-Worn)",
-    "yyypSellPrice": 2488.0
-  },
-  {
-    "goodId": 7296,
-    "marketHashName": "★ M9 Bayonet | Case Hardened (Battle-Scarred)",
-    "yyypSellPrice": 3099.0
-  },
-  {
-    "goodId": 7297,
-    "marketHashName": "★ M9 Bayonet | Case Hardened (Factory New)",
-    "yyypSellPrice": 7499.5
-  },
-  {
-    "goodId": 7298,
-    "marketHashName": "★ M9 Bayonet | Case Hardened (Field-Tested)",
-    "yyypSellPrice": 3388.0
-  },
-  {
-    "goodId": 7299,
-    "marketHashName": "★ M9 Bayonet | Case Hardened (Minimal Wear)",
-    "yyypSellPrice": 3858.49
-  },
-  {
-    "goodId": 7300,
-    "marketHashName": "★ M9 Bayonet | Case Hardened (Well-Worn)",
-    "yyypSellPrice": 3199.5
-  },
-  {
     "goodId": 7301,
     "marketHashName": "★ M9 Bayonet | Crimson Web (Battle-Scarred)",
     "yyypSellPrice": 2988.91
@@ -65998,6 +65748,256 @@
     "goodId": 13200,
     "marketHashName": "CZ75-Auto | Circaetus (Battle-Scarred)",
     "yyypSellPrice": 1.14
+  },
+  {
+    "goodId": 13201,
+    "marketHashName": "CZ75-Auto | Circaetus (Field-Tested)",
+    "yyypSellPrice": 1.39
+  },
+  {
+    "goodId": 13202,
+    "marketHashName": "Galil AR | Chromatic Aberration (Minimal Wear)",
+    "yyypSellPrice": 50.55
+  },
+  {
+    "goodId": 13203,
+    "marketHashName": "StatTrak™ MAC-10 | Button Masher (Well-Worn)",
+    "yyypSellPrice": 3.55
+  },
+  {
+    "goodId": 13204,
+    "marketHashName": "StatTrak™ P250 | Cyber Shell (Field-Tested)",
+    "yyypSellPrice": 4.21
+  },
+  {
+    "goodId": 13205,
+    "marketHashName": "Desert Eagle | Trigger Discipline (Well-Worn)",
+    "yyypSellPrice": 3.44
+  },
+  {
+    "goodId": 13206,
+    "marketHashName": "StatTrak™ R8 Revolver | Junk Yard (Minimal Wear)",
+    "yyypSellPrice": 5.06
+  },
+  {
+    "goodId": 13207,
+    "marketHashName": "Desert Eagle | Trigger Discipline (Field-Tested)",
+    "yyypSellPrice": 5.05
+  },
+  {
+    "goodId": 13208,
+    "marketHashName": "MAC-10 | Button Masher (Minimal Wear)",
+    "yyypSellPrice": 6.43
+  },
+  {
+    "goodId": 13209,
+    "marketHashName": "UMP-45 | Oscillator (Factory New)",
+    "yyypSellPrice": 3.3
+  },
+  {
+    "goodId": 13210,
+    "marketHashName": "StatTrak™ CZ75-Auto | Circaetus (Minimal Wear)",
+    "yyypSellPrice": 4.47
+  },
+  {
+    "goodId": 13211,
+    "marketHashName": "StatTrak™ UMP-45 | Oscillator (Minimal Wear)",
+    "yyypSellPrice": 2.96
+  },
+  {
+    "goodId": 13212,
+    "marketHashName": "UMP-45 | Oscillator (Battle-Scarred)",
+    "yyypSellPrice": 1.38
+  },
+  {
+    "goodId": 13213,
+    "marketHashName": "SG 553 | Heavy Metal (Minimal Wear)",
+    "yyypSellPrice": 2.18
+  },
+  {
+    "goodId": 13214,
+    "marketHashName": "UMP-45 | Oscillator (Minimal Wear)",
+    "yyypSellPrice": 1.57
+  },
+  {
+    "goodId": 13215,
+    "marketHashName": "R8 Revolver | Junk Yard (Minimal Wear)",
+    "yyypSellPrice": 2.25
+  },
+  {
+    "goodId": 13216,
+    "marketHashName": "CZ75-Auto | Circaetus (Minimal Wear)",
+    "yyypSellPrice": 1.89
+  },
+  {
+    "goodId": 13217,
+    "marketHashName": "P250 | Cyber Shell (Battle-Scarred)",
+    "yyypSellPrice": 2.29
+  },
+  {
+    "goodId": 13218,
+    "marketHashName": "StatTrak™ R8 Revolver | Junk Yard (Well-Worn)",
+    "yyypSellPrice": 2.02
+  },
+  {
+    "goodId": 13219,
+    "marketHashName": "StatTrak™ R8 Revolver | Junk Yard (Battle-Scarred)",
+    "yyypSellPrice": 2.0
+  },
+  {
+    "goodId": 13220,
+    "marketHashName": "Glock-18 | Clear Polymer (Well-Worn)",
+    "yyypSellPrice": 1.5
+  },
+  {
+    "goodId": 13221,
+    "marketHashName": "Glock-18 | Clear Polymer (Minimal Wear)",
+    "yyypSellPrice": 4.95
+  },
+  {
+    "goodId": 13222,
+    "marketHashName": "P250 | Cyber Shell (Field-Tested)",
+    "yyypSellPrice": 2.69
+  },
+  {
+    "goodId": 13223,
+    "marketHashName": "MAC-10 | Button Masher (Field-Tested)",
+    "yyypSellPrice": 2.89
+  },
+  {
+    "goodId": 13224,
+    "marketHashName": "Desert Eagle | Trigger Discipline (Battle-Scarred)",
+    "yyypSellPrice": 3.28
+  },
+  {
+    "goodId": 13225,
+    "marketHashName": "MAC-10 | Button Masher (Well-Worn)",
+    "yyypSellPrice": 2.39
+  },
+  {
+    "goodId": 13226,
+    "marketHashName": "StatTrak™ Galil AR | Chromatic Aberration (Minimal Wear)",
+    "yyypSellPrice": 105.99
+  },
+  {
+    "goodId": 13227,
+    "marketHashName": "StatTrak™ MP9 | Food Chain (Minimal Wear)",
+    "yyypSellPrice": 98.2
+  },
+  {
+    "goodId": 13228,
+    "marketHashName": "StatTrak™ MAC-10 | Button Masher (Factory New)",
+    "yyypSellPrice": 27.66
+  },
+  {
+    "goodId": 13229,
+    "marketHashName": "M4A4 | In Living Color (Battle-Scarred)",
+    "yyypSellPrice": 189.0
+  },
+  {
+    "goodId": 13230,
+    "marketHashName": "M4A4 | In Living Color (Field-Tested)",
+    "yyypSellPrice": 236.6
+  },
+  {
+    "goodId": 13231,
+    "marketHashName": "M4A4 | In Living Color (Minimal Wear)",
+    "yyypSellPrice": 299.5
+  },
+  {
+    "goodId": 13232,
+    "marketHashName": "USP-S | The Traitor (Field-Tested)",
+    "yyypSellPrice": 244.0
+  },
+  {
+    "goodId": 13233,
+    "marketHashName": "Galil AR | Chromatic Aberration (Battle-Scarred)",
+    "yyypSellPrice": 22.2
+  },
+  {
+    "goodId": 13234,
+    "marketHashName": "MP9 | Food Chain (Battle-Scarred)",
+    "yyypSellPrice": 20.69
+  },
+  {
+    "goodId": 13235,
+    "marketHashName": "StatTrak™ SG 553 | Heavy Metal (Field-Tested)",
+    "yyypSellPrice": 2.74
+  },
+  {
+    "goodId": 13236,
+    "marketHashName": "StatTrak™ UMP-45 | Oscillator (Battle-Scarred)",
+    "yyypSellPrice": 3.41
+  },
+  {
+    "goodId": 13237,
+    "marketHashName": "StatTrak™ SG 553 | Heavy Metal (Well-Worn)",
+    "yyypSellPrice": 2.11
+  },
+  {
+    "goodId": 13238,
+    "marketHashName": "CZ75-Auto | Circaetus (Well-Worn)",
+    "yyypSellPrice": 1.18
+  },
+  {
+    "goodId": 13239,
+    "marketHashName": "StatTrak™ AK-47 | Slate (Field-Tested)",
+    "yyypSellPrice": 100.6
+  },
+  {
+    "goodId": 13240,
+    "marketHashName": "MP9 | Food Chain (Factory New)",
+    "yyypSellPrice": 153.0
+  },
+  {
+    "goodId": 13241,
+    "marketHashName": "SG 553 | Heavy Metal (Well-Worn)",
+    "yyypSellPrice": 1.11
+  },
+  {
+    "goodId": 13242,
+    "marketHashName": "Galil AR | Chromatic Aberration (Well-Worn)",
+    "yyypSellPrice": 22.06
+  },
+  {
+    "goodId": 13243,
+    "marketHashName": "StatTrak™ R8 Revolver | Junk Yard (Field-Tested)",
+    "yyypSellPrice": 2.4
+  },
+  {
+    "goodId": 13244,
+    "marketHashName": "MAC-10 | Button Masher (Battle-Scarred)",
+    "yyypSellPrice": 2.31
+  },
+  {
+    "goodId": 13245,
+    "marketHashName": "StatTrak™ UMP-45 | Oscillator (Field-Tested)",
+    "yyypSellPrice": 2.49
+  },
+  {
+    "goodId": 13246,
+    "marketHashName": "StatTrak™ AK-47 | Slate (Well-Worn)",
+    "yyypSellPrice": 87.9
+  },
+  {
+    "goodId": 13247,
+    "marketHashName": "UMP-45 | Oscillator (Well-Worn)",
+    "yyypSellPrice": 1.28
+  },
+  {
+    "goodId": 13248,
+    "marketHashName": "MP9 | Food Chain (Well-Worn)",
+    "yyypSellPrice": 22.74
+  },
+  {
+    "goodId": 13249,
+    "marketHashName": "USP-S | The Traitor (Battle-Scarred)",
+    "yyypSellPrice": 217.5
+  },
+  {
+    "goodId": 13250,
+    "marketHashName": "StatTrak™ Glock-18 | Clear Polymer (Well-Worn)",
+    "yyypSellPrice": 4.85
   },
   {
     "goodId": 13251,
