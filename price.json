@@ -16000,6 +16000,256 @@
     "yyypSellPrice": 29.32
   },
   {
+    "goodId": 3201,
+    "marketHashName": "StatTrak™ FAMAS | Pulse (Factory New)",
+    "yyypSellPrice": 147.75
+  },
+  {
+    "goodId": 3202,
+    "marketHashName": "StatTrak™ FAMAS | Pulse (Field-Tested)",
+    "yyypSellPrice": 87.39
+  },
+  {
+    "goodId": 3203,
+    "marketHashName": "StatTrak™ FAMAS | Pulse (Minimal Wear)",
+    "yyypSellPrice": 106.4
+  },
+  {
+    "goodId": 3204,
+    "marketHashName": "StatTrak™ FAMAS | Pulse (Well-Worn)",
+    "yyypSellPrice": 0.0
+  },
+  {
+    "goodId": 3205,
+    "marketHashName": "StatTrak™ FAMAS | Roll Cage (Battle-Scarred)",
+    "yyypSellPrice": 649.5
+  },
+  {
+    "goodId": 3206,
+    "marketHashName": "StatTrak™ FAMAS | Roll Cage (Factory New)",
+    "yyypSellPrice": 1219.5
+  },
+  {
+    "goodId": 3207,
+    "marketHashName": "StatTrak™ FAMAS | Roll Cage (Field-Tested)",
+    "yyypSellPrice": 626.88
+  },
+  {
+    "goodId": 3208,
+    "marketHashName": "StatTrak™ FAMAS | Roll Cage (Minimal Wear)",
+    "yyypSellPrice": 720.0
+  },
+  {
+    "goodId": 3209,
+    "marketHashName": "StatTrak™ FAMAS | Roll Cage (Well-Worn)",
+    "yyypSellPrice": 607.0
+  },
+  {
+    "goodId": 3210,
+    "marketHashName": "StatTrak™ FAMAS | Sergeant (Battle-Scarred)",
+    "yyypSellPrice": 28.9
+  },
+  {
+    "goodId": 3211,
+    "marketHashName": "StatTrak™ FAMAS | Sergeant (Field-Tested)",
+    "yyypSellPrice": 35.7
+  },
+  {
+    "goodId": 3212,
+    "marketHashName": "StatTrak™ FAMAS | Sergeant (Minimal Wear)",
+    "yyypSellPrice": 174.96
+  },
+  {
+    "goodId": 3213,
+    "marketHashName": "StatTrak™ FAMAS | Sergeant (Well-Worn)",
+    "yyypSellPrice": 29.2
+  },
+  {
+    "goodId": 3214,
+    "marketHashName": "StatTrak™ FAMAS | Survivor Z (Battle-Scarred)",
+    "yyypSellPrice": 8.97
+  },
+  {
+    "goodId": 3215,
+    "marketHashName": "StatTrak™ FAMAS | Survivor Z (Factory New)",
+    "yyypSellPrice": 23.89
+  },
+  {
+    "goodId": 3216,
+    "marketHashName": "StatTrak™ FAMAS | Survivor Z (Field-Tested)",
+    "yyypSellPrice": 5.94
+  },
+  {
+    "goodId": 3217,
+    "marketHashName": "StatTrak™ FAMAS | Survivor Z (Minimal Wear)",
+    "yyypSellPrice": 13.77
+  },
+  {
+    "goodId": 3218,
+    "marketHashName": "StatTrak™ FAMAS | Survivor Z (Well-Worn)",
+    "yyypSellPrice": 11.73
+  },
+  {
+    "goodId": 3219,
+    "marketHashName": "StatTrak™ FAMAS | Valence (Battle-Scarred)",
+    "yyypSellPrice": 47.8
+  },
+  {
+    "goodId": 3220,
+    "marketHashName": "StatTrak™ FAMAS | Valence (Factory New)",
+    "yyypSellPrice": 189.49
+  },
+  {
+    "goodId": 3221,
+    "marketHashName": "StatTrak™ FAMAS | Valence (Field-Tested)",
+    "yyypSellPrice": 46.0
+  },
+  {
+    "goodId": 3222,
+    "marketHashName": "StatTrak™ FAMAS | Valence (Minimal Wear)",
+    "yyypSellPrice": 83.64
+  },
+  {
+    "goodId": 3223,
+    "marketHashName": "StatTrak™ FAMAS | Valence (Well-Worn)",
+    "yyypSellPrice": 100.0
+  },
+  {
+    "goodId": 3224,
+    "marketHashName": "StatTrak™ Five-SeveN | Capillary (Battle-Scarred)",
+    "yyypSellPrice": 2.74
+  },
+  {
+    "goodId": 3225,
+    "marketHashName": "StatTrak™ Five-SeveN | Capillary (Factory New)",
+    "yyypSellPrice": 11.45
+  },
+  {
+    "goodId": 3226,
+    "marketHashName": "StatTrak™ Five-SeveN | Capillary (Field-Tested)",
+    "yyypSellPrice": 3.13
+  },
+  {
+    "goodId": 3227,
+    "marketHashName": "StatTrak™ Five-SeveN | Capillary (Minimal Wear)",
+    "yyypSellPrice": 5.33
+  },
+  {
+    "goodId": 3228,
+    "marketHashName": "StatTrak™ Five-SeveN | Capillary (Well-Worn)",
+    "yyypSellPrice": 3.78
+  },
+  {
+    "goodId": 3229,
+    "marketHashName": "StatTrak™ Five-SeveN | Case Hardened (Battle-Scarred)",
+    "yyypSellPrice": 165.69
+  },
+  {
+    "goodId": 3230,
+    "marketHashName": "StatTrak™ Five-SeveN | Case Hardened (Factory New)",
+    "yyypSellPrice": 675.0
+  },
+  {
+    "goodId": 3231,
+    "marketHashName": "StatTrak™ Five-SeveN | Case Hardened (Field-Tested)",
+    "yyypSellPrice": 149.98
+  },
+  {
+    "goodId": 3232,
+    "marketHashName": "StatTrak™ Five-SeveN | Case Hardened (Minimal Wear)",
+    "yyypSellPrice": 234.19
+  },
+  {
+    "goodId": 3233,
+    "marketHashName": "StatTrak™ Five-SeveN | Case Hardened (Well-Worn)",
+    "yyypSellPrice": 156.99
+  },
+  {
+    "goodId": 3234,
+    "marketHashName": "StatTrak™ Five-SeveN | Copper Galaxy (Factory New)",
+    "yyypSellPrice": 189.49
+  },
+  {
+    "goodId": 3235,
+    "marketHashName": "StatTrak™ Five-SeveN | Copper Galaxy (Field-Tested)",
+    "yyypSellPrice": 240.0
+  },
+  {
+    "goodId": 3236,
+    "marketHashName": "StatTrak™ Five-SeveN | Copper Galaxy (Minimal Wear)",
+    "yyypSellPrice": 134.99
+  },
+  {
+    "goodId": 3237,
+    "marketHashName": "StatTrak™ Five-SeveN | Fowl Play (Battle-Scarred)",
+    "yyypSellPrice": 126.0
+  },
+  {
+    "goodId": 3238,
+    "marketHashName": "StatTrak™ Five-SeveN | Fowl Play (Factory New)",
+    "yyypSellPrice": 277.97
+  },
+  {
+    "goodId": 3239,
+    "marketHashName": "StatTrak™ Five-SeveN | Fowl Play (Field-Tested)",
+    "yyypSellPrice": 116.89
+  },
+  {
+    "goodId": 3240,
+    "marketHashName": "StatTrak™ Five-SeveN | Fowl Play (Minimal Wear)",
+    "yyypSellPrice": 149.89
+  },
+  {
+    "goodId": 3241,
+    "marketHashName": "StatTrak™ Five-SeveN | Fowl Play (Well-Worn)",
+    "yyypSellPrice": 123.0
+  },
+  {
+    "goodId": 3242,
+    "marketHashName": "StatTrak™ Five-SeveN | Hyper Beast (Battle-Scarred)",
+    "yyypSellPrice": 1888.0
+  },
+  {
+    "goodId": 3243,
+    "marketHashName": "StatTrak™ Five-SeveN | Hyper Beast (Factory New)",
+    "yyypSellPrice": 4500.0
+  },
+  {
+    "goodId": 3244,
+    "marketHashName": "StatTrak™ Five-SeveN | Hyper Beast (Field-Tested)",
+    "yyypSellPrice": 1399.0
+  },
+  {
+    "goodId": 3245,
+    "marketHashName": "StatTrak™ Five-SeveN | Hyper Beast (Minimal Wear)",
+    "yyypSellPrice": 1800.0
+  },
+  {
+    "goodId": 3246,
+    "marketHashName": "StatTrak™ Five-SeveN | Hyper Beast (Well-Worn)",
+    "yyypSellPrice": 10000.0
+  },
+  {
+    "goodId": 3247,
+    "marketHashName": "StatTrak™ Five-SeveN | Kami (Factory New)",
+    "yyypSellPrice": 39.48
+  },
+  {
+    "goodId": 3248,
+    "marketHashName": "StatTrak™ Five-SeveN | Kami (Field-Tested)",
+    "yyypSellPrice": 21.26
+  },
+  {
+    "goodId": 3249,
+    "marketHashName": "StatTrak™ Five-SeveN | Kami (Minimal Wear)",
+    "yyypSellPrice": 27.68
+  },
+  {
+    "goodId": 3250,
+    "marketHashName": "StatTrak™ Five-SeveN | Monkey Business (Battle-Scarred)",
+    "yyypSellPrice": 75.39
+  },
+  {
     "goodId": 3251,
     "marketHashName": "StatTrak™ Five-SeveN | Monkey Business (Field-Tested)",
     "yyypSellPrice": 86.94
@@ -119082,7 +119332,7 @@
   {
     "goodId": 23892,
     "marketHashName": "AWP | Ice Coaled (Factory New)",
-    "yyypSellPrice": 205.5
+    "yyypSellPrice": 205.0
   },
   {
     "goodId": 23893,
@@ -119207,7 +119457,7 @@
   {
     "goodId": 23917,
     "marketHashName": "StatTrak™ M4A4 | Full Throttle (Factory New)",
-    "yyypSellPrice": 3200.0
+    "yyypSellPrice": 3199.0
   },
   {
     "goodId": 23918,
@@ -119782,7 +120032,7 @@
   {
     "goodId": 24032,
     "marketHashName": "Glock-18 | Mirror Mosaic (Factory New)",
-    "yyypSellPrice": 171.0
+    "yyypSellPrice": 177.9
   },
   {
     "goodId": 24033,
@@ -120167,7 +120417,7 @@
   {
     "goodId": 24109,
     "marketHashName": "Sticker | Mimicapsule",
-    "yyypSellPrice": 0.14
+    "yyypSellPrice": 0.15
   },
   {
     "goodId": 24110,
@@ -124522,7 +124772,7 @@
   {
     "goodId": 24980,
     "marketHashName": "Sawed-Off | Crimson Batik (Minimal Wear)",
-    "yyypSellPrice": 0.05
+    "yyypSellPrice": 0.04
   },
   {
     "goodId": 24981,
@@ -124777,7 +125027,7 @@
   {
     "goodId": 25031,
     "marketHashName": "MAC-10 | Snow Splash (Field-Tested)",
-    "yyypSellPrice": 0.1
+    "yyypSellPrice": 0.12
   },
   {
     "goodId": 25032,
@@ -126102,7 +126352,7 @@
   {
     "goodId": 25296,
     "marketHashName": "★ Specialist Gloves | Sunburst (Minimal Wear)",
-    "yyypSellPrice": 2530.0
+    "yyypSellPrice": 2529.5
   },
   {
     "goodId": 25297,
@@ -126157,7 +126407,7 @@
   {
     "goodId": 25307,
     "marketHashName": "★ Sport Gloves | Frosty (Well-Worn)",
-    "yyypSellPrice": 1230.0
+    "yyypSellPrice": 1229.0
   },
   {
     "goodId": 25308,
@@ -126172,7 +126422,7 @@
   {
     "goodId": 25310,
     "marketHashName": "★ Sport Gloves | Occult (Minimal Wear)",
-    "yyypSellPrice": 7727.88
+    "yyypSellPrice": 7726.88
   },
   {
     "goodId": 25311,
@@ -126277,7 +126527,7 @@
   {
     "goodId": 25331,
     "marketHashName": "★ Sport Gloves | Blaze (Well-Worn)",
-    "yyypSellPrice": 924.0
+    "yyypSellPrice": 923.5
   },
   {
     "goodId": 25332,
