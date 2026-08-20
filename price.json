@@ -13750,6 +13750,256 @@
     "yyypSellPrice": 15.9
   },
   {
+    "goodId": 2751,
+    "marketHashName": "Souvenir SG 553 | Fallout Warning (Factory New)",
+    "yyypSellPrice": 59.87
+  },
+  {
+    "goodId": 2752,
+    "marketHashName": "Souvenir SG 553 | Fallout Warning (Field-Tested)",
+    "yyypSellPrice": 12.9
+  },
+  {
+    "goodId": 2753,
+    "marketHashName": "Souvenir SG 553 | Fallout Warning (Minimal Wear)",
+    "yyypSellPrice": 29.99
+  },
+  {
+    "goodId": 2754,
+    "marketHashName": "Souvenir SG 553 | Fallout Warning (Well-Worn)",
+    "yyypSellPrice": 25.0
+  },
+  {
+    "goodId": 2755,
+    "marketHashName": "Souvenir SG 553 | Gator Mesh (Battle-Scarred)",
+    "yyypSellPrice": 79.84
+  },
+  {
+    "goodId": 2756,
+    "marketHashName": "Souvenir SG 553 | Gator Mesh (Factory New)",
+    "yyypSellPrice": 82.13
+  },
+  {
+    "goodId": 2757,
+    "marketHashName": "Souvenir SG 553 | Gator Mesh (Field-Tested)",
+    "yyypSellPrice": 78.0
+  },
+  {
+    "goodId": 2758,
+    "marketHashName": "Souvenir SG 553 | Gator Mesh (Minimal Wear)",
+    "yyypSellPrice": 87.8
+  },
+  {
+    "goodId": 2759,
+    "marketHashName": "Souvenir SG 553 | Gator Mesh (Well-Worn)",
+    "yyypSellPrice": 117.92
+  },
+  {
+    "goodId": 2760,
+    "marketHashName": "Souvenir SG 553 | Waves Perforated (Field-Tested)",
+    "yyypSellPrice": 137.74
+  },
+  {
+    "goodId": 2761,
+    "marketHashName": "Souvenir SG 553 | Waves Perforated (Minimal Wear)",
+    "yyypSellPrice": 41.0
+  },
+  {
+    "goodId": 2762,
+    "marketHashName": "Souvenir SG 553 | Waves Perforated (Well-Worn)",
+    "yyypSellPrice": 750.0
+  },
+  {
+    "goodId": 2763,
+    "marketHashName": "Souvenir SSG 08 | Acid Fade (Factory New)",
+    "yyypSellPrice": 105.0
+  },
+  {
+    "goodId": 2764,
+    "marketHashName": "Souvenir SSG 08 | Blue Spruce (Battle-Scarred)",
+    "yyypSellPrice": 1499.5
+  },
+  {
+    "goodId": 2765,
+    "marketHashName": "Souvenir SSG 08 | Blue Spruce (Field-Tested)",
+    "yyypSellPrice": 129.96
+  },
+  {
+    "goodId": 2766,
+    "marketHashName": "Souvenir SSG 08 | Blue Spruce (Minimal Wear)",
+    "yyypSellPrice": 21.99
+  },
+  {
+    "goodId": 2767,
+    "marketHashName": "Souvenir SSG 08 | Blue Spruce (Well-Worn)",
+    "yyypSellPrice": 288.88
+  },
+  {
+    "goodId": 2768,
+    "marketHashName": "Souvenir SSG 08 | Detour (Factory New)",
+    "yyypSellPrice": 105.37
+  },
+  {
+    "goodId": 2769,
+    "marketHashName": "Souvenir SSG 08 | Detour (Field-Tested)",
+    "yyypSellPrice": 35.08
+  },
+  {
+    "goodId": 2770,
+    "marketHashName": "Souvenir SSG 08 | Detour (Minimal Wear)",
+    "yyypSellPrice": 66.0
+  },
+  {
+    "goodId": 2771,
+    "marketHashName": "Souvenir SSG 08 | Detour (Well-Worn)",
+    "yyypSellPrice": 48.5
+  },
+  {
+    "goodId": 2772,
+    "marketHashName": "Souvenir SSG 08 | Tropical Storm (Battle-Scarred)",
+    "yyypSellPrice": 79.99
+  },
+  {
+    "goodId": 2773,
+    "marketHashName": "Souvenir SSG 08 | Tropical Storm (Factory New)",
+    "yyypSellPrice": 995.0
+  },
+  {
+    "goodId": 2774,
+    "marketHashName": "Souvenir SSG 08 | Tropical Storm (Field-Tested)",
+    "yyypSellPrice": 79.87
+  },
+  {
+    "goodId": 2775,
+    "marketHashName": "Souvenir SSG 08 | Tropical Storm (Minimal Wear)",
+    "yyypSellPrice": 97.89
+  },
+  {
+    "goodId": 2776,
+    "marketHashName": "Souvenir SSG 08 | Tropical Storm (Well-Worn)",
+    "yyypSellPrice": 90.0
+  },
+  {
+    "goodId": 2777,
+    "marketHashName": "Souvenir Tec-9 | Army Mesh (Factory New)",
+    "yyypSellPrice": 28.85
+  },
+  {
+    "goodId": 2778,
+    "marketHashName": "Souvenir Tec-9 | Army Mesh (Field-Tested)",
+    "yyypSellPrice": 50.0
+  },
+  {
+    "goodId": 2779,
+    "marketHashName": "Souvenir Tec-9 | Army Mesh (Minimal Wear)",
+    "yyypSellPrice": 50.0
+  },
+  {
+    "goodId": 2780,
+    "marketHashName": "Souvenir Tec-9 | Army Mesh (Well-Worn)",
+    "yyypSellPrice": 6800.0
+  },
+  {
+    "goodId": 2781,
+    "marketHashName": "Souvenir Tec-9 | Brass (Battle-Scarred)",
+    "yyypSellPrice": 164.9
+  },
+  {
+    "goodId": 2782,
+    "marketHashName": "Souvenir Tec-9 | Brass (Factory New)",
+    "yyypSellPrice": 2000.0
+  },
+  {
+    "goodId": 2783,
+    "marketHashName": "Souvenir Tec-9 | Brass (Field-Tested)",
+    "yyypSellPrice": 111.0
+  },
+  {
+    "goodId": 2784,
+    "marketHashName": "Souvenir Tec-9 | Brass (Minimal Wear)",
+    "yyypSellPrice": 300.0
+  },
+  {
+    "goodId": 2785,
+    "marketHashName": "Souvenir Tec-9 | Brass (Well-Worn)",
+    "yyypSellPrice": 98.1
+  },
+  {
+    "goodId": 2786,
+    "marketHashName": "Souvenir Tec-9 | Groundwater (Battle-Scarred)",
+    "yyypSellPrice": 2888.0
+  },
+  {
+    "goodId": 2787,
+    "marketHashName": "Souvenir Tec-9 | Groundwater (Field-Tested)",
+    "yyypSellPrice": 24.79
+  },
+  {
+    "goodId": 2788,
+    "marketHashName": "Souvenir Tec-9 | Groundwater (Minimal Wear)",
+    "yyypSellPrice": 29.0
+  },
+  {
+    "goodId": 2789,
+    "marketHashName": "Souvenir Tec-9 | Groundwater (Well-Worn)",
+    "yyypSellPrice": 0.0
+  },
+  {
+    "goodId": 2790,
+    "marketHashName": "Souvenir Tec-9 | Nuclear Threat (Battle-Scarred)",
+    "yyypSellPrice": 5000.0
+  },
+  {
+    "goodId": 2791,
+    "marketHashName": "Souvenir Tec-9 | Nuclear Threat (Field-Tested)",
+    "yyypSellPrice": 1399.0
+  },
+  {
+    "goodId": 2792,
+    "marketHashName": "Souvenir Tec-9 | Nuclear Threat (Minimal Wear)",
+    "yyypSellPrice": 2380.0
+  },
+  {
+    "goodId": 2793,
+    "marketHashName": "Souvenir Tec-9 | Nuclear Threat (Well-Worn)",
+    "yyypSellPrice": 1788.0
+  },
+  {
+    "goodId": 2794,
+    "marketHashName": "Souvenir Tec-9 | Red Quartz (Factory New)",
+    "yyypSellPrice": 98.8
+  },
+  {
+    "goodId": 2795,
+    "marketHashName": "Souvenir Tec-9 | Red Quartz (Field-Tested)",
+    "yyypSellPrice": 99.9
+  },
+  {
+    "goodId": 2796,
+    "marketHashName": "Souvenir Tec-9 | Red Quartz (Minimal Wear)",
+    "yyypSellPrice": 98.89
+  },
+  {
+    "goodId": 2797,
+    "marketHashName": "Souvenir Tec-9 | Toxic (Battle-Scarred)",
+    "yyypSellPrice": 133.97
+  },
+  {
+    "goodId": 2798,
+    "marketHashName": "Souvenir Tec-9 | Toxic (Factory New)",
+    "yyypSellPrice": 371.84
+  },
+  {
+    "goodId": 2799,
+    "marketHashName": "Souvenir Tec-9 | Toxic (Field-Tested)",
+    "yyypSellPrice": 81.22
+  },
+  {
+    "goodId": 2800,
+    "marketHashName": "Souvenir Tec-9 | Toxic (Minimal Wear)",
+    "yyypSellPrice": 139.4
+  },
+  {
     "goodId": 2801,
     "marketHashName": "Souvenir Tec-9 | Toxic (Well-Worn)",
     "yyypSellPrice": 1700.0
@@ -92998,256 +93248,6 @@
     "goodId": 18652,
     "marketHashName": "StatTrak™ Negev | Man-o'-war (Minimal Wear)",
     "yyypSellPrice": 2.81
-  },
-  {
-    "goodId": 18653,
-    "marketHashName": "StatTrak™ Negev | Lionfish (Field-Tested)",
-    "yyypSellPrice": 3.77
-  },
-  {
-    "goodId": 18654,
-    "marketHashName": "Negev | Lionfish (Minimal Wear)",
-    "yyypSellPrice": 3.69
-  },
-  {
-    "goodId": 18655,
-    "marketHashName": "Negev | Terrain (Field-Tested)",
-    "yyypSellPrice": 3.31
-  },
-  {
-    "goodId": 18656,
-    "marketHashName": "StatTrak™ Negev | dev_texture (Field-Tested)",
-    "yyypSellPrice": 3.38
-  },
-  {
-    "goodId": 18657,
-    "marketHashName": "Negev | dev_texture (Field-Tested)",
-    "yyypSellPrice": 2.34
-  },
-  {
-    "goodId": 18658,
-    "marketHashName": "StatTrak™ Negev | Man-o'-war (Field-Tested)",
-    "yyypSellPrice": 2.49
-  },
-  {
-    "goodId": 18659,
-    "marketHashName": "Negev | dev_texture (Factory New)",
-    "yyypSellPrice": 10.98
-  },
-  {
-    "goodId": 18660,
-    "marketHashName": "Negev | Bulkhead (Factory New)",
-    "yyypSellPrice": 2.01
-  },
-  {
-    "goodId": 18661,
-    "marketHashName": "Negev | Ultralight (Factory New)",
-    "yyypSellPrice": 2.59
-  },
-  {
-    "goodId": 18662,
-    "marketHashName": "Negev | Boroque Sand (Field-Tested)",
-    "yyypSellPrice": 18.61
-  },
-  {
-    "goodId": 18663,
-    "marketHashName": "StatTrak™ Negev | dev_texture (Factory New)",
-    "yyypSellPrice": 21.1
-  },
-  {
-    "goodId": 18664,
-    "marketHashName": "Negev | Power Loader (Battle-Scarred)",
-    "yyypSellPrice": 7.32
-  },
-  {
-    "goodId": 18665,
-    "marketHashName": "StatTrak™ Negev | Ultralight (Factory New)",
-    "yyypSellPrice": 3.28
-  },
-  {
-    "goodId": 18666,
-    "marketHashName": "Souvenir Negev | Infrastructure (Field-Tested)",
-    "yyypSellPrice": 28.0
-  },
-  {
-    "goodId": 18667,
-    "marketHashName": "Souvenir Negev | Nuclear Waste (Factory New)",
-    "yyypSellPrice": 36.98
-  },
-  {
-    "goodId": 18668,
-    "marketHashName": "Souvenir Negev | Bulkhead (Field-Tested)",
-    "yyypSellPrice": 2.1
-  },
-  {
-    "goodId": 18669,
-    "marketHashName": "Negev | Prototype (Factory New)",
-    "yyypSellPrice": 3.72
-  },
-  {
-    "goodId": 18670,
-    "marketHashName": "Negev | Loudmouth (Field-Tested)",
-    "yyypSellPrice": 4.74
-  },
-  {
-    "goodId": 18671,
-    "marketHashName": "Souvenir Negev | Bulkhead (Well-Worn)",
-    "yyypSellPrice": 3.47
-  },
-  {
-    "goodId": 18672,
-    "marketHashName": "StatTrak™ Negev | Terrain (Field-Tested)",
-    "yyypSellPrice": 3.63
-  },
-  {
-    "goodId": 18673,
-    "marketHashName": "Negev | Lionfish (Factory New)",
-    "yyypSellPrice": 10.49
-  },
-  {
-    "goodId": 18674,
-    "marketHashName": "StatTrak™ Negev | Drop Me (Minimal Wear)",
-    "yyypSellPrice": 1.14
-  },
-  {
-    "goodId": 18675,
-    "marketHashName": "StatTrak™ Negev | Lionfish (Minimal Wear)",
-    "yyypSellPrice": 7.42
-  },
-  {
-    "goodId": 18676,
-    "marketHashName": "Negev | dev_texture (Minimal Wear)",
-    "yyypSellPrice": 4.07
-  },
-  {
-    "goodId": 18677,
-    "marketHashName": "StatTrak™ Negev | Dazzle (Field-Tested)",
-    "yyypSellPrice": 2.27
-  },
-  {
-    "goodId": 18678,
-    "marketHashName": "Negev | dev_texture (Battle-Scarred)",
-    "yyypSellPrice": 2.29
-  },
-  {
-    "goodId": 18679,
-    "marketHashName": "Negev | Power Loader (Well-Worn)",
-    "yyypSellPrice": 7.0
-  },
-  {
-    "goodId": 18680,
-    "marketHashName": "StatTrak™ Negev | Drop Me (Field-Tested)",
-    "yyypSellPrice": 0.5
-  },
-  {
-    "goodId": 18681,
-    "marketHashName": "Negev | Terrain (Minimal Wear)",
-    "yyypSellPrice": 3.41
-  },
-  {
-    "goodId": 18682,
-    "marketHashName": "Negev | dev_texture (Well-Worn)",
-    "yyypSellPrice": 2.34
-  },
-  {
-    "goodId": 18683,
-    "marketHashName": "Negev | Dazzle (Minimal Wear)",
-    "yyypSellPrice": 9.89
-  },
-  {
-    "goodId": 18684,
-    "marketHashName": "Negev | Lionfish (Field-Tested)",
-    "yyypSellPrice": 2.42
-  },
-  {
-    "goodId": 18685,
-    "marketHashName": "Negev | Bratatat (Battle-Scarred)",
-    "yyypSellPrice": 24.98
-  },
-  {
-    "goodId": 18686,
-    "marketHashName": "Souvenir Negev | Bulkhead (Minimal Wear)",
-    "yyypSellPrice": 4.29
-  },
-  {
-    "goodId": 18687,
-    "marketHashName": "StatTrak™ Negev | Prototype (Minimal Wear)",
-    "yyypSellPrice": 3.94
-  },
-  {
-    "goodId": 18688,
-    "marketHashName": "Souvenir Negev | Bulkhead (Battle-Scarred)",
-    "yyypSellPrice": 2.98
-  },
-  {
-    "goodId": 18689,
-    "marketHashName": "StatTrak™ Negev | Prototype (Factory New)",
-    "yyypSellPrice": 9.67
-  },
-  {
-    "goodId": 18690,
-    "marketHashName": "Negev | Phoenix Stencil (Minimal Wear)",
-    "yyypSellPrice": 139.98
-  },
-  {
-    "goodId": 18691,
-    "marketHashName": "Negev | Drop Me (Factory New)",
-    "yyypSellPrice": 4.32
-  },
-  {
-    "goodId": 18692,
-    "marketHashName": "Negev | Desert-Strike (Factory New)",
-    "yyypSellPrice": 3.96
-  },
-  {
-    "goodId": 18693,
-    "marketHashName": "Negev | Bratatat (Field-Tested)",
-    "yyypSellPrice": 13.67
-  },
-  {
-    "goodId": 18694,
-    "marketHashName": "Negev | Loudmouth (Well-Worn)",
-    "yyypSellPrice": 5.36
-  },
-  {
-    "goodId": 18695,
-    "marketHashName": "StatTrak™ Negev | Lionfish (Factory New)",
-    "yyypSellPrice": 17.79
-  },
-  {
-    "goodId": 18696,
-    "marketHashName": "Negev | Boroque Sand (Minimal Wear)",
-    "yyypSellPrice": 26.87
-  },
-  {
-    "goodId": 18697,
-    "marketHashName": "Souvenir Negev | Infrastructure (Factory New)",
-    "yyypSellPrice": 35.89
-  },
-  {
-    "goodId": 18698,
-    "marketHashName": "Negev | Phoenix Stencil (Factory New)",
-    "yyypSellPrice": 127.99
-  },
-  {
-    "goodId": 18699,
-    "marketHashName": "Negev | Boroque Sand (Well-Worn)",
-    "yyypSellPrice": 17.99
-  },
-  {
-    "goodId": 18700,
-    "marketHashName": "Negev | Nuclear Waste (Factory New)",
-    "yyypSellPrice": 34.47
-  },
-  {
-    "goodId": 18701,
-    "marketHashName": "Negev | Bratatat (Minimal Wear)",
-    "yyypSellPrice": 21.12
-  },
-  {
-    "goodId": 18702,
-    "marketHashName": "Souvenir Negev | Bulkhead (Factory New)",
-    "yyypSellPrice": 7.76
   },
   {
     "goodId": 18703,
