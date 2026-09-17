@@ -517,7 +517,7 @@
   {
     "goodId": 104,
     "marketHashName": "AK-47 | Jet Set (Well-Worn)",
-    "yyypSellPrice": 2594.0
+    "yyypSellPrice": 2593.5
   },
   {
     "goodId": 105,
@@ -557,7 +557,7 @@
   {
     "goodId": 112,
     "marketHashName": "AK-47 | Neon Revolution (Field-Tested)",
-    "yyypSellPrice": 758.9
+    "yyypSellPrice": 758.4
   },
   {
     "goodId": 113,
@@ -1202,7 +1202,7 @@
   {
     "goodId": 241,
     "marketHashName": "AWP | Corticera (Field-Tested)",
-    "yyypSellPrice": 124.5
+    "yyypSellPrice": 124.0
   },
   {
     "goodId": 242,
@@ -3657,7 +3657,7 @@
   {
     "goodId": 732,
     "marketHashName": "ESL One Katowice 2015 Legends (Holo-Foil)",
-    "yyypSellPrice": 1165.0
+    "yyypSellPrice": 1164.5
   },
   {
     "goodId": 733,
@@ -3797,7 +3797,7 @@
   {
     "goodId": 760,
     "marketHashName": "FAMAS | Hexane (Factory New)",
-    "yyypSellPrice": 79.3
+    "yyypSellPrice": 79.2
   },
   {
     "goodId": 761,
@@ -4547,7 +4547,7 @@
   {
     "goodId": 910,
     "marketHashName": "Five-SeveN | Violent Daimyo (Minimal Wear)",
-    "yyypSellPrice": 3.94
+    "yyypSellPrice": 3.9
   },
   {
     "goodId": 911,
@@ -5102,7 +5102,7 @@
   {
     "goodId": 1021,
     "marketHashName": "Galil AR | Firefight (Factory New)",
-    "yyypSellPrice": 70.99
+    "yyypSellPrice": 70.0
   },
   {
     "goodId": 1022,
@@ -6142,7 +6142,7 @@
   {
     "goodId": 1229,
     "marketHashName": "M4A1-S | Cyrex (Well-Worn)",
-    "yyypSellPrice": 1158.05
+    "yyypSellPrice": 1157.55
   },
   {
     "goodId": 1230,
@@ -6392,7 +6392,7 @@
   {
     "goodId": 1279,
     "marketHashName": "M4A1-S | Nitro (Minimal Wear)",
-    "yyypSellPrice": 6.99
+    "yyypSellPrice": 7.0
   },
   {
     "goodId": 1280,
@@ -6987,7 +6987,7 @@
   {
     "goodId": 1398,
     "marketHashName": "MAC-10 | Candy Apple (Minimal Wear)",
-    "yyypSellPrice": 1.15
+    "yyypSellPrice": 1.16
   },
   {
     "goodId": 1399,
@@ -8792,7 +8792,7 @@
   {
     "goodId": 1759,
     "marketHashName": "P2000 | Silver (Factory New)",
-    "yyypSellPrice": 569.5
+    "yyypSellPrice": 570.0
   },
   {
     "goodId": 1760,
@@ -9617,7 +9617,7 @@
   {
     "goodId": 1924,
     "marketHashName": "P90 | Elite Build (Battle-Scarred)",
-    "yyypSellPrice": 2.73
+    "yyypSellPrice": 2.72
   },
   {
     "goodId": 1925,
@@ -10057,7 +10057,7 @@
   {
     "goodId": 2012,
     "marketHashName": "PP-Bizon | Brass (Field-Tested)",
-    "yyypSellPrice": 0.92
+    "yyypSellPrice": 0.91
   },
   {
     "goodId": 2013,
@@ -10637,7 +10637,7 @@
   {
     "goodId": 2128,
     "marketHashName": "R8 Revolver | Reboot (Field-Tested)",
-    "yyypSellPrice": 8.69
+    "yyypSellPrice": 8.0
   },
   {
     "goodId": 2129,
@@ -12867,7 +12867,7 @@
   {
     "goodId": 2574,
     "marketHashName": "Souvenir MAC-10 | Candy Apple (Minimal Wear)",
-    "yyypSellPrice": 9.83
+    "yyypSellPrice": 9.82
   },
   {
     "goodId": 2575,
@@ -14332,7 +14332,7 @@
   {
     "goodId": 2867,
     "marketHashName": "StatTrak™ AK-47 | Cartel (Well-Worn)",
-    "yyypSellPrice": 499.5
+    "yyypSellPrice": 499.0
   },
   {
     "goodId": 2868,
@@ -14982,7 +14982,7 @@
   {
     "goodId": 2997,
     "marketHashName": "StatTrak™ AWP | Graphite (Factory New)",
-    "yyypSellPrice": 1989.33
+    "yyypSellPrice": 1988.99
   },
   {
     "goodId": 2998,
@@ -15417,7 +15417,7 @@
   {
     "goodId": 3084,
     "marketHashName": "StatTrak™ Desert Eagle | Bronze Deco (Battle-Scarred)",
-    "yyypSellPrice": 16.93
+    "yyypSellPrice": 16.92
   },
   {
     "goodId": 3085,
@@ -16387,7 +16387,7 @@
   {
     "goodId": 3278,
     "marketHashName": "StatTrak™ Five-SeveN | Violent Daimyo (Field-Tested)",
-    "yyypSellPrice": 4.15
+    "yyypSellPrice": 4.14
   },
   {
     "goodId": 3279,
@@ -106250,256 +106250,6 @@
     "yyypSellPrice": 26.8
   },
   {
-    "goodId": 21257,
-    "marketHashName": "Sticker | Liazz (Gold) | Shanghai 2024",
-    "yyypSellPrice": 9.99
-  },
-  {
-    "goodId": 21259,
-    "marketHashName": "Sticker | Perfecto (Gold) | Shanghai 2024",
-    "yyypSellPrice": 13.99
-  },
-  {
-    "goodId": 21260,
-    "marketHashName": "Sticker | Sonic (Gold) | Shanghai 2024",
-    "yyypSellPrice": 8.0
-  },
-  {
-    "goodId": 21261,
-    "marketHashName": "Sticker | Summer (Gold) | Shanghai 2024",
-    "yyypSellPrice": 24.89
-  },
-  {
-    "goodId": 21262,
-    "marketHashName": "Sticker | TRY (Gold) | Shanghai 2024",
-    "yyypSellPrice": 12.0
-  },
-  {
-    "goodId": 21263,
-    "marketHashName": "Sticker | VINI (Gold) | Shanghai 2024",
-    "yyypSellPrice": 18.56
-  },
-  {
-    "goodId": 21264,
-    "marketHashName": "Sticker | aNdu (Gold) | Shanghai 2024",
-    "yyypSellPrice": 13.8
-  },
-  {
-    "goodId": 21265,
-    "marketHashName": "Sticker | aliStair (Gold) | Shanghai 2024",
-    "yyypSellPrice": 8.97
-  },
-  {
-    "goodId": 21266,
-    "marketHashName": "Sticker | decenty (Gold) | Shanghai 2024",
-    "yyypSellPrice": 11.0
-  },
-  {
-    "goodId": 21267,
-    "marketHashName": "Sticker | dexter (Gold) | Shanghai 2024",
-    "yyypSellPrice": 460.0
-  },
-  {
-    "goodId": 21268,
-    "marketHashName": "Sticker | drop (Gold) | Shanghai 2024",
-    "yyypSellPrice": 11.25
-  },
-  {
-    "goodId": 21269,
-    "marketHashName": "Sticker | exit (Gold) | Shanghai 2024",
-    "yyypSellPrice": 9.0
-  },
-  {
-    "goodId": 21270,
-    "marketHashName": "Sticker | fEAR (Gold) | Shanghai 2024",
-    "yyypSellPrice": 12.9
-  },
-  {
-    "goodId": 21271,
-    "marketHashName": "Sticker | felps (Gold) | Shanghai 2024",
-    "yyypSellPrice": 9.96
-  },
-  {
-    "goodId": 21272,
-    "marketHashName": "Sticker | insani (Gold) | Shanghai 2024",
-    "yyypSellPrice": 13.89
-  },
-  {
-    "goodId": 21273,
-    "marketHashName": "Sticker | jackasmo (Gold) | Shanghai 2024",
-    "yyypSellPrice": 18.61
-  },
-  {
-    "goodId": 21274,
-    "marketHashName": "Sticker | jambo (Gold) | Shanghai 2024",
-    "yyypSellPrice": 10.8
-  },
-  {
-    "goodId": 21275,
-    "marketHashName": "Sticker | noway (Gold) | Shanghai 2024",
-    "yyypSellPrice": 78.0
-  },
-  {
-    "goodId": 21276,
-    "marketHashName": "Sticker | phzy (Gold) | Shanghai 2024",
-    "yyypSellPrice": 12.89
-  },
-  {
-    "goodId": 21277,
-    "marketHashName": "Sticker | s-chilla (Gold) | Shanghai 2024",
-    "yyypSellPrice": 32.86
-  },
-  {
-    "goodId": 21278,
-    "marketHashName": "Sticker | saffee (Gold) | Shanghai 2024",
-    "yyypSellPrice": 11.0
-  },
-  {
-    "goodId": 21279,
-    "marketHashName": "Sticker | sl3nd (Gold) | Shanghai 2024",
-    "yyypSellPrice": 9.41
-  },
-  {
-    "goodId": 21280,
-    "marketHashName": "Sticker | somebody (Gold) | Shanghai 2024",
-    "yyypSellPrice": 45.77
-  },
-  {
-    "goodId": 21281,
-    "marketHashName": "Sticker | stanislaw (Gold) | Shanghai 2024",
-    "yyypSellPrice": 12.7
-  },
-  {
-    "goodId": 21282,
-    "marketHashName": "Sticker | susp (Gold) | Shanghai 2024",
-    "yyypSellPrice": 11.38
-  },
-  {
-    "goodId": 21283,
-    "marketHashName": "Sticker | vexite (Gold) | Shanghai 2024",
-    "yyypSellPrice": 7.4
-  },
-  {
-    "goodId": 21284,
-    "marketHashName": "Sticker | zeRRoFIX (Gold) | Shanghai 2024",
-    "yyypSellPrice": 11.36
-  },
-  {
-    "goodId": 21285,
-    "marketHashName": "Sticker | ztr (Gold) | Shanghai 2024",
-    "yyypSellPrice": 11.39
-  },
-  {
-    "goodId": 21286,
-    "marketHashName": "Sticker | Ax1Le (Holo) | Shanghai 2024",
-    "yyypSellPrice": 5.07
-  },
-  {
-    "goodId": 21287,
-    "marketHashName": "Sticker | Boombl4 (Holo) | Shanghai 2024",
-    "yyypSellPrice": 2.73
-  },
-  {
-    "goodId": 21288,
-    "marketHashName": "Sticker | ChildKing (Holo) | Shanghai 2024",
-    "yyypSellPrice": 16.81
-  },
-  {
-    "goodId": 21289,
-    "marketHashName": "Sticker | FL4MUS (Holo) | Shanghai 2024",
-    "yyypSellPrice": 2.22
-  },
-  {
-    "goodId": 21290,
-    "marketHashName": "Sticker | Heavygod (Holo) | Shanghai 2024",
-    "yyypSellPrice": 4.98
-  },
-  {
-    "goodId": 21291,
-    "marketHashName": "Sticker | ICY (Holo) | Shanghai 2024",
-    "yyypSellPrice": 3.93
-  },
-  {
-    "goodId": 21292,
-    "marketHashName": "Sticker | INS (Holo) | Shanghai 2024",
-    "yyypSellPrice": 8.27
-  },
-  {
-    "goodId": 21293,
-    "marketHashName": "Sticker | JBa (Holo) | Shanghai 2024",
-    "yyypSellPrice": 10.99
-  },
-  {
-    "goodId": 21294,
-    "marketHashName": "Sticker | Kaze (Holo) | Shanghai 2024",
-    "yyypSellPrice": 15.89
-  },
-  {
-    "goodId": 21295,
-    "marketHashName": "Sticker | L1haNg (Holo) | Shanghai 2024",
-    "yyypSellPrice": 9.0
-  },
-  {
-    "goodId": 21296,
-    "marketHashName": "Sticker | Liazz (Holo) | Shanghai 2024",
-    "yyypSellPrice": 3.96
-  },
-  {
-    "goodId": 21298,
-    "marketHashName": "Sticker | Perfecto (Holo) | Shanghai 2024",
-    "yyypSellPrice": 3.39
-  },
-  {
-    "goodId": 21299,
-    "marketHashName": "Sticker | Sonic (Holo) | Shanghai 2024",
-    "yyypSellPrice": 2.33
-  },
-  {
-    "goodId": 21300,
-    "marketHashName": "Sticker | Summer (Holo) | Shanghai 2024",
-    "yyypSellPrice": 13.22
-  },
-  {
-    "goodId": 21301,
-    "marketHashName": "Sticker | TRY (Holo) | Shanghai 2024",
-    "yyypSellPrice": 3.82
-  },
-  {
-    "goodId": 21302,
-    "marketHashName": "Sticker | VINI (Holo) | Shanghai 2024",
-    "yyypSellPrice": 4.48
-  },
-  {
-    "goodId": 21303,
-    "marketHashName": "Sticker | aNdu (Holo) | Shanghai 2024",
-    "yyypSellPrice": 4.28
-  },
-  {
-    "goodId": 21304,
-    "marketHashName": "Sticker | aliStair (Holo) | Shanghai 2024",
-    "yyypSellPrice": 2.89
-  },
-  {
-    "goodId": 21305,
-    "marketHashName": "Sticker | decenty (Holo) | Shanghai 2024",
-    "yyypSellPrice": 3.85
-  },
-  {
-    "goodId": 21306,
-    "marketHashName": "Sticker | dexter (Holo) | Shanghai 2024",
-    "yyypSellPrice": 85.99
-  },
-  {
-    "goodId": 21307,
-    "marketHashName": "Sticker | drop (Holo) | Shanghai 2024",
-    "yyypSellPrice": 3.96
-  },
-  {
-    "goodId": 21308,
-    "marketHashName": "Sticker | exit (Holo) | Shanghai 2024",
-    "yyypSellPrice": 4.01
-  },
-  {
     "goodId": 21309,
     "marketHashName": "Sticker | fEAR (Holo) | Shanghai 2024",
     "yyypSellPrice": 2.95
@@ -112248,6 +111998,256 @@
     "goodId": 22460,
     "marketHashName": "Sticker | m0NESY (Gold) | Austin 2025",
     "yyypSellPrice": 139.36
+  },
+  {
+    "goodId": 22461,
+    "marketHashName": "Sticker | molodoy (Gold) | Austin 2025",
+    "yyypSellPrice": 89.9
+  },
+  {
+    "goodId": 22462,
+    "marketHashName": "Sticker | rain (Gold) | Austin 2025",
+    "yyypSellPrice": 53.3
+  },
+  {
+    "goodId": 22463,
+    "marketHashName": "Sticker | reck (Gold) | Austin 2025",
+    "yyypSellPrice": 12.9
+  },
+  {
+    "goodId": 22464,
+    "marketHashName": "Sticker | s1n (Gold) | Austin 2025",
+    "yyypSellPrice": 9.94
+  },
+  {
+    "goodId": 22465,
+    "marketHashName": "Sticker | saffee (Gold) | Austin 2025",
+    "yyypSellPrice": 11.5
+  },
+  {
+    "goodId": 22466,
+    "marketHashName": "Sticker | skullz (Gold) | Austin 2025",
+    "yyypSellPrice": 9.94
+  },
+  {
+    "goodId": 22467,
+    "marketHashName": "Sticker | slaxz- (Gold) | Austin 2025",
+    "yyypSellPrice": 9.94
+  },
+  {
+    "goodId": 22468,
+    "marketHashName": "Sticker | snow (Gold) | Austin 2025",
+    "yyypSellPrice": 14.6
+  },
+  {
+    "goodId": 22469,
+    "marketHashName": "Sticker | yuurih (Gold) | Austin 2025",
+    "yyypSellPrice": 13.28
+  },
+  {
+    "goodId": 22470,
+    "marketHashName": "Sticker | EliGE (Holo) | Austin 2025",
+    "yyypSellPrice": 9.25
+  },
+  {
+    "goodId": 22471,
+    "marketHashName": "Sticker | Ex3rcice (Holo) | Austin 2025",
+    "yyypSellPrice": 1.49
+  },
+  {
+    "goodId": 22472,
+    "marketHashName": "Sticker | FL1T (Holo) | Austin 2025",
+    "yyypSellPrice": 1.61
+  },
+  {
+    "goodId": 22473,
+    "marketHashName": "Sticker | FL4MUS (Holo) | Austin 2025",
+    "yyypSellPrice": 1.94
+  },
+  {
+    "goodId": 22474,
+    "marketHashName": "Sticker | FalleN (Holo) | Austin 2025",
+    "yyypSellPrice": 25.9
+  },
+  {
+    "goodId": 22475,
+    "marketHashName": "Sticker | Graviti (Holo) | Austin 2025",
+    "yyypSellPrice": 2.37
+  },
+  {
+    "goodId": 22476,
+    "marketHashName": "Sticker | ICY (Holo) | Austin 2025",
+    "yyypSellPrice": 2.14
+  },
+  {
+    "goodId": 22477,
+    "marketHashName": "Sticker | KSCERATO (Holo) | Austin 2025",
+    "yyypSellPrice": 4.96
+  },
+  {
+    "goodId": 22478,
+    "marketHashName": "Sticker | Lake (Holo) | Austin 2025",
+    "yyypSellPrice": 3.7
+  },
+  {
+    "goodId": 22479,
+    "marketHashName": "Sticker | Lucaozy (Holo) | Austin 2025",
+    "yyypSellPrice": 2.02
+  },
+  {
+    "goodId": 22480,
+    "marketHashName": "Sticker | Lucky (Holo) | Austin 2025",
+    "yyypSellPrice": 9.08
+  },
+  {
+    "goodId": 22481,
+    "marketHashName": "Sticker | Magisk (Holo) | Austin 2025",
+    "yyypSellPrice": 5.35
+  },
+  {
+    "goodId": 22482,
+    "marketHashName": "Sticker | Maka (Holo) | Austin 2025",
+    "yyypSellPrice": 2.35
+  },
+  {
+    "goodId": 22483,
+    "marketHashName": "Sticker | NQZ (Holo) | Austin 2025",
+    "yyypSellPrice": 2.77
+  },
+  {
+    "goodId": 22484,
+    "marketHashName": "Sticker | NiKo (Holo) | Austin 2025",
+    "yyypSellPrice": 35.5
+  },
+  {
+    "goodId": 22485,
+    "marketHashName": "Sticker | Swisher (Holo) | Austin 2025",
+    "yyypSellPrice": 0.99
+  },
+  {
+    "goodId": 22486,
+    "marketHashName": "Sticker | TeSeS (Holo) | Austin 2025",
+    "yyypSellPrice": 5.1
+  },
+  {
+    "goodId": 22487,
+    "marketHashName": "Sticker | biguzera (Holo) | Austin 2025",
+    "yyypSellPrice": 1.25
+  },
+  {
+    "goodId": 22488,
+    "marketHashName": "Sticker | bodyy (Holo) | Austin 2025",
+    "yyypSellPrice": 1.74
+  },
+  {
+    "goodId": 22489,
+    "marketHashName": "Sticker | brnz4n (Holo) | Austin 2025",
+    "yyypSellPrice": 1.19
+  },
+  {
+    "goodId": 22490,
+    "marketHashName": "Sticker | broky (Holo) | Austin 2025",
+    "yyypSellPrice": 5.8
+  },
+  {
+    "goodId": 22491,
+    "marketHashName": "Sticker | dgt (Holo) | Austin 2025",
+    "yyypSellPrice": 2.38
+  },
+  {
+    "goodId": 22492,
+    "marketHashName": "Sticker | electronic (Holo) | Austin 2025",
+    "yyypSellPrice": 2.9
+  },
+  {
+    "goodId": 22493,
+    "marketHashName": "Sticker | exit (Holo) | Austin 2025",
+    "yyypSellPrice": 3.62
+  },
+  {
+    "goodId": 22494,
+    "marketHashName": "Sticker | fame (Holo) | Austin 2025",
+    "yyypSellPrice": 2.99
+  },
+  {
+    "goodId": 22495,
+    "marketHashName": "Sticker | frozen (Holo) | Austin 2025",
+    "yyypSellPrice": 9.5
+  },
+  {
+    "goodId": 22496,
+    "marketHashName": "Sticker | insani (Holo) | Austin 2025",
+    "yyypSellPrice": 3.83
+  },
+  {
+    "goodId": 22497,
+    "marketHashName": "Sticker | karrigan (Holo) | Austin 2025",
+    "yyypSellPrice": 12.29
+  },
+  {
+    "goodId": 22498,
+    "marketHashName": "Sticker | kyxsan (Holo) | Austin 2025",
+    "yyypSellPrice": 2.97
+  },
+  {
+    "goodId": 22499,
+    "marketHashName": "Sticker | m0NESY (Holo) | Austin 2025",
+    "yyypSellPrice": 26.6
+  },
+  {
+    "goodId": 22500,
+    "marketHashName": "Sticker | molodoy (Holo) | Austin 2025",
+    "yyypSellPrice": 12.99
+  },
+  {
+    "goodId": 22501,
+    "marketHashName": "Sticker | rain (Holo) | Austin 2025",
+    "yyypSellPrice": 9.6
+  },
+  {
+    "goodId": 22502,
+    "marketHashName": "Sticker | reck (Holo) | Austin 2025",
+    "yyypSellPrice": 1.88
+  },
+  {
+    "goodId": 22503,
+    "marketHashName": "Sticker | s1n (Holo) | Austin 2025",
+    "yyypSellPrice": 1.67
+  },
+  {
+    "goodId": 22504,
+    "marketHashName": "Sticker | saffee (Holo) | Austin 2025",
+    "yyypSellPrice": 2.97
+  },
+  {
+    "goodId": 22505,
+    "marketHashName": "Sticker | skullz (Holo) | Austin 2025",
+    "yyypSellPrice": 2.28
+  },
+  {
+    "goodId": 22506,
+    "marketHashName": "Sticker | slaxz- (Holo) | Austin 2025",
+    "yyypSellPrice": 1.25
+  },
+  {
+    "goodId": 22507,
+    "marketHashName": "Sticker | snow (Holo) | Austin 2025",
+    "yyypSellPrice": 3.15
+  },
+  {
+    "goodId": 22508,
+    "marketHashName": "Sticker | yuurih (Holo) | Austin 2025",
+    "yyypSellPrice": 3.6
+  },
+  {
+    "goodId": 22509,
+    "marketHashName": "Sticker | EliGE (Foil) | Austin 2025",
+    "yyypSellPrice": 2.3
+  },
+  {
+    "goodId": 22510,
+    "marketHashName": "Sticker | Ex3rcice (Foil) | Austin 2025",
+    "yyypSellPrice": 0.2
   },
   {
     "goodId": 22511,
