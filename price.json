@@ -297,7 +297,7 @@
   {
     "goodId": 60,
     "marketHashName": "AK-47 | Case Hardened (Minimal Wear)",
-    "yyypSellPrice": 1672.99
+    "yyypSellPrice": 1672.0
   },
   {
     "goodId": 61,
@@ -337,7 +337,7 @@
   {
     "goodId": 68,
     "marketHashName": "AK-47 | Emerald Pinstripe (Field-Tested)",
-    "yyypSellPrice": 12.88
+    "yyypSellPrice": 12.89
   },
   {
     "goodId": 69,
@@ -427,7 +427,7 @@
   {
     "goodId": 86,
     "marketHashName": "AK-47 | Fuel Injector (Factory New)",
-    "yyypSellPrice": 2180.0
+    "yyypSellPrice": 2179.5
   },
   {
     "goodId": 87,
@@ -562,7 +562,7 @@
   {
     "goodId": 113,
     "marketHashName": "AK-47 | Neon Revolution (Minimal Wear)",
-    "yyypSellPrice": 752.5
+    "yyypSellPrice": 752.0
   },
   {
     "goodId": 114,
@@ -597,7 +597,7 @@
   {
     "goodId": 120,
     "marketHashName": "AK-47 | Point Disarray (Factory New)",
-    "yyypSellPrice": 360.0
+    "yyypSellPrice": 359.5
   },
   {
     "goodId": 121,
@@ -697,7 +697,7 @@
   {
     "goodId": 140,
     "marketHashName": "AK-47 | Safari Mesh (Field-Tested)",
-    "yyypSellPrice": 0.35
+    "yyypSellPrice": 0.46
   },
   {
     "goodId": 141,
@@ -712,7 +712,7 @@
   {
     "goodId": 143,
     "marketHashName": "AK-47 | The Empress (Battle-Scarred)",
-    "yyypSellPrice": 650.36
+    "yyypSellPrice": 650.33
   },
   {
     "goodId": 144,
@@ -757,7 +757,7 @@
   {
     "goodId": 152,
     "marketHashName": "AK-47 | Vulcan (Well-Worn)",
-    "yyypSellPrice": 846.0
+    "yyypSellPrice": 845.0
   },
   {
     "goodId": 153,
@@ -1002,7 +1002,7 @@
   {
     "goodId": 201,
     "marketHashName": "AUG | Fleet Flock (Well-Worn)",
-    "yyypSellPrice": 78.17
+    "yyypSellPrice": 78.16
   },
   {
     "goodId": 202,
@@ -1192,7 +1192,7 @@
   {
     "goodId": 239,
     "marketHashName": "AWP | BOOM (Minimal Wear)",
-    "yyypSellPrice": 654.0
+    "yyypSellPrice": 654.5
   },
   {
     "goodId": 240,
@@ -1297,7 +1297,7 @@
   {
     "goodId": 260,
     "marketHashName": "AWP | Graphite (Minimal Wear)",
-    "yyypSellPrice": 850.98
+    "yyypSellPrice": 850.0
   },
   {
     "goodId": 261,
@@ -2377,7 +2377,7 @@
   {
     "goodId": 476,
     "marketHashName": "CZ75-Auto | Red Astor (Factory New)",
-    "yyypSellPrice": 20.63
+    "yyypSellPrice": 20.62
   },
   {
     "goodId": 477,
@@ -2407,7 +2407,7 @@
   {
     "goodId": 482,
     "marketHashName": "CZ75-Auto | Tacticat (Field-Tested)",
-    "yyypSellPrice": 7.16
+    "yyypSellPrice": 7.15
   },
   {
     "goodId": 483,
@@ -2422,7 +2422,7 @@
   {
     "goodId": 485,
     "marketHashName": "CZ75-Auto | The Fuschia Is Now (Factory New)",
-    "yyypSellPrice": 182.93
+    "yyypSellPrice": 182.91
   },
   {
     "goodId": 486,
@@ -2697,7 +2697,7 @@
   {
     "goodId": 540,
     "marketHashName": "Desert Eagle | Bronze Deco (Well-Worn)",
-    "yyypSellPrice": 1.84
+    "yyypSellPrice": 1.83
   },
   {
     "goodId": 541,
@@ -3292,7 +3292,7 @@
   {
     "goodId": 659,
     "marketHashName": "Dual Berettas | Contractor (Battle-Scarred)",
-    "yyypSellPrice": 0.02
+    "yyypSellPrice": 0.04
   },
   {
     "goodId": 660,
@@ -3392,7 +3392,7 @@
   {
     "goodId": 679,
     "marketHashName": "Dual Berettas | Marina (Field-Tested)",
-    "yyypSellPrice": 29.33
+    "yyypSellPrice": 29.34
   },
   {
     "goodId": 680,
@@ -3432,7 +3432,7 @@
   {
     "goodId": 687,
     "marketHashName": "Dual Berettas | Panther (Field-Tested)",
-    "yyypSellPrice": 23.0
+    "yyypSellPrice": 22.98
   },
   {
     "goodId": 688,
@@ -3767,7 +3767,7 @@
   {
     "goodId": 754,
     "marketHashName": "FAMAS | Djinn (Factory New)",
-    "yyypSellPrice": 199.69
+    "yyypSellPrice": 199.68
   },
   {
     "goodId": 755,
@@ -3812,12 +3812,12 @@
   {
     "goodId": 763,
     "marketHashName": "FAMAS | Macabre (Battle-Scarred)",
-    "yyypSellPrice": 42.69
+    "yyypSellPrice": 42.68
   },
   {
     "goodId": 764,
     "marketHashName": "FAMAS | Macabre (Factory New)",
-    "yyypSellPrice": 58.96
+    "yyypSellPrice": 58.95
   },
   {
     "goodId": 765,
@@ -3897,7 +3897,7 @@
   {
     "goodId": 780,
     "marketHashName": "FAMAS | Pulse (Minimal Wear)",
-    "yyypSellPrice": 59.95
+    "yyypSellPrice": 59.94
   },
   {
     "goodId": 781,
@@ -3917,7 +3917,7 @@
   {
     "goodId": 784,
     "marketHashName": "FAMAS | Roll Cage (Field-Tested)",
-    "yyypSellPrice": 739.43
+    "yyypSellPrice": 739.42
   },
   {
     "goodId": 785,
@@ -4192,7 +4192,7 @@
   {
     "goodId": 839,
     "marketHashName": "Five-SeveN | Forest Night (Factory New)",
-    "yyypSellPrice": 8.36
+    "yyypSellPrice": 8.34
   },
   {
     "goodId": 840,
@@ -4272,7 +4272,7 @@
   {
     "goodId": 855,
     "marketHashName": "Five-SeveN | Hyper Beast (Field-Tested)",
-    "yyypSellPrice": 1536.7
+    "yyypSellPrice": 1536.69
   },
   {
     "goodId": 856,
@@ -4337,7 +4337,7 @@
   {
     "goodId": 868,
     "marketHashName": "Five-SeveN | Monkey Business (Minimal Wear)",
-    "yyypSellPrice": 173.39
+    "yyypSellPrice": 173.0
   },
   {
     "goodId": 869,
@@ -4467,7 +4467,7 @@
   {
     "goodId": 894,
     "marketHashName": "Five-SeveN | Scumbria (Minimal Wear)",
-    "yyypSellPrice": 2.18
+    "yyypSellPrice": 2.17
   },
   {
     "goodId": 895,
@@ -4482,7 +4482,7 @@
   {
     "goodId": 897,
     "marketHashName": "Five-SeveN | Silver Quartz (Field-Tested)",
-    "yyypSellPrice": 0.72
+    "yyypSellPrice": 0.71
   },
   {
     "goodId": 898,
@@ -4507,7 +4507,7 @@
   {
     "goodId": 902,
     "marketHashName": "Five-SeveN | Triumvirate (Field-Tested)",
-    "yyypSellPrice": 11.23
+    "yyypSellPrice": 11.22
   },
   {
     "goodId": 903,
@@ -4807,12 +4807,12 @@
   {
     "goodId": 962,
     "marketHashName": "G3SG1 | Orange Kimono (Factory New)",
-    "yyypSellPrice": 63.72
+    "yyypSellPrice": 63.71
   },
   {
     "goodId": 963,
     "marketHashName": "G3SG1 | Orange Kimono (Field-Tested)",
-    "yyypSellPrice": 33.93
+    "yyypSellPrice": 33.92
   },
   {
     "goodId": 964,
@@ -5172,7 +5172,7 @@
   {
     "goodId": 1035,
     "marketHashName": "Galil AR | Orange DDPAT (Field-Tested)",
-    "yyypSellPrice": 125.27
+    "yyypSellPrice": 125.26
   },
   {
     "goodId": 1036,
@@ -5242,7 +5242,7 @@
   {
     "goodId": 1049,
     "marketHashName": "Galil AR | Sandstorm (Field-Tested)",
-    "yyypSellPrice": 9.09
+    "yyypSellPrice": 9.07
   },
   {
     "goodId": 1050,
@@ -5362,7 +5362,7 @@
   {
     "goodId": 1073,
     "marketHashName": "Galil AR | Urban Rubble (Factory New)",
-    "yyypSellPrice": 67.89
+    "yyypSellPrice": 67.7
   },
   {
     "goodId": 1074,
@@ -5427,7 +5427,7 @@
   {
     "goodId": 1086,
     "marketHashName": "Gamma 2 Case",
-    "yyypSellPrice": 18.45
+    "yyypSellPrice": 18.35
   },
   {
     "goodId": 1087,
@@ -5527,7 +5527,7 @@
   {
     "goodId": 1106,
     "marketHashName": "Glock-18 | Catacombs (Factory New)",
-    "yyypSellPrice": 27.47
+    "yyypSellPrice": 27.37
   },
   {
     "goodId": 1107,
@@ -5742,7 +5742,7 @@
   {
     "goodId": 1149,
     "marketHashName": "Glock-18 | Royal Legion (Minimal Wear)",
-    "yyypSellPrice": 28.0
+    "yyypSellPrice": 28.3
   },
   {
     "goodId": 1150,
@@ -5812,7 +5812,7 @@
   {
     "goodId": 1163,
     "marketHashName": "Glock-18 | Wasteland Rebel (Factory New)",
-    "yyypSellPrice": 755.0
+    "yyypSellPrice": 757.5
   },
   {
     "goodId": 1164,
@@ -5837,7 +5837,7 @@
   {
     "goodId": 1168,
     "marketHashName": "Glock-18 | Water Elemental (Factory New)",
-    "yyypSellPrice": 263.0
+    "yyypSellPrice": 262.5
   },
   {
     "goodId": 1169,
@@ -5992,7 +5992,7 @@
   {
     "goodId": 1199,
     "marketHashName": "M4A1-S | Atomic Alloy (Well-Worn)",
-    "yyypSellPrice": 147.44
+    "yyypSellPrice": 146.94
   },
   {
     "goodId": 1200,
@@ -6012,7 +6012,7 @@
   {
     "goodId": 1203,
     "marketHashName": "M4A1-S | Basilisk (Minimal Wear)",
-    "yyypSellPrice": 61.18
+    "yyypSellPrice": 61.27
   },
   {
     "goodId": 1204,
@@ -6162,7 +6162,7 @@
   {
     "goodId": 1233,
     "marketHashName": "M4A1-S | Decimator (Factory New)",
-    "yyypSellPrice": 243.5
+    "yyypSellPrice": 244.0
   },
   {
     "goodId": 1234,
@@ -6192,7 +6192,7 @@
   {
     "goodId": 1239,
     "marketHashName": "M4A1-S | Flashback (Field-Tested)",
-    "yyypSellPrice": 22.27
+    "yyypSellPrice": 22.18
   },
   {
     "goodId": 1240,
@@ -6427,7 +6427,7 @@
   {
     "goodId": 1286,
     "marketHashName": "M4A4 | Asiimov (Battle-Scarred)",
-    "yyypSellPrice": 501.7
+    "yyypSellPrice": 501.69
   },
   {
     "goodId": 1287,
@@ -6467,7 +6467,7 @@
   {
     "goodId": 1294,
     "marketHashName": "M4A4 | Buzz Kill (Battle-Scarred)",
-    "yyypSellPrice": 1509.9
+    "yyypSellPrice": 1397.0
   },
   {
     "goodId": 1295,
@@ -6567,7 +6567,7 @@
   {
     "goodId": 1314,
     "marketHashName": "M4A4 | Desolate Space (Factory New)",
-    "yyypSellPrice": 433.4
+    "yyypSellPrice": 432.9
   },
   {
     "goodId": 1315,
@@ -6642,7 +6642,7 @@
   {
     "goodId": 1329,
     "marketHashName": "M4A4 | Griffin (Field-Tested)",
-    "yyypSellPrice": 16.66
+    "yyypSellPrice": 16.56
   },
   {
     "goodId": 1330,
@@ -6792,7 +6792,7 @@
   {
     "goodId": 1359,
     "marketHashName": "M4A4 | Royal Paladin (Minimal Wear)",
-    "yyypSellPrice": 519.99
+    "yyypSellPrice": 518.97
   },
   {
     "goodId": 1360,
@@ -6882,7 +6882,7 @@
   {
     "goodId": 1377,
     "marketHashName": "M4A4 | X-Ray (Field-Tested)",
-    "yyypSellPrice": 514.39
+    "yyypSellPrice": 514.2
   },
   {
     "goodId": 1378,
@@ -7212,7 +7212,7 @@
   {
     "goodId": 1443,
     "marketHashName": "MAC-10 | Neon Rider (Factory New)",
-    "yyypSellPrice": 790.0
+    "yyypSellPrice": 793.0
   },
   {
     "goodId": 1444,
@@ -7222,7 +7222,7 @@
   {
     "goodId": 1445,
     "marketHashName": "MAC-10 | Neon Rider (Minimal Wear)",
-    "yyypSellPrice": 781.5
+    "yyypSellPrice": 790.0
   },
   {
     "goodId": 1446,
@@ -7342,12 +7342,12 @@
   {
     "goodId": 1469,
     "marketHashName": "MAC-10 | Tatter (Factory New)",
-    "yyypSellPrice": 40.79
+    "yyypSellPrice": 40.77
   },
   {
     "goodId": 1470,
     "marketHashName": "MAC-10 | Tatter (Field-Tested)",
-    "yyypSellPrice": 33.38
+    "yyypSellPrice": 33.37
   },
   {
     "goodId": 1471,
@@ -7527,7 +7527,7 @@
   {
     "goodId": 1506,
     "marketHashName": "MP7 | Armor Core (Well-Worn)",
-    "yyypSellPrice": 1.54
+    "yyypSellPrice": 2.52
   },
   {
     "goodId": 1507,
@@ -7627,7 +7627,7 @@
   {
     "goodId": 1526,
     "marketHashName": "MP7 | Full Stop (Factory New)",
-    "yyypSellPrice": 269.8
+    "yyypSellPrice": 269.78
   },
   {
     "goodId": 1527,
@@ -7802,7 +7802,7 @@
   {
     "goodId": 1561,
     "marketHashName": "MP7 | Special Delivery (Battle-Scarred)",
-    "yyypSellPrice": 6.92
+    "yyypSellPrice": 6.9
   },
   {
     "goodId": 1562,
@@ -8362,7 +8362,7 @@
   {
     "goodId": 1673,
     "marketHashName": "Music Kit | Robert Allaire, Insurgency",
-    "yyypSellPrice": 18.3
+    "yyypSellPrice": 18.23
   },
   {
     "goodId": 1674,
@@ -8742,7 +8742,7 @@
   {
     "goodId": 1749,
     "marketHashName": "P2000 | Pulse (Field-Tested)",
-    "yyypSellPrice": 6.25
+    "yyypSellPrice": 6.23
   },
   {
     "goodId": 1750,
@@ -8822,7 +8822,7 @@
   {
     "goodId": 1765,
     "marketHashName": "P2000 | Woodsman (Factory New)",
-    "yyypSellPrice": 338.55
+    "yyypSellPrice": 338.53
   },
   {
     "goodId": 1766,
@@ -8857,7 +8857,7 @@
   {
     "goodId": 1772,
     "marketHashName": "P250 | Asiimov (Well-Worn)",
-    "yyypSellPrice": 78.33
+    "yyypSellPrice": 78.32
   },
   {
     "goodId": 1773,
@@ -8942,7 +8942,7 @@
   {
     "goodId": 1789,
     "marketHashName": "P250 | Contamination (Field-Tested)",
-    "yyypSellPrice": 13.89
+    "yyypSellPrice": 13.87
   },
   {
     "goodId": 1790,
@@ -9092,7 +9092,7 @@
   {
     "goodId": 1819,
     "marketHashName": "P250 | Mehndi (Factory New)",
-    "yyypSellPrice": 180.86
+    "yyypSellPrice": 180.85
   },
   {
     "goodId": 1820,
@@ -9132,7 +9132,7 @@
   {
     "goodId": 1827,
     "marketHashName": "P250 | Mint Kimono (Field-Tested)",
-    "yyypSellPrice": 33.39
+    "yyypSellPrice": 33.37
   },
   {
     "goodId": 1828,
@@ -9212,7 +9212,7 @@
   {
     "goodId": 1843,
     "marketHashName": "P250 | Red Rock (Battle-Scarred)",
-    "yyypSellPrice": 150.0
+    "yyypSellPrice": 114.5
   },
   {
     "goodId": 1844,
@@ -9232,7 +9232,7 @@
   {
     "goodId": 1847,
     "marketHashName": "P250 | Red Rock (Well-Worn)",
-    "yyypSellPrice": 123.1
+    "yyypSellPrice": 123.09
   },
   {
     "goodId": 1848,
@@ -9492,7 +9492,7 @@
   {
     "goodId": 1899,
     "marketHashName": "P90 | Asiimov (Well-Worn)",
-    "yyypSellPrice": 1151.95
+    "yyypSellPrice": 1151.94
   },
   {
     "goodId": 1900,
@@ -9547,7 +9547,7 @@
   {
     "goodId": 1910,
     "marketHashName": "P90 | Cold Blooded (Factory New)",
-    "yyypSellPrice": 275.0
+    "yyypSellPrice": 274.99
   },
   {
     "goodId": 1911,
@@ -9627,7 +9627,7 @@
   {
     "goodId": 1926,
     "marketHashName": "P90 | Elite Build (Field-Tested)",
-    "yyypSellPrice": 3.29
+    "yyypSellPrice": 3.28
   },
   {
     "goodId": 1927,
@@ -9652,7 +9652,7 @@
   {
     "goodId": 1931,
     "marketHashName": "P90 | Emerald Dragon (Minimal Wear)",
-    "yyypSellPrice": 683.5
+    "yyypSellPrice": 683.4
   },
   {
     "goodId": 1932,
@@ -9702,7 +9702,7 @@
   {
     "goodId": 1941,
     "marketHashName": "P90 | Glacier Mesh (Minimal Wear)",
-    "yyypSellPrice": 25.99
+    "yyypSellPrice": 25.98
   },
   {
     "goodId": 1942,
@@ -9732,7 +9732,7 @@
   {
     "goodId": 1947,
     "marketHashName": "P90 | Grim (Well-Worn)",
-    "yyypSellPrice": 1.95
+    "yyypSellPrice": 2.0
   },
   {
     "goodId": 1948,
@@ -9767,7 +9767,7 @@
   {
     "goodId": 1954,
     "marketHashName": "P90 | Module (Field-Tested)",
-    "yyypSellPrice": 6.77
+    "yyypSellPrice": 6.76
   },
   {
     "goodId": 1955,
@@ -9842,7 +9842,7 @@
   {
     "goodId": 1969,
     "marketHashName": "P90 | Shallow Grave (Minimal Wear)",
-    "yyypSellPrice": 214.97
+    "yyypSellPrice": 214.96
   },
   {
     "goodId": 1970,
@@ -9892,7 +9892,7 @@
   {
     "goodId": 1979,
     "marketHashName": "P90 | Storm (Minimal Wear)",
-    "yyypSellPrice": 23.45
+    "yyypSellPrice": 23.43
   },
   {
     "goodId": 1980,
@@ -9917,7 +9917,7 @@
   {
     "goodId": 1984,
     "marketHashName": "P90 | Teardown (Minimal Wear)",
-    "yyypSellPrice": 1.49
+    "yyypSellPrice": 1.48
   },
   {
     "goodId": 1985,
@@ -10012,7 +10012,7 @@
   {
     "goodId": 2003,
     "marketHashName": "PP-Bizon | Bamboo Print (Minimal Wear)",
-    "yyypSellPrice": 49.57
+    "yyypSellPrice": 49.55
   },
   {
     "goodId": 2004,
@@ -10757,7 +10757,7 @@
   {
     "goodId": 2152,
     "marketHashName": "SCAR-20 | Contractor (Factory New)",
-    "yyypSellPrice": 1.99
+    "yyypSellPrice": 2.0
   },
   {
     "goodId": 2153,
@@ -10977,7 +10977,7 @@
   {
     "goodId": 2196,
     "marketHashName": "SCAR-20 | Sand Mesh (Battle-Scarred)",
-    "yyypSellPrice": 0.38
+    "yyypSellPrice": 0.36
   },
   {
     "goodId": 2197,
@@ -11057,7 +11057,7 @@
   {
     "goodId": 2212,
     "marketHashName": "SG 553 | Aerial (Factory New)",
-    "yyypSellPrice": 2.37
+    "yyypSellPrice": 2.36
   },
   {
     "goodId": 2213,
@@ -11232,7 +11232,7 @@
   {
     "goodId": 2247,
     "marketHashName": "SG 553 | Gator Mesh (Minimal Wear)",
-    "yyypSellPrice": 142.9
+    "yyypSellPrice": 142.89
   },
   {
     "goodId": 2248,
@@ -11547,7 +11547,7 @@
   {
     "goodId": 2310,
     "marketHashName": "SSG 08 | Dark Water (Minimal Wear)",
-    "yyypSellPrice": 85.44
+    "yyypSellPrice": 85.43
   },
   {
     "goodId": 2311,
@@ -11627,7 +11627,7 @@
   {
     "goodId": 2326,
     "marketHashName": "SSG 08 | Ghost Crusader (Factory New)",
-    "yyypSellPrice": 51.8
+    "yyypSellPrice": 51.78
   },
   {
     "goodId": 2327,
@@ -11927,7 +11927,7 @@
   {
     "goodId": 2386,
     "marketHashName": "Souvenir AWP | Pink DDPAT (Minimal Wear)",
-    "yyypSellPrice": 254.39
+    "yyypSellPrice": 254.19
   },
   {
     "goodId": 2387,
@@ -12047,7 +12047,7 @@
   {
     "goodId": 2410,
     "marketHashName": "Souvenir Desert Eagle | Urban DDPAT (Minimal Wear)",
-    "yyypSellPrice": 14.28
+    "yyypSellPrice": 14.18
   },
   {
     "goodId": 2411,
@@ -12327,7 +12327,7 @@
   {
     "goodId": 2466,
     "marketHashName": "Souvenir Five-SeveN | Hot Shot (Factory New)",
-    "yyypSellPrice": 272.0
+    "yyypSellPrice": 271.8
   },
   {
     "goodId": 2467,
@@ -12387,7 +12387,7 @@
   {
     "goodId": 2478,
     "marketHashName": "Souvenir G3SG1 | Desert Storm (Battle-Scarred)",
-    "yyypSellPrice": 2.85
+    "yyypSellPrice": 2.84
   },
   {
     "goodId": 2479,
@@ -12832,7 +12832,7 @@
   {
     "goodId": 2567,
     "marketHashName": "Souvenir M4A4 | Urban DDPAT (Well-Worn)",
-    "yyypSellPrice": 61.8
+    "yyypSellPrice": 61.79
   },
   {
     "goodId": 2568,
@@ -12842,7 +12842,7 @@
   {
     "goodId": 2569,
     "marketHashName": "Souvenir MAC-10 | Amber Fade (Field-Tested)",
-    "yyypSellPrice": 98.29
+    "yyypSellPrice": 98.1
   },
   {
     "goodId": 2570,
@@ -13202,7 +13202,7 @@
   {
     "goodId": 2641,
     "marketHashName": "Souvenir P2000 | Grassland (Field-Tested)",
-    "yyypSellPrice": 7.74
+    "yyypSellPrice": 7.72
   },
   {
     "goodId": 2642,
@@ -13362,7 +13362,7 @@
   {
     "goodId": 2673,
     "marketHashName": "Souvenir P90 | Ash Wood (Factory New)",
-    "yyypSellPrice": 28.92
+    "yyypSellPrice": 28.91
   },
   {
     "goodId": 2674,
@@ -13422,7 +13422,7 @@
   {
     "goodId": 2685,
     "marketHashName": "Souvenir P90 | Sand Spray (Minimal Wear)",
-    "yyypSellPrice": 4.09
+    "yyypSellPrice": 4.08
   },
   {
     "goodId": 2686,
@@ -13677,7 +13677,7 @@
   {
     "goodId": 2736,
     "marketHashName": "Souvenir SCAR-20 | Sand Mesh (Field-Tested)",
-    "yyypSellPrice": 1.9
+    "yyypSellPrice": 1.89
   },
   {
     "goodId": 2737,
@@ -13847,7 +13847,7 @@
   {
     "goodId": 2770,
     "marketHashName": "Souvenir SSG 08 | Detour (Minimal Wear)",
-    "yyypSellPrice": 64.89
+    "yyypSellPrice": 64.87
   },
   {
     "goodId": 2771,
@@ -14262,7 +14262,7 @@
   {
     "goodId": 2853,
     "marketHashName": "StatTrak™ AK-47 | Aquamarine Revenge (Minimal Wear)",
-    "yyypSellPrice": 915.26
+    "yyypSellPrice": 915.24
   },
   {
     "goodId": 2854,
@@ -14347,7 +14347,7 @@
   {
     "goodId": 2870,
     "marketHashName": "StatTrak™ AK-47 | Case Hardened (Field-Tested)",
-    "yyypSellPrice": 2919.0
+    "yyypSellPrice": 2918.0
   },
   {
     "goodId": 2871,
@@ -14467,7 +14467,7 @@
   {
     "goodId": 2894,
     "marketHashName": "StatTrak™ AK-47 | Jaguar (Field-Tested)",
-    "yyypSellPrice": 1103.0
+    "yyypSellPrice": 1102.5
   },
   {
     "goodId": 2895,
@@ -14842,7 +14842,7 @@
   {
     "goodId": 2969,
     "marketHashName": "StatTrak™ AUG | Triqua (Field-Tested)",
-    "yyypSellPrice": 1.36
+    "yyypSellPrice": 1.1
   },
   {
     "goodId": 2970,
@@ -14922,7 +14922,7 @@
   {
     "goodId": 2985,
     "marketHashName": "StatTrak™ AWP | Electric Hive (Minimal Wear)",
-    "yyypSellPrice": 413.03
+    "yyypSellPrice": 413.01
   },
   {
     "goodId": 2986,
@@ -14932,7 +14932,7 @@
   {
     "goodId": 2987,
     "marketHashName": "StatTrak™ AWP | Elite Build (Battle-Scarred)",
-    "yyypSellPrice": 158.38
+    "yyypSellPrice": 158.37
   },
   {
     "goodId": 2988,
@@ -15002,7 +15002,7 @@
   {
     "goodId": 3001,
     "marketHashName": "StatTrak™ AWP | Hyper Beast (Field-Tested)",
-    "yyypSellPrice": 415.34
+    "yyypSellPrice": 415.33
   },
   {
     "goodId": 3002,
@@ -15092,7 +15092,7 @@
   {
     "goodId": 3019,
     "marketHashName": "StatTrak™ AWP | Worm God (Minimal Wear)",
-    "yyypSellPrice": 36.0
+    "yyypSellPrice": 35.9
   },
   {
     "goodId": 3020,
@@ -15137,7 +15137,7 @@
   {
     "goodId": 3028,
     "marketHashName": "StatTrak™ CZ75-Auto | Imprint (Battle-Scarred)",
-    "yyypSellPrice": 1.05
+    "yyypSellPrice": 1.29
   },
   {
     "goodId": 3029,
@@ -15427,7 +15427,7 @@
   {
     "goodId": 3086,
     "marketHashName": "StatTrak™ Desert Eagle | Bronze Deco (Field-Tested)",
-    "yyypSellPrice": 2.99
+    "yyypSellPrice": 3.0
   },
   {
     "goodId": 3087,
@@ -15607,7 +15607,7 @@
   {
     "goodId": 3122,
     "marketHashName": "StatTrak™ Desert Eagle | Naga (Factory New)",
-    "yyypSellPrice": 133.72
+    "yyypSellPrice": 133.71
   },
   {
     "goodId": 3123,
@@ -16087,7 +16087,7 @@
   {
     "goodId": 3218,
     "marketHashName": "StatTrak™ FAMAS | Survivor Z (Well-Worn)",
-    "yyypSellPrice": 9.89
+    "yyypSellPrice": 9.88
   },
   {
     "goodId": 3219,
@@ -16142,7 +16142,7 @@
   {
     "goodId": 3229,
     "marketHashName": "StatTrak™ Five-SeveN | Case Hardened (Battle-Scarred)",
-    "yyypSellPrice": 157.29
+    "yyypSellPrice": 157.09
   },
   {
     "goodId": 3230,
@@ -16272,7 +16272,7 @@
   {
     "goodId": 3255,
     "marketHashName": "StatTrak™ Five-SeveN | Nightshade (Field-Tested)",
-    "yyypSellPrice": 18.46
+    "yyypSellPrice": 18.45
   },
   {
     "goodId": 3256,
@@ -16322,7 +16322,7 @@
   {
     "goodId": 3265,
     "marketHashName": "StatTrak™ Five-SeveN | Scumbria (Field-Tested)",
-    "yyypSellPrice": 1.31
+    "yyypSellPrice": 1.3
   },
   {
     "goodId": 3266,
@@ -16592,7 +16592,7 @@
   {
     "goodId": 3319,
     "marketHashName": "StatTrak™ Galil AR | Black Sand (Factory New)",
-    "yyypSellPrice": 24.6
+    "yyypSellPrice": 24.59
   },
   {
     "goodId": 3320,
@@ -16842,7 +16842,7 @@
   {
     "goodId": 3369,
     "marketHashName": "StatTrak™ Galil AR | Sugar Rush (Factory New)",
-    "yyypSellPrice": 1172.95
+    "yyypSellPrice": 1172.94
   },
   {
     "goodId": 3370,
@@ -16947,7 +16947,7 @@
   {
     "goodId": 3390,
     "marketHashName": "StatTrak™ Glock-18 | Grinder (Field-Tested)",
-    "yyypSellPrice": 68.1
+    "yyypSellPrice": 68.0
   },
   {
     "goodId": 3391,
@@ -17222,7 +17222,7 @@
   {
     "goodId": 3445,
     "marketHashName": "StatTrak™ M4A1-S | Bright Water (Minimal Wear)",
-    "yyypSellPrice": 381.82
+    "yyypSellPrice": 381.81
   },
   {
     "goodId": 3446,
@@ -17242,7 +17242,7 @@
   {
     "goodId": 3449,
     "marketHashName": "StatTrak™ M4A1-S | Chantico's Fire (Minimal Wear)",
-    "yyypSellPrice": 912.06
+    "yyypSellPrice": 912.05
   },
   {
     "goodId": 3450,
@@ -17302,7 +17302,7 @@
   {
     "goodId": 3461,
     "marketHashName": "StatTrak™ M4A1-S | Flashback (Field-Tested)",
-    "yyypSellPrice": 19.44
+    "yyypSellPrice": 19.43
   },
   {
     "goodId": 3462,
@@ -17612,7 +17612,7 @@
   {
     "goodId": 3523,
     "marketHashName": "StatTrak™ M4A4 | Hellfire (Minimal Wear)",
-    "yyypSellPrice": 1028.23
+    "yyypSellPrice": 1028.22
   },
   {
     "goodId": 3524,
@@ -17637,7 +17637,7 @@
   {
     "goodId": 3528,
     "marketHashName": "StatTrak™ M4A4 | Royal Paladin (Field-Tested)",
-    "yyypSellPrice": 458.85
+    "yyypSellPrice": 458.82
   },
   {
     "goodId": 3529,
@@ -17727,7 +17727,7 @@
   {
     "goodId": 3546,
     "marketHashName": "StatTrak™ M4A4 | 龍王 (Dragon King) (Minimal Wear)",
-    "yyypSellPrice": 321.03
+    "yyypSellPrice": 321.02
   },
   {
     "goodId": 3547,
@@ -17972,7 +17972,7 @@
   {
     "goodId": 3595,
     "marketHashName": "StatTrak™ MAC-10 | Rangeen (Battle-Scarred)",
-    "yyypSellPrice": 3.32
+    "yyypSellPrice": 3.3
   },
   {
     "goodId": 3596,
@@ -18457,7 +18457,7 @@
   {
     "goodId": 3692,
     "marketHashName": "StatTrak™ Music Kit | Dren, Death's Head Demolition",
-    "yyypSellPrice": 30.16
+    "yyypSellPrice": 30.06
   },
   {
     "goodId": 3693,
@@ -18857,7 +18857,7 @@
   {
     "goodId": 3772,
     "marketHashName": "StatTrak™ P250 | Asiimov (Well-Worn)",
-    "yyypSellPrice": 80.6
+    "yyypSellPrice": 80.5
   },
   {
     "goodId": 3773,
@@ -19072,7 +19072,7 @@
   {
     "goodId": 3815,
     "marketHashName": "StatTrak™ P250 | Steel Disruption (Minimal Wear)",
-    "yyypSellPrice": 22.8
+    "yyypSellPrice": 22.78
   },
   {
     "goodId": 3816,
@@ -19442,7 +19442,7 @@
   {
     "goodId": 3889,
     "marketHashName": "StatTrak™ P90 | Trigon (Battle-Scarred)",
-    "yyypSellPrice": 120.79
+    "yyypSellPrice": 120.6
   },
   {
     "goodId": 3890,
@@ -19497,7 +19497,7 @@
   {
     "goodId": 3900,
     "marketHashName": "StatTrak™ PP-Bizon | Antique (Minimal Wear)",
-    "yyypSellPrice": 60.09
+    "yyypSellPrice": 60.07
   },
   {
     "goodId": 3901,
@@ -19597,7 +19597,7 @@
   {
     "goodId": 3920,
     "marketHashName": "StatTrak™ PP-Bizon | Harvester (Well-Worn)",
-    "yyypSellPrice": 1.33
+    "yyypSellPrice": 1.32
   },
   {
     "goodId": 3921,
@@ -19657,7 +19657,7 @@
   {
     "goodId": 3932,
     "marketHashName": "StatTrak™ PP-Bizon | Jungle Slipstream (Factory New)",
-    "yyypSellPrice": 4.37
+    "yyypSellPrice": 4.38
   },
   {
     "goodId": 3933,
@@ -19722,7 +19722,7 @@
   {
     "goodId": 3945,
     "marketHashName": "StatTrak™ PP-Bizon | Photic Zone (Well-Worn)",
-    "yyypSellPrice": 2.91
+    "yyypSellPrice": 2.99
   },
   {
     "goodId": 3946,
@@ -19847,7 +19847,7 @@
   {
     "goodId": 3970,
     "marketHashName": "StatTrak™ Radicals Box",
-    "yyypSellPrice": 39.43
+    "yyypSellPrice": 39.41
   },
   {
     "goodId": 3971,
@@ -19892,7 +19892,7 @@
   {
     "goodId": 3979,
     "marketHashName": "StatTrak™ SCAR-20 | Blueprint (Well-Worn)",
-    "yyypSellPrice": 4.28
+    "yyypSellPrice": 4.27
   },
   {
     "goodId": 3980,
@@ -20242,7 +20242,7 @@
   {
     "goodId": 4049,
     "marketHashName": "StatTrak™ SG 553 | Triarch (Well-Worn)",
-    "yyypSellPrice": 6.79
+    "yyypSellPrice": 6.78
   },
   {
     "goodId": 4050,
@@ -20537,7 +20537,7 @@
   {
     "goodId": 4108,
     "marketHashName": "StatTrak™ Tec-9 | Cut Out (Minimal Wear)",
-    "yyypSellPrice": 66.99
+    "yyypSellPrice": 67.0
   },
   {
     "goodId": 4109,
@@ -20622,7 +20622,7 @@
   {
     "goodId": 4125,
     "marketHashName": "StatTrak™ Tec-9 | Jambiya (Battle-Scarred)",
-    "yyypSellPrice": 3.1
+    "yyypSellPrice": 3.09
   },
   {
     "goodId": 4126,
@@ -20677,7 +20677,7 @@
   {
     "goodId": 4136,
     "marketHashName": "StatTrak™ Tec-9 | Sandstorm (Minimal Wear)",
-    "yyypSellPrice": 27.71
+    "yyypSellPrice": 27.69
   },
   {
     "goodId": 4137,
@@ -20742,7 +20742,7 @@
   {
     "goodId": 4149,
     "marketHashName": "StatTrak™ UMP-45 | Corporal (Battle-Scarred)",
-    "yyypSellPrice": 3.2
+    "yyypSellPrice": 3.19
   },
   {
     "goodId": 4150,
@@ -20837,7 +20837,7 @@
   {
     "goodId": 4168,
     "marketHashName": "StatTrak™ UMP-45 | Metal Flowers (Factory New)",
-    "yyypSellPrice": 61.73
+    "yyypSellPrice": 61.72
   },
   {
     "goodId": 4169,
@@ -20882,7 +20882,7 @@
   {
     "goodId": 4177,
     "marketHashName": "StatTrak™ UMP-45 | Riot (Battle-Scarred)",
-    "yyypSellPrice": 3.71
+    "yyypSellPrice": 3.7
   },
   {
     "goodId": 4178,
@@ -21007,7 +21007,7 @@
   {
     "goodId": 4202,
     "marketHashName": "StatTrak™ USP-S | Cyrex (Well-Worn)",
-    "yyypSellPrice": 34.44
+    "yyypSellPrice": 34.42
   },
   {
     "goodId": 4203,
@@ -21572,7 +21572,7 @@
   {
     "goodId": 4315,
     "marketHashName": "Sticker | BIG (Holo) | Krakow 2017",
-    "yyypSellPrice": 44.21
+    "yyypSellPrice": 44.2
   },
   {
     "goodId": 4316,
@@ -21637,7 +21637,7 @@
   {
     "goodId": 4328,
     "marketHashName": "Sticker | Black Dog",
-    "yyypSellPrice": 2.86
+    "yyypSellPrice": 2.85
   },
   {
     "goodId": 4329,
@@ -22117,7 +22117,7 @@
   {
     "goodId": 4424,
     "marketHashName": "Sticker | Dinked",
-    "yyypSellPrice": 4.89
+    "yyypSellPrice": 4.88
   },
   {
     "goodId": 4425,
@@ -22347,7 +22347,7 @@
   {
     "goodId": 4470,
     "marketHashName": "Sticker | Edward (Foil) | Boston 2018",
-    "yyypSellPrice": 33.29
+    "yyypSellPrice": 33.1
   },
   {
     "goodId": 4471,
@@ -22957,7 +22957,7 @@
   {
     "goodId": 4592,
     "marketHashName": "Sticker | Fnatic | Cologne 2014",
-    "yyypSellPrice": 72.16
+    "yyypSellPrice": 72.15
   },
   {
     "goodId": 4593,
@@ -23007,7 +23007,7 @@
   {
     "goodId": 4602,
     "marketHashName": "Sticker | FugLy | Cluj-Napoca 2015",
-    "yyypSellPrice": 55.7
+    "yyypSellPrice": 55.69
   },
   {
     "goodId": 4603,
@@ -23112,7 +23112,7 @@
   {
     "goodId": 4623,
     "marketHashName": "Sticker | G2 Esports | Krakow 2017",
-    "yyypSellPrice": 7.8
+    "yyypSellPrice": 7.79
   },
   {
     "goodId": 4624,
@@ -23482,7 +23482,7 @@
   {
     "goodId": 4697,
     "marketHashName": "Sticker | Happy | Cologne 2015",
-    "yyypSellPrice": 48.87
+    "yyypSellPrice": 48.86
   },
   {
     "goodId": 4698,
@@ -24212,7 +24212,7 @@
   {
     "goodId": 4843,
     "marketHashName": "Sticker | Lekr0 (Foil) | Boston 2018",
-    "yyypSellPrice": 284.45
+    "yyypSellPrice": 284.44
   },
   {
     "goodId": 4844,
@@ -24302,7 +24302,7 @@
   {
     "goodId": 4861,
     "marketHashName": "Sticker | Lucky Cat (Foil)",
-    "yyypSellPrice": 29.87
+    "yyypSellPrice": 29.86
   },
   {
     "goodId": 4862,
@@ -24522,7 +24522,7 @@
   {
     "goodId": 4905,
     "marketHashName": "Sticker | Manticore (Holo)",
-    "yyypSellPrice": 4.56
+    "yyypSellPrice": 4.57
   },
   {
     "goodId": 4906,
@@ -24557,7 +24557,7 @@
   {
     "goodId": 4912,
     "marketHashName": "Sticker | Merietta (Holo)",
-    "yyypSellPrice": 3.73
+    "yyypSellPrice": 3.72
   },
   {
     "goodId": 4913,
@@ -24592,7 +24592,7 @@
   {
     "goodId": 4919,
     "marketHashName": "Sticker | Move It (Holo)",
-    "yyypSellPrice": 9.27
+    "yyypSellPrice": 9.26
   },
   {
     "goodId": 4920,
@@ -24877,7 +24877,7 @@
   {
     "goodId": 4976,
     "marketHashName": "Sticker | Natus Vincere (Holo) | Krakow 2017",
-    "yyypSellPrice": 139.86
+    "yyypSellPrice": 139.83
   },
   {
     "goodId": 4977,
@@ -25047,7 +25047,7 @@
   {
     "goodId": 5010,
     "marketHashName": "Sticker | Ninjas in Pyjamas  | Katowice 2015",
-    "yyypSellPrice": 105.23
+    "yyypSellPrice": 105.22
   },
   {
     "goodId": 5011,
@@ -25512,7 +25512,7 @@
   {
     "goodId": 5103,
     "marketHashName": "Sticker | Rising Skull",
-    "yyypSellPrice": 4.61
+    "yyypSellPrice": 4.6
   },
   {
     "goodId": 5104,
@@ -25587,7 +25587,7 @@
   {
     "goodId": 5118,
     "marketHashName": "Sticker | SAS Chicken",
-    "yyypSellPrice": 5.43
+    "yyypSellPrice": 5.42
   },
   {
     "goodId": 5119,
@@ -25827,7 +25827,7 @@
   {
     "goodId": 5166,
     "marketHashName": "Sticker | Shave Master",
-    "yyypSellPrice": 3.18
+    "yyypSellPrice": 3.16
   },
   {
     "goodId": 5167,
@@ -26517,7 +26517,7 @@
   {
     "goodId": 5304,
     "marketHashName": "Sticker | Team EnVyUs (Foil) | Atlanta 2017",
-    "yyypSellPrice": 352.87
+    "yyypSellPrice": 352.86
   },
   {
     "goodId": 5305,
@@ -26667,7 +26667,7 @@
   {
     "goodId": 5334,
     "marketHashName": "Sticker | Team Liquid (Foil) | Cologne 2016",
-    "yyypSellPrice": 314.05
+    "yyypSellPrice": 314.04
   },
   {
     "goodId": 5335,
@@ -26752,7 +26752,7 @@
   {
     "goodId": 5351,
     "marketHashName": "Sticker | Teamwork (Holo)",
-    "yyypSellPrice": 8.57
+    "yyypSellPrice": 8.55
   },
   {
     "goodId": 5352,
@@ -27152,7 +27152,7 @@
   {
     "goodId": 5431,
     "marketHashName": "Sticker | Virtus.Pro | Cologne 2016",
-    "yyypSellPrice": 24.65
+    "yyypSellPrice": 24.64
   },
   {
     "goodId": 5432,
@@ -27237,7 +27237,7 @@
   {
     "goodId": 5448,
     "marketHashName": "Sticker | Warowl",
-    "yyypSellPrice": 4.39
+    "yyypSellPrice": 4.38
   },
   {
     "goodId": 5449,
@@ -27397,7 +27397,7 @@
   {
     "goodId": 5480,
     "marketHashName": "Sticker | Xizt | Cologne 2016",
-    "yyypSellPrice": 16.29
+    "yyypSellPrice": 16.3
   },
   {
     "goodId": 5481,
@@ -28012,7 +28012,7 @@
   {
     "goodId": 5603,
     "marketHashName": "Sticker | buster | Boston 2018",
-    "yyypSellPrice": 12.93
+    "yyypSellPrice": 12.92
   },
   {
     "goodId": 5604,
@@ -29012,7 +29012,7 @@
   {
     "goodId": 5803,
     "marketHashName": "Sticker | flamie | Cologne 2015",
-    "yyypSellPrice": 19.43
+    "yyypSellPrice": 19.42
   },
   {
     "goodId": 5804,
@@ -29862,7 +29862,7 @@
   {
     "goodId": 5973,
     "marketHashName": "Sticker | keev (Foil) | Krakow 2017",
-    "yyypSellPrice": 252.6
+    "yyypSellPrice": 252.59
   },
   {
     "goodId": 5974,
@@ -29957,7 +29957,7 @@
   {
     "goodId": 5992,
     "marketHashName": "Sticker | kennyS | Krakow 2017",
-    "yyypSellPrice": 69.77
+    "yyypSellPrice": 69.75
   },
   {
     "goodId": 5993,
@@ -30032,7 +30032,7 @@
   {
     "goodId": 6007,
     "marketHashName": "Sticker | kioShiMa | Cluj-Napoca 2015",
-    "yyypSellPrice": 27.07
+    "yyypSellPrice": 27.06
   },
   {
     "goodId": 6008,
@@ -30477,7 +30477,7 @@
   {
     "goodId": 6096,
     "marketHashName": "Sticker | nex | Cluj-Napoca 2015",
-    "yyypSellPrice": 160.59
+    "yyypSellPrice": 160.58
   },
   {
     "goodId": 6097,
@@ -30912,7 +30912,7 @@
   {
     "goodId": 6183,
     "marketHashName": "Sticker | rain | Boston 2018",
-    "yyypSellPrice": 33.75
+    "yyypSellPrice": 33.73
   },
   {
     "goodId": 6184,
@@ -31427,7 +31427,7 @@
   {
     "goodId": 6286,
     "marketHashName": "Sticker | suNny (Foil) | Krakow 2017",
-    "yyypSellPrice": 171.27
+    "yyypSellPrice": 171.25
   },
   {
     "goodId": 6287,
@@ -31832,7 +31832,7 @@
   {
     "goodId": 6367,
     "marketHashName": "Tec-9 | Cracked Opal (Minimal Wear)",
-    "yyypSellPrice": 1.76
+    "yyypSellPrice": 1.75
   },
   {
     "goodId": 6368,
@@ -31957,7 +31957,7 @@
   {
     "goodId": 6392,
     "marketHashName": "Tec-9 | Ice Cap (Well-Worn)",
-    "yyypSellPrice": 2.65
+    "yyypSellPrice": 2.66
   },
   {
     "goodId": 6393,
@@ -32117,7 +32117,7 @@
   {
     "goodId": 6424,
     "marketHashName": "Tec-9 | Titanium Bit (Factory New)",
-    "yyypSellPrice": 499.49
+    "yyypSellPrice": 499.48
   },
   {
     "goodId": 6425,
@@ -32307,7 +32307,7 @@
   {
     "goodId": 6462,
     "marketHashName": "UMP-45 | Corporal (Battle-Scarred)",
-    "yyypSellPrice": 2.0
+    "yyypSellPrice": 1.99
   },
   {
     "goodId": 6463,
@@ -32422,7 +32422,7 @@
   {
     "goodId": 6485,
     "marketHashName": "UMP-45 | Indigo (Factory New)",
-    "yyypSellPrice": 110.91
+    "yyypSellPrice": 110.92
   },
   {
     "goodId": 6486,
@@ -32472,7 +32472,7 @@
   {
     "goodId": 6495,
     "marketHashName": "UMP-45 | Metal Flowers (Field-Tested)",
-    "yyypSellPrice": 22.48
+    "yyypSellPrice": 22.46
   },
   {
     "goodId": 6496,
@@ -32672,7 +32672,7 @@
   {
     "goodId": 6535,
     "marketHashName": "USP-S | Business Class (Field-Tested)",
-    "yyypSellPrice": 498.03
+    "yyypSellPrice": 498.04
   },
   {
     "goodId": 6536,
@@ -32787,7 +32787,7 @@
   {
     "goodId": 6558,
     "marketHashName": "USP-S | Kill Confirmed (Factory New)",
-    "yyypSellPrice": 1440.0
+    "yyypSellPrice": 1439.0
   },
   {
     "goodId": 6559,
@@ -32887,7 +32887,7 @@
   {
     "goodId": 6578,
     "marketHashName": "USP-S | Orion (Factory New)",
-    "yyypSellPrice": 515.0
+    "yyypSellPrice": 514.5
   },
   {
     "goodId": 6579,
@@ -33217,7 +33217,7 @@
   {
     "goodId": 6644,
     "marketHashName": "★ Bayonet | Bright Water (Factory New)",
-    "yyypSellPrice": 1173.91
+    "yyypSellPrice": 1173.0
   },
   {
     "goodId": 6645,
@@ -33312,7 +33312,7 @@
   {
     "goodId": 6663,
     "marketHashName": "★ Bayonet | Doppler (Minimal Wear)",
-    "yyypSellPrice": 3000.0
+    "yyypSellPrice": 2999.5
   },
   {
     "goodId": 6664,
@@ -33647,7 +33647,7 @@
   {
     "goodId": 6730,
     "marketHashName": "★ Bloodhound Gloves | Snakebite (Field-Tested)",
-    "yyypSellPrice": 1044.99
+    "yyypSellPrice": 1045.0
   },
   {
     "goodId": 6731,
@@ -33707,7 +33707,7 @@
   {
     "goodId": 6742,
     "marketHashName": "★ Bowie Knife | Case Hardened (Battle-Scarred)",
-    "yyypSellPrice": 794.5
+    "yyypSellPrice": 794.3
   },
   {
     "goodId": 6743,
@@ -33872,7 +33872,7 @@
   {
     "goodId": 6775,
     "marketHashName": "★ Bowie Knife | Scorched (Field-Tested)",
-    "yyypSellPrice": 310.0
+    "yyypSellPrice": 313.0
   },
   {
     "goodId": 6776,
@@ -34107,7 +34107,7 @@
   {
     "goodId": 6822,
     "marketHashName": "★ Butterfly Knife | Fade (Factory New)",
-    "yyypSellPrice": 13645.0
+    "yyypSellPrice": 13640.0
   },
   {
     "goodId": 6823,
@@ -34172,7 +34172,7 @@
   {
     "goodId": 6835,
     "marketHashName": "★ Butterfly Knife | Rust Coat (Battle-Scarred)",
-    "yyypSellPrice": 3280.0
+    "yyypSellPrice": 3269.5
   },
   {
     "goodId": 6836,
@@ -34182,7 +34182,7 @@
   {
     "goodId": 6837,
     "marketHashName": "★ Butterfly Knife | Safari Mesh (Battle-Scarred)",
-    "yyypSellPrice": 2699.91
+    "yyypSellPrice": 2698.0
   },
   {
     "goodId": 6838,
@@ -34222,7 +34222,7 @@
   {
     "goodId": 6845,
     "marketHashName": "★ Butterfly Knife | Slaughter (Factory New)",
-    "yyypSellPrice": 8967.39
+    "yyypSellPrice": 8967.0
   },
   {
     "goodId": 6846,
@@ -34547,7 +34547,7 @@
   {
     "goodId": 6910,
     "marketHashName": "★ Falchion Knife | Marble Fade (Factory New)",
-    "yyypSellPrice": 1047.0
+    "yyypSellPrice": 1051.3
   },
   {
     "goodId": 6911,
@@ -34662,7 +34662,7 @@
   {
     "goodId": 6933,
     "marketHashName": "★ Falchion Knife | Stained (Minimal Wear)",
-    "yyypSellPrice": 605.12
+    "yyypSellPrice": 605.1
   },
   {
     "goodId": 6934,
@@ -34692,7 +34692,7 @@
   {
     "goodId": 6939,
     "marketHashName": "★ Falchion Knife | Ultraviolet (Field-Tested)",
-    "yyypSellPrice": 405.0
+    "yyypSellPrice": 409.5
   },
   {
     "goodId": 6940,
@@ -34962,7 +34962,7 @@
   {
     "goodId": 6993,
     "marketHashName": "★ Flip Knife | Freehand (Factory New)",
-    "yyypSellPrice": 882.9
+    "yyypSellPrice": 881.0
   },
   {
     "goodId": 6994,
@@ -35017,7 +35017,7 @@
   {
     "goodId": 7004,
     "marketHashName": "★ Flip Knife | Marble Fade (Factory New)",
-    "yyypSellPrice": 1591.0
+    "yyypSellPrice": 1597.0
   },
   {
     "goodId": 7005,
@@ -35182,7 +35182,7 @@
   {
     "goodId": 7037,
     "marketHashName": "★ Flip Knife | Urban Masked (Well-Worn)",
-    "yyypSellPrice": 708.9
+    "yyypSellPrice": 790.0
   },
   {
     "goodId": 7038,
@@ -35257,7 +35257,7 @@
   {
     "goodId": 7052,
     "marketHashName": "★ Gut Knife | Blue Steel (Minimal Wear)",
-    "yyypSellPrice": 527.99
+    "yyypSellPrice": 617.0
   },
   {
     "goodId": 7053,
@@ -35677,7 +35677,7 @@
   {
     "goodId": 7136,
     "marketHashName": "★ Hand Wraps | Spruce DDPAT (Field-Tested)",
-    "yyypSellPrice": 2128.02
+    "yyypSellPrice": 2123.77
   },
   {
     "goodId": 7137,
@@ -35862,7 +35862,7 @@
   {
     "goodId": 7173,
     "marketHashName": "★ Huntsman Knife | Rust Coat (Battle-Scarred)",
-    "yyypSellPrice": 304.94
+    "yyypSellPrice": 304.33
   },
   {
     "goodId": 7174,
@@ -36092,7 +36092,7 @@
   {
     "goodId": 7219,
     "marketHashName": "★ Karambit | Case Hardened (Well-Worn)",
-    "yyypSellPrice": 4493.0
+    "yyypSellPrice": 4492.0
   },
   {
     "goodId": 7220,
@@ -36567,7 +36567,7 @@
   {
     "goodId": 7314,
     "marketHashName": "★ M9 Bayonet | Forest DDPAT (Field-Tested)",
-    "yyypSellPrice": 1710.0
+    "yyypSellPrice": 1714.5
   },
   {
     "goodId": 7315,
@@ -36642,7 +36642,7 @@
   {
     "goodId": 7329,
     "marketHashName": "★ M9 Bayonet | Marble Fade (Minimal Wear)",
-    "yyypSellPrice": 5149.5
+    "yyypSellPrice": 5149.0
   },
   {
     "goodId": 7330,
@@ -36687,7 +36687,7 @@
   {
     "goodId": 7338,
     "marketHashName": "★ M9 Bayonet | Safari Mesh (Field-Tested)",
-    "yyypSellPrice": 1698.0
+    "yyypSellPrice": 1704.5
   },
   {
     "goodId": 7339,
@@ -36887,7 +36887,7 @@
   {
     "goodId": 7378,
     "marketHashName": "★ Moto Gloves | Spearmint (Minimal Wear)",
-    "yyypSellPrice": 16513.68
+    "yyypSellPrice": 16480.65
   },
   {
     "goodId": 7379,
@@ -37332,7 +37332,7 @@
   {
     "goodId": 7467,
     "marketHashName": "★ Sport Gloves | Arid (Minimal Wear)",
-    "yyypSellPrice": 6798.0
+    "yyypSellPrice": 6792.27
   },
   {
     "goodId": 7468,
@@ -37522,7 +37522,7 @@
   {
     "goodId": 7505,
     "marketHashName": "★ StatTrak™ Bayonet | Doppler (Factory New)",
-    "yyypSellPrice": 2720.0
+    "yyypSellPrice": 2700.0
   },
   {
     "goodId": 7506,
@@ -38032,7 +38032,7 @@
   {
     "goodId": 7607,
     "marketHashName": "★ StatTrak™ Butterfly Knife | Rust Coat (Battle-Scarred)",
-    "yyypSellPrice": 3378.9
+    "yyypSellPrice": 3376.91
   },
   {
     "goodId": 7608,
@@ -38092,7 +38092,7 @@
   {
     "goodId": 7619,
     "marketHashName": "★ StatTrak™ Butterfly Knife | Tiger Tooth (Factory New)",
-    "yyypSellPrice": 7228.9
+    "yyypSellPrice": 7226.91
   },
   {
     "goodId": 7620,
@@ -39092,7 +39092,7 @@
   {
     "goodId": 7819,
     "marketHashName": "★ StatTrak™ Karambit | Boreal Forest (Minimal Wear)",
-    "yyypSellPrice": 2890.0
+    "yyypSellPrice": 2889.0
   },
   {
     "goodId": 7820,
@@ -39952,7 +39952,7 @@
   {
     "goodId": 7991,
     "marketHashName": "StatTrak™ SSG 08 | Dragonfire (Minimal Wear)",
-    "yyypSellPrice": 770.96
+    "yyypSellPrice": 770.94
   },
   {
     "goodId": 7992,
@@ -40597,7 +40597,7 @@
   {
     "goodId": 8120,
     "marketHashName": "M4A4 | Neo-Noir (Well-Worn)",
-    "yyypSellPrice": 179.18
+    "yyypSellPrice": 179.19
   },
   {
     "goodId": 8121,
@@ -40777,7 +40777,7 @@
   {
     "goodId": 8156,
     "marketHashName": "StatTrak™ MP7 | Bloodsport (Minimal Wear)",
-    "yyypSellPrice": 184.89
+    "yyypSellPrice": 184.2
   },
   {
     "goodId": 8157,
@@ -40932,7 +40932,7 @@
   {
     "goodId": 8187,
     "marketHashName": "Sticker | Small Arms",
-    "yyypSellPrice": 2.09
+    "yyypSellPrice": 2.1
   },
   {
     "goodId": 8188,
@@ -40977,7 +40977,7 @@
   {
     "goodId": 8196,
     "marketHashName": "USP-S | Cortex (Minimal Wear)",
-    "yyypSellPrice": 41.0
+    "yyypSellPrice": 41.46
   },
   {
     "goodId": 8197,
@@ -41017,7 +41017,7 @@
   {
     "goodId": 8204,
     "marketHashName": "M4A4 | Neo-Noir (Minimal Wear)",
-    "yyypSellPrice": 301.0
+    "yyypSellPrice": 304.18
   },
   {
     "goodId": 8205,
@@ -41267,7 +41267,7 @@
   {
     "goodId": 8254,
     "marketHashName": "★ Sport Gloves | Amphibious (Field-Tested)",
-    "yyypSellPrice": 1798.98
+    "yyypSellPrice": 1798.99
   },
   {
     "goodId": 8255,
@@ -41352,7 +41352,7 @@
   {
     "goodId": 8271,
     "marketHashName": "★ Hand Wraps | Cobalt Skulls (Field-Tested)",
-    "yyypSellPrice": 1208.5
+    "yyypSellPrice": 1209.0
   },
   {
     "goodId": 8272,
@@ -41432,7 +41432,7 @@
   {
     "goodId": 8287,
     "marketHashName": "★ Sport Gloves | Omega (Battle-Scarred)",
-    "yyypSellPrice": 827.9
+    "yyypSellPrice": 826.91
   },
   {
     "goodId": 8288,
@@ -41487,7 +41487,7 @@
   {
     "goodId": 8298,
     "marketHashName": "★ Sport Gloves | Omega (Field-Tested)",
-    "yyypSellPrice": 1112.5
+    "yyypSellPrice": 1112.0
   },
   {
     "goodId": 8299,
@@ -41517,7 +41517,7 @@
   {
     "goodId": 8304,
     "marketHashName": "★ Moto Gloves | Polygon (Minimal Wear)",
-    "yyypSellPrice": 1020.78
+    "yyypSellPrice": 1018.74
   },
   {
     "goodId": 8305,
@@ -41547,7 +41547,7 @@
   {
     "goodId": 8310,
     "marketHashName": "★ Driver Gloves | Racing Green (Minimal Wear)",
-    "yyypSellPrice": 242.5
+    "yyypSellPrice": 244.0
   },
   {
     "goodId": 8311,
@@ -41557,7 +41557,7 @@
   {
     "goodId": 8312,
     "marketHashName": "★ Hand Wraps | Overprint (Battle-Scarred)",
-    "yyypSellPrice": 408.5
+    "yyypSellPrice": 408.0
   },
   {
     "goodId": 8313,
@@ -41627,7 +41627,7 @@
   {
     "goodId": 8326,
     "marketHashName": "★ Specialist Gloves | Fade (Minimal Wear)",
-    "yyypSellPrice": 2854.5
+    "yyypSellPrice": 2855.0
   },
   {
     "goodId": 8327,
@@ -41657,7 +41657,7 @@
   {
     "goodId": 8332,
     "marketHashName": "★ Driver Gloves | Racing Green (Well-Worn)",
-    "yyypSellPrice": 208.2
+    "yyypSellPrice": 208.1
   },
   {
     "goodId": 8333,
@@ -41682,7 +41682,7 @@
   {
     "goodId": 8337,
     "marketHashName": "★ Sport Gloves | Vice (Field-Tested)",
-    "yyypSellPrice": 2488.0
+    "yyypSellPrice": 2500.0
   },
   {
     "goodId": 8338,
@@ -41762,7 +41762,7 @@
   {
     "goodId": 8353,
     "marketHashName": "★ Driver Gloves | Imperial Plaid (Minimal Wear)",
-    "yyypSellPrice": 1719.0
+    "yyypSellPrice": 1718.5
   },
   {
     "goodId": 8354,
@@ -41852,7 +41852,7 @@
   {
     "goodId": 8371,
     "marketHashName": "★ Sport Gloves | Omega (Well-Worn)",
-    "yyypSellPrice": 999.5
+    "yyypSellPrice": 999.0
   },
   {
     "goodId": 8372,
@@ -42342,7 +42342,7 @@
   {
     "goodId": 8469,
     "marketHashName": "Glock-18 | Warhawk (Battle-Scarred)",
-    "yyypSellPrice": 1.94
+    "yyypSellPrice": 1.93
   },
   {
     "goodId": 8470,
@@ -42807,7 +42807,7 @@
   {
     "goodId": 8562,
     "marketHashName": "★ Talon Knife | Urban Masked (Field-Tested)",
-    "yyypSellPrice": 1411.5
+    "yyypSellPrice": 1410.0
   },
   {
     "goodId": 8563,
@@ -42817,7 +42817,7 @@
   {
     "goodId": 8564,
     "marketHashName": "Dual Berettas | Shred (Battle-Scarred)",
-    "yyypSellPrice": 2.12
+    "yyypSellPrice": 2.11
   },
   {
     "goodId": 8565,
@@ -42857,7 +42857,7 @@
   {
     "goodId": 8572,
     "marketHashName": "StatTrak™ G3SG1 | High Seas (Well-Worn)",
-    "yyypSellPrice": 13.87
+    "yyypSellPrice": 13.88
   },
   {
     "goodId": 8573,
@@ -42887,7 +42887,7 @@
   {
     "goodId": 8578,
     "marketHashName": "StatTrak™ MP9 | Capillary (Well-Worn)",
-    "yyypSellPrice": 6.88
+    "yyypSellPrice": 6.87
   },
   {
     "goodId": 8579,
@@ -43327,7 +43327,7 @@
   {
     "goodId": 8666,
     "marketHashName": "★ Stiletto Knife | Slaughter (Field-Tested)",
-    "yyypSellPrice": 2233.3
+    "yyypSellPrice": 2233.29
   },
   {
     "goodId": 8667,
@@ -43497,7 +43497,7 @@
   {
     "goodId": 8700,
     "marketHashName": "★ Talon Knife | Case Hardened (Battle-Scarred)",
-    "yyypSellPrice": 2155.0
+    "yyypSellPrice": 2198.0
   },
   {
     "goodId": 8701,
@@ -43587,7 +43587,7 @@
   {
     "goodId": 8718,
     "marketHashName": "★ Talon Knife | Stained (Well-Worn)",
-    "yyypSellPrice": 1825.9
+    "yyypSellPrice": 1824.9
   },
   {
     "goodId": 8719,
@@ -43987,7 +43987,7 @@
   {
     "goodId": 8798,
     "marketHashName": "★ Ursus Knife | Blue Steel (Factory New)",
-    "yyypSellPrice": 1150.49
+    "yyypSellPrice": 1150.29
   },
   {
     "goodId": 8799,
@@ -44287,7 +44287,7 @@
   {
     "goodId": 8858,
     "marketHashName": "★ Stiletto Knife | Crimson Web (Battle-Scarred)",
-    "yyypSellPrice": 1173.8
+    "yyypSellPrice": 1173.6
   },
   {
     "goodId": 8859,
@@ -44317,7 +44317,7 @@
   {
     "goodId": 8864,
     "marketHashName": "Sticker | Gambit Esports | London 2018",
-    "yyypSellPrice": 4.96
+    "yyypSellPrice": 4.94
   },
   {
     "goodId": 8865,
@@ -44447,7 +44447,7 @@
   {
     "goodId": 8890,
     "marketHashName": "Sticker | G2 Esports | London 2018",
-    "yyypSellPrice": 9.31
+    "yyypSellPrice": 9.3
   },
   {
     "goodId": 8891,
@@ -44477,7 +44477,7 @@
   {
     "goodId": 8896,
     "marketHashName": "Sticker | compLexity Gaming | London 2018",
-    "yyypSellPrice": 39.77
+    "yyypSellPrice": 39.76
   },
   {
     "goodId": 8897,
@@ -44617,7 +44617,7 @@
   {
     "goodId": 8924,
     "marketHashName": "Sticker | Xyp9x (Foil) | London 2018",
-    "yyypSellPrice": 92.16
+    "yyypSellPrice": 92.15
   },
   {
     "goodId": 8925,
@@ -44672,7 +44672,7 @@
   {
     "goodId": 8935,
     "marketHashName": "Sticker | Golden | London 2018",
-    "yyypSellPrice": 7.82
+    "yyypSellPrice": 7.81
   },
   {
     "goodId": 8936,
@@ -44822,7 +44822,7 @@
   {
     "goodId": 8965,
     "marketHashName": "Sticker | fer (Foil) | London 2018",
-    "yyypSellPrice": 54.75
+    "yyypSellPrice": 54.73
   },
   {
     "goodId": 8966,
@@ -45117,7 +45117,7 @@
   {
     "goodId": 9024,
     "marketHashName": "Sticker | shox | London 2018",
-    "yyypSellPrice": 5.37
+    "yyypSellPrice": 5.36
   },
   {
     "goodId": 9025,
@@ -45362,7 +45362,7 @@
   {
     "goodId": 9073,
     "marketHashName": "Sticker | Edward | London 2018",
-    "yyypSellPrice": 8.27
+    "yyypSellPrice": 8.28
   },
   {
     "goodId": 9074,
@@ -45542,7 +45542,7 @@
   {
     "goodId": 9109,
     "marketHashName": "Sticker | RUSH (Foil) | London 2018",
-    "yyypSellPrice": 96.69
+    "yyypSellPrice": 96.5
   },
   {
     "goodId": 9110,
@@ -45607,7 +45607,7 @@
   {
     "goodId": 9122,
     "marketHashName": "Sticker | cadiaN (Foil) | London 2018",
-    "yyypSellPrice": 134.18
+    "yyypSellPrice": 134.17
   },
   {
     "goodId": 9123,
@@ -46747,7 +46747,7 @@
   {
     "goodId": 9350,
     "marketHashName": "Souvenir USP-S | Check Engine (Field-Tested)",
-    "yyypSellPrice": 16.41
+    "yyypSellPrice": 16.39
   },
   {
     "goodId": 9351,
@@ -46872,7 +46872,7 @@
   {
     "goodId": 9375,
     "marketHashName": "Souvenir SSG 08 | Hand Brake (Field-Tested)",
-    "yyypSellPrice": 15.7
+    "yyypSellPrice": 15.69
   },
   {
     "goodId": 9376,
@@ -47187,7 +47187,7 @@
   {
     "goodId": 9438,
     "marketHashName": "Souvenir Galil AR | Cold Fusion (Battle-Scarred)",
-    "yyypSellPrice": 2.59
+    "yyypSellPrice": 2.6
   },
   {
     "goodId": 9439,
@@ -47322,7 +47322,7 @@
   {
     "goodId": 9465,
     "marketHashName": "Souvenir AUG | Random Access (Minimal Wear)",
-    "yyypSellPrice": 44.79
+    "yyypSellPrice": 44.78
   },
   {
     "goodId": 9466,
@@ -47517,7 +47517,7 @@
   {
     "goodId": 9504,
     "marketHashName": "★ StatTrak™ Ursus Knife | Forest DDPAT (Minimal Wear)",
-    "yyypSellPrice": 599.19
+    "yyypSellPrice": 599.0
   },
   {
     "goodId": 9505,
@@ -47662,7 +47662,7 @@
   {
     "goodId": 9533,
     "marketHashName": "PP-Bizon | Candy Apple (Factory New)",
-    "yyypSellPrice": 1.01
+    "yyypSellPrice": 1.02
   },
   {
     "goodId": 9534,
@@ -47732,7 +47732,7 @@
   {
     "goodId": 9547,
     "marketHashName": "AWP | Acheron (Field-Tested)",
-    "yyypSellPrice": 5.0
+    "yyypSellPrice": 5.05
   },
   {
     "goodId": 9548,
@@ -47797,7 +47797,7 @@
   {
     "goodId": 9560,
     "marketHashName": "AK-47 | Safety Net (Well-Worn)",
-    "yyypSellPrice": 20.18
+    "yyypSellPrice": 20.9
   },
   {
     "goodId": 9561,
@@ -47912,7 +47912,7 @@
   {
     "goodId": 9583,
     "marketHashName": "MP7 | Fade (Factory New)",
-    "yyypSellPrice": 62.98
+    "yyypSellPrice": 62.88
   },
   {
     "goodId": 9584,
@@ -47952,7 +47952,7 @@
   {
     "goodId": 9591,
     "marketHashName": "P250 | Vino Primo (Factory New)",
-    "yyypSellPrice": 96.0
+    "yyypSellPrice": 101.0
   },
   {
     "goodId": 9592,
@@ -48052,12 +48052,12 @@
   {
     "goodId": 9611,
     "marketHashName": "UMP-45 | Facility Dark (Well-Worn)",
-    "yyypSellPrice": 0.02
+    "yyypSellPrice": 0.04
   },
   {
     "goodId": 9612,
     "marketHashName": "AK-47 | Safety Net (Factory New)",
-    "yyypSellPrice": 60.78
+    "yyypSellPrice": 60.7
   },
   {
     "goodId": 9613,
@@ -48567,7 +48567,7 @@
   {
     "goodId": 9714,
     "marketHashName": "AWP | Neo-Noir (Factory New)",
-    "yyypSellPrice": 312.98
+    "yyypSellPrice": 312.99
   },
   {
     "goodId": 9715,
@@ -48597,7 +48597,7 @@
   {
     "goodId": 9720,
     "marketHashName": "AK-47 | Asiimov (Field-Tested)",
-    "yyypSellPrice": 262.13
+    "yyypSellPrice": 262.4
   },
   {
     "goodId": 9721,
@@ -48707,7 +48707,7 @@
   {
     "goodId": 9742,
     "marketHashName": "Galil AR | Signal (Minimal Wear)",
-    "yyypSellPrice": 5.47
+    "yyypSellPrice": 5.51
   },
   {
     "goodId": 9743,
@@ -48737,7 +48737,7 @@
   {
     "goodId": 9748,
     "marketHashName": "StatTrak™ USP-S | Flashback (Field-Tested)",
-    "yyypSellPrice": 8.07
+    "yyypSellPrice": 8.05
   },
   {
     "goodId": 9749,
@@ -48797,12 +48797,12 @@
   {
     "goodId": 9760,
     "marketHashName": "StatTrak™ Glock-18 | Oxide Blaze (Battle-Scarred)",
-    "yyypSellPrice": 1.96
+    "yyypSellPrice": 1.95
   },
   {
     "goodId": 9761,
     "marketHashName": "StatTrak™ MAC-10 | Pipe Down (Field-Tested)",
-    "yyypSellPrice": 5.81
+    "yyypSellPrice": 5.8
   },
   {
     "goodId": 9762,
@@ -48867,7 +48867,7 @@
   {
     "goodId": 9774,
     "marketHashName": "StatTrak™ USP-S | Flashback (Factory New)",
-    "yyypSellPrice": 19.44
+    "yyypSellPrice": 19.4
   },
   {
     "goodId": 9775,
@@ -48972,7 +48972,7 @@
   {
     "goodId": 9795,
     "marketHashName": "StatTrak™ M4A4 | Magnesium (Well-Worn)",
-    "yyypSellPrice": 4.85
+    "yyypSellPrice": 4.84
   },
   {
     "goodId": 9796,
@@ -49082,7 +49082,7 @@
   {
     "goodId": 9817,
     "marketHashName": "StatTrak™ P250 | Nevermore (Minimal Wear)",
-    "yyypSellPrice": 15.7
+    "yyypSellPrice": 15.68
   },
   {
     "goodId": 9818,
@@ -49182,7 +49182,7 @@
   {
     "goodId": 9837,
     "marketHashName": "StatTrak™ G3SG1 | Scavenger (Well-Worn)",
-    "yyypSellPrice": 6.99
+    "yyypSellPrice": 7.0
   },
   {
     "goodId": 9838,
@@ -49217,7 +49217,7 @@
   {
     "goodId": 9844,
     "marketHashName": "StatTrak™ Galil AR | Signal (Well-Worn)",
-    "yyypSellPrice": 9.73
+    "yyypSellPrice": 9.72
   },
   {
     "goodId": 9845,
@@ -49407,7 +49407,7 @@
   {
     "goodId": 9882,
     "marketHashName": "Sticker | Tyloo (Holo) | Katowice 2019",
-    "yyypSellPrice": 43.98
+    "yyypSellPrice": 43.89
   },
   {
     "goodId": 9883,
@@ -49512,7 +49512,7 @@
   {
     "goodId": 9903,
     "marketHashName": "Sticker | DeadFox (Foil) | Katowice 2019",
-    "yyypSellPrice": 15.78
+    "yyypSellPrice": 15.77
   },
   {
     "goodId": 9904,
@@ -49652,7 +49652,7 @@
   {
     "goodId": 9931,
     "marketHashName": "Sticker | crush | Katowice 2019",
-    "yyypSellPrice": 9.52
+    "yyypSellPrice": 9.5
   },
   {
     "goodId": 9932,
@@ -49672,7 +49672,7 @@
   {
     "goodId": 9935,
     "marketHashName": "Sticker | TACO (Foil) | Katowice 2019",
-    "yyypSellPrice": 16.97
+    "yyypSellPrice": 16.99
   },
   {
     "goodId": 9936,
@@ -49772,12 +49772,12 @@
   {
     "goodId": 9955,
     "marketHashName": "Sticker | Cloud9 (Holo) | Katowice 2019",
-    "yyypSellPrice": 74.69
+    "yyypSellPrice": 74.6
   },
   {
     "goodId": 9956,
     "marketHashName": "Sticker | MIBR (Holo) | Katowice 2019",
-    "yyypSellPrice": 13.79
+    "yyypSellPrice": 13.7
   },
   {
     "goodId": 9957,
@@ -50097,7 +50097,7 @@
   {
     "goodId": 10020,
     "marketHashName": "Sticker | tabseN | Katowice 2019",
-    "yyypSellPrice": 2.26
+    "yyypSellPrice": 2.25
   },
   {
     "goodId": 10021,
@@ -50187,7 +50187,7 @@
   {
     "goodId": 10038,
     "marketHashName": "Sticker | dexter | Katowice 2019",
-    "yyypSellPrice": 4.22
+    "yyypSellPrice": 4.23
   },
   {
     "goodId": 10039,
@@ -50312,7 +50312,7 @@
   {
     "goodId": 10063,
     "marketHashName": "Sticker | ableJ | Katowice 2019",
-    "yyypSellPrice": 1.97
+    "yyypSellPrice": 1.95
   },
   {
     "goodId": 10064,
@@ -50392,12 +50392,12 @@
   {
     "goodId": 10079,
     "marketHashName": "Sticker | dephh (Foil) | Katowice 2019",
-    "yyypSellPrice": 14.38
+    "yyypSellPrice": 14.28
   },
   {
     "goodId": 10080,
     "marketHashName": "Sticker | Hobbit (Foil) | Katowice 2019",
-    "yyypSellPrice": 23.17
+    "yyypSellPrice": 23.07
   },
   {
     "goodId": 10081,
@@ -50477,7 +50477,7 @@
   {
     "goodId": 10096,
     "marketHashName": "Sticker | Liazz | Katowice 2019",
-    "yyypSellPrice": 5.59
+    "yyypSellPrice": 5.58
   },
   {
     "goodId": 10097,
@@ -50547,7 +50547,7 @@
   {
     "goodId": 10110,
     "marketHashName": "Sticker | RpK | Katowice 2019",
-    "yyypSellPrice": 3.94
+    "yyypSellPrice": 3.93
   },
   {
     "goodId": 10111,
@@ -50592,7 +50592,7 @@
   {
     "goodId": 10119,
     "marketHashName": "Sticker | kennyS (Foil) | Katowice 2019",
-    "yyypSellPrice": 182.0
+    "yyypSellPrice": 181.5
   },
   {
     "goodId": 10120,
@@ -50857,7 +50857,7 @@
   {
     "goodId": 10172,
     "marketHashName": "Sticker | KSCERATO (Foil) | Katowice 2019",
-    "yyypSellPrice": 32.98
+    "yyypSellPrice": 32.99
   },
   {
     "goodId": 10173,
@@ -51837,7 +51837,7 @@
   {
     "goodId": 10368,
     "marketHashName": "Tec-9 | Bamboozle (Field-Tested)",
-    "yyypSellPrice": 3.92
+    "yyypSellPrice": 3.91
   },
   {
     "goodId": 10369,
@@ -51872,7 +51872,7 @@
   {
     "goodId": 10375,
     "marketHashName": "StatTrak™ AK-47 | Uncharted (Battle-Scarred)",
-    "yyypSellPrice": 13.58
+    "yyypSellPrice": 13.57
   },
   {
     "goodId": 10376,
@@ -51962,7 +51962,7 @@
   {
     "goodId": 10393,
     "marketHashName": "MAC-10 | Whitefish (Field-Tested)",
-    "yyypSellPrice": 1.74
+    "yyypSellPrice": 1.73
   },
   {
     "goodId": 10394,
@@ -52027,7 +52027,7 @@
   {
     "goodId": 10406,
     "marketHashName": "StatTrak™ P250 | Verdigris (Factory New)",
-    "yyypSellPrice": 7.97
+    "yyypSellPrice": 7.95
   },
   {
     "goodId": 10407,
@@ -52247,7 +52247,7 @@
   {
     "goodId": 10450,
     "marketHashName": "StatTrak™ Desert Eagle | Light Rail (Minimal Wear)",
-    "yyypSellPrice": 43.29
+    "yyypSellPrice": 43.19
   },
   {
     "goodId": 10451,
@@ -52357,7 +52357,7 @@
   {
     "goodId": 10472,
     "marketHashName": "★ Stiletto Knife | Doppler (Factory New)",
-    "yyypSellPrice": 2919.49
+    "yyypSellPrice": 2918.0
   },
   {
     "goodId": 10473,
@@ -52447,7 +52447,7 @@
   {
     "goodId": 10490,
     "marketHashName": "★ Talon Knife | Doppler (Factory New)",
-    "yyypSellPrice": 4988.0
+    "yyypSellPrice": 4986.0
   },
   {
     "goodId": 10491,
@@ -52457,7 +52457,7 @@
   {
     "goodId": 10492,
     "marketHashName": "★ Talon Knife | Ultraviolet (Field-Tested)",
-    "yyypSellPrice": 1679.0
+    "yyypSellPrice": 1678.0
   },
   {
     "goodId": 10493,
@@ -52667,7 +52667,7 @@
   {
     "goodId": 10534,
     "marketHashName": "★ StatTrak™ Ursus Knife | Rust Coat (Battle-Scarred)",
-    "yyypSellPrice": 399.98
+    "yyypSellPrice": 399.18
   },
   {
     "goodId": 10535,
@@ -52792,7 +52792,7 @@
   {
     "goodId": 10559,
     "marketHashName": "★ Ursus Knife | Ultraviolet (Minimal Wear)",
-    "yyypSellPrice": 720.99
+    "yyypSellPrice": 720.0
   },
   {
     "goodId": 10560,
@@ -52817,7 +52817,7 @@
   {
     "goodId": 10564,
     "marketHashName": "★ StatTrak™ Navaja Knife | Damascus Steel (Field-Tested)",
-    "yyypSellPrice": 450.29
+    "yyypSellPrice": 450.1
   },
   {
     "goodId": 10565,
@@ -52867,7 +52867,7 @@
   {
     "goodId": 10574,
     "marketHashName": "StatTrak™ Music Kit | The Verkkars, EZ4ENCE",
-    "yyypSellPrice": 36.55
+    "yyypSellPrice": 36.54
   },
   {
     "goodId": 10575,
@@ -52957,7 +52957,7 @@
   {
     "goodId": 10592,
     "marketHashName": "Sticker | Lurker (Foil)",
-    "yyypSellPrice": 17.98
+    "yyypSellPrice": 17.99
   },
   {
     "goodId": 10593,
@@ -53192,7 +53192,7 @@
   {
     "goodId": 10639,
     "marketHashName": "★ Talon Knife | Ultraviolet (Factory New)",
-    "yyypSellPrice": 5999.99
+    "yyypSellPrice": 5750.0
   },
   {
     "goodId": 10640,
@@ -53337,7 +53337,7 @@
   {
     "goodId": 10668,
     "marketHashName": "Sticker | Magisk | Berlin 2019",
-    "yyypSellPrice": 0.66
+    "yyypSellPrice": 0.65
   },
   {
     "goodId": 10669,
@@ -53357,7 +53357,7 @@
   {
     "goodId": 10672,
     "marketHashName": "Sticker | device (Foil) | Berlin 2019",
-    "yyypSellPrice": 18.58
+    "yyypSellPrice": 18.57
   },
   {
     "goodId": 10673,
@@ -53547,7 +53547,7 @@
   {
     "goodId": 10710,
     "marketHashName": "Sticker | MIBR (Holo) | Berlin 2019",
-    "yyypSellPrice": 4.48
+    "yyypSellPrice": 4.47
   },
   {
     "goodId": 10711,
@@ -53657,12 +53657,12 @@
   {
     "goodId": 10732,
     "marketHashName": "Sticker | device | Berlin 2019",
-    "yyypSellPrice": 4.33
+    "yyypSellPrice": 4.34
   },
   {
     "goodId": 10733,
     "marketHashName": "Sticker | GeT_RiGhT | Berlin 2019",
-    "yyypSellPrice": 0.46
+    "yyypSellPrice": 1.12
   },
   {
     "goodId": 10734,
@@ -53687,7 +53687,7 @@
   {
     "goodId": 10738,
     "marketHashName": "Sticker | G2 Esports (Holo) | Berlin 2019",
-    "yyypSellPrice": 4.42
+    "yyypSellPrice": 4.38
   },
   {
     "goodId": 10739,
@@ -53712,7 +53712,7 @@
   {
     "goodId": 10743,
     "marketHashName": "Sticker | Lucky (Foil) | Berlin 2019",
-    "yyypSellPrice": 7.24
+    "yyypSellPrice": 7.23
   },
   {
     "goodId": 10744,
@@ -53737,7 +53737,7 @@
   {
     "goodId": 10748,
     "marketHashName": "Sticker | gade | Berlin 2019",
-    "yyypSellPrice": 1.9
+    "yyypSellPrice": 1.89
   },
   {
     "goodId": 10749,
@@ -53822,7 +53822,7 @@
   {
     "goodId": 10765,
     "marketHashName": "Sticker | Grayhound Gaming (Holo) | Berlin 2019",
-    "yyypSellPrice": 2.05
+    "yyypSellPrice": 2.04
   },
   {
     "goodId": 10766,
@@ -54007,7 +54007,7 @@
   {
     "goodId": 10802,
     "marketHashName": "Sticker | Natus Vincere (Holo) | Berlin 2019",
-    "yyypSellPrice": 6.07
+    "yyypSellPrice": 6.06
   },
   {
     "goodId": 10803,
@@ -54057,7 +54057,7 @@
   {
     "goodId": 10812,
     "marketHashName": "Sticker | Vitality (Holo) | Berlin 2019",
-    "yyypSellPrice": 2.76
+    "yyypSellPrice": 2.75
   },
   {
     "goodId": 10813,
@@ -54177,7 +54177,7 @@
   {
     "goodId": 10836,
     "marketHashName": "Sticker | TACO | Berlin 2019",
-    "yyypSellPrice": 0.58
+    "yyypSellPrice": 0.7
   },
   {
     "goodId": 10837,
@@ -54192,7 +54192,7 @@
   {
     "goodId": 10839,
     "marketHashName": "Sticker | FalleN (Foil) | Berlin 2019",
-    "yyypSellPrice": 9.07
+    "yyypSellPrice": 9.06
   },
   {
     "goodId": 10840,
@@ -54272,7 +54272,7 @@
   {
     "goodId": 10855,
     "marketHashName": "Berlin 2019 Legends (Holo-Foil)",
-    "yyypSellPrice": 8.58
+    "yyypSellPrice": 8.56
   },
   {
     "goodId": 10856,
@@ -54307,7 +54307,7 @@
   {
     "goodId": 10862,
     "marketHashName": "Sticker | dexter | Berlin 2019",
-    "yyypSellPrice": 1.52
+    "yyypSellPrice": 1.51
   },
   {
     "goodId": 10863,
@@ -54327,7 +54327,7 @@
   {
     "goodId": 10866,
     "marketHashName": "Sticker | BnTeT | Berlin 2019",
-    "yyypSellPrice": 1.42
+    "yyypSellPrice": 1.41
   },
   {
     "goodId": 10867,
@@ -54342,7 +54342,7 @@
   {
     "goodId": 10869,
     "marketHashName": "Sticker | frozen | Berlin 2019",
-    "yyypSellPrice": 6.62
+    "yyypSellPrice": 6.61
   },
   {
     "goodId": 10870,
@@ -54377,7 +54377,7 @@
   {
     "goodId": 10876,
     "marketHashName": "Sticker | ALEX | Berlin 2019",
-    "yyypSellPrice": 0.32
+    "yyypSellPrice": 0.31
   },
   {
     "goodId": 10877,
@@ -54452,7 +54452,7 @@
   {
     "goodId": 10891,
     "marketHashName": "Sticker | Golden (Foil) | Berlin 2019",
-    "yyypSellPrice": 3.77
+    "yyypSellPrice": 3.76
   },
   {
     "goodId": 10892,
@@ -54617,7 +54617,7 @@
   {
     "goodId": 10924,
     "marketHashName": "Sticker | qikert (Foil) | Berlin 2019",
-    "yyypSellPrice": 2.84
+    "yyypSellPrice": 2.83
   },
   {
     "goodId": 10925,
@@ -54742,7 +54742,7 @@
   {
     "goodId": 10949,
     "marketHashName": "Sticker | CR4ZY (Foil) | Berlin 2019",
-    "yyypSellPrice": 25.39
+    "yyypSellPrice": 25.38
   },
   {
     "goodId": 10950,
@@ -54847,7 +54847,7 @@
   {
     "goodId": 10970,
     "marketHashName": "Sticker | Avangar | Berlin 2019",
-    "yyypSellPrice": 5.59
+    "yyypSellPrice": 5.57
   },
   {
     "goodId": 10971,
@@ -55417,12 +55417,12 @@
   {
     "goodId": 11084,
     "marketHashName": "Sticker | ZywOo (Gold) | Berlin 2019",
-    "yyypSellPrice": 235.54
+    "yyypSellPrice": 235.53
   },
   {
     "goodId": 11085,
     "marketHashName": "Sticker | dephh (Gold) | Berlin 2019",
-    "yyypSellPrice": 39.95
+    "yyypSellPrice": 39.94
   },
   {
     "goodId": 11086,
@@ -55542,7 +55542,7 @@
   {
     "goodId": 11109,
     "marketHashName": "Souvenir MAC-10 | Urban DDPAT (Field-Tested)",
-    "yyypSellPrice": 4.0
+    "yyypSellPrice": 3.98
   },
   {
     "goodId": 11110,
@@ -55932,7 +55932,7 @@
   {
     "goodId": 11187,
     "marketHashName": "★ Classic Knife | Scorched (Field-Tested)",
-    "yyypSellPrice": 478.0
+    "yyypSellPrice": 477.5
   },
   {
     "goodId": 11188,
@@ -55977,7 +55977,7 @@
   {
     "goodId": 11196,
     "marketHashName": "SCAR-20 | Assault (Battle-Scarred)",
-    "yyypSellPrice": 1.93
+    "yyypSellPrice": 1.92
   },
   {
     "goodId": 11197,
@@ -56212,7 +56212,7 @@
   {
     "goodId": 11243,
     "marketHashName": "AWP | Wildfire (Factory New)",
-    "yyypSellPrice": 898.0
+    "yyypSellPrice": 897.5
   },
   {
     "goodId": 11244,
@@ -56232,7 +56232,7 @@
   {
     "goodId": 11247,
     "marketHashName": "AWP | Wildfire (Minimal Wear)",
-    "yyypSellPrice": 407.95
+    "yyypSellPrice": 408.0
   },
   {
     "goodId": 11248,
@@ -56252,7 +56252,7 @@
   {
     "goodId": 11251,
     "marketHashName": "StatTrak™ Tec-9 | Flash Out (Battle-Scarred)",
-    "yyypSellPrice": 1.89
+    "yyypSellPrice": 1.88
   },
   {
     "goodId": 11252,
@@ -56527,7 +56527,7 @@
   {
     "goodId": 11306,
     "marketHashName": "★ Classic Knife | Boreal Forest (Minimal Wear)",
-    "yyypSellPrice": 513.96
+    "yyypSellPrice": 512.93
   },
   {
     "goodId": 11307,
@@ -56622,7 +56622,7 @@
   {
     "goodId": 11325,
     "marketHashName": "StatTrak™ Tec-9 | Flash Out (Well-Worn)",
-    "yyypSellPrice": 3.79
+    "yyypSellPrice": 3.78
   },
   {
     "goodId": 11326,
@@ -56807,7 +56807,7 @@
   {
     "goodId": 11362,
     "marketHashName": "★ StatTrak™ Classic Knife | Urban Masked (Field-Tested)",
-    "yyypSellPrice": 964.9
+    "yyypSellPrice": 964.8
   },
   {
     "goodId": 11363,
@@ -57087,7 +57087,7 @@
   {
     "goodId": 11418,
     "marketHashName": "SSG 08 | Red Stone (Field-Tested)",
-    "yyypSellPrice": 40.03
+    "yyypSellPrice": 40.01
   },
   {
     "goodId": 11419,
@@ -57097,7 +57097,7 @@
   {
     "goodId": 11420,
     "marketHashName": "PP-Bizon | Seabird (Factory New)",
-    "yyypSellPrice": 39.89
+    "yyypSellPrice": 39.87
   },
   {
     "goodId": 11421,
@@ -57172,7 +57172,7 @@
   {
     "goodId": 11435,
     "marketHashName": "MAC-10 | Surfwood (Factory New)",
-    "yyypSellPrice": 244.5
+    "yyypSellPrice": 244.0
   },
   {
     "goodId": 11436,
@@ -57312,7 +57312,7 @@
   {
     "goodId": 11463,
     "marketHashName": "R8 Revolver | Canal Spray (Field-Tested)",
-    "yyypSellPrice": 16.3
+    "yyypSellPrice": 16.28
   },
   {
     "goodId": 11464,
@@ -57322,7 +57322,7 @@
   {
     "goodId": 11465,
     "marketHashName": "Ground Rebel  | Elite Crew",
-    "yyypSellPrice": 57.9
+    "yyypSellPrice": 57.89
   },
   {
     "goodId": 11466,
@@ -57352,7 +57352,7 @@
   {
     "goodId": 11471,
     "marketHashName": "Blackwolf | Sabre",
-    "yyypSellPrice": 35.4
+    "yyypSellPrice": 35.5
   },
   {
     "goodId": 11472,
@@ -57407,7 +57407,7 @@
   {
     "goodId": 11482,
     "marketHashName": "M4A4 | Dark Blossom (Field-Tested)",
-    "yyypSellPrice": 79.46
+    "yyypSellPrice": 79.45
   },
   {
     "goodId": 11483,
@@ -57487,7 +57487,7 @@
   {
     "goodId": 11498,
     "marketHashName": "B Squadron Officer | SAS",
-    "yyypSellPrice": 47.8
+    "yyypSellPrice": 47.7
   },
   {
     "goodId": 11499,
@@ -57542,7 +57542,7 @@
   {
     "goodId": 11509,
     "marketHashName": "MAC-10 | Surfwood (Minimal Wear)",
-    "yyypSellPrice": 23.72
+    "yyypSellPrice": 23.7
   },
   {
     "goodId": 11510,
@@ -57592,7 +57592,7 @@
   {
     "goodId": 11519,
     "marketHashName": "USP-S | Pathfinder (Factory New)",
-    "yyypSellPrice": 179.45
+    "yyypSellPrice": 179.09
   },
   {
     "goodId": 11520,
@@ -57932,12 +57932,12 @@
   {
     "goodId": 11587,
     "marketHashName": "StatTrak™ SG 553 | Colony IV (Minimal Wear)",
-    "yyypSellPrice": 248.78
+    "yyypSellPrice": 248.77
   },
   {
     "goodId": 11588,
     "marketHashName": "Tec-9 | Decimator (Well-Worn)",
-    "yyypSellPrice": 136.0
+    "yyypSellPrice": 135.5
   },
   {
     "goodId": 11589,
@@ -57947,7 +57947,7 @@
   {
     "goodId": 11590,
     "marketHashName": "SCAR-20 | Torn (Well-Worn)",
-    "yyypSellPrice": 6.94
+    "yyypSellPrice": 6.95
   },
   {
     "goodId": 11591,
@@ -58002,7 +58002,7 @@
   {
     "goodId": 11601,
     "marketHashName": "AK-47 | Rat Rod (Minimal Wear)",
-    "yyypSellPrice": 37.0
+    "yyypSellPrice": 36.97
   },
   {
     "goodId": 11602,
@@ -58047,7 +58047,7 @@
   {
     "goodId": 11610,
     "marketHashName": "StatTrak™ SCAR-20 | Torn (Factory New)",
-    "yyypSellPrice": 15.55
+    "yyypSellPrice": 15.54
   },
   {
     "goodId": 11611,
@@ -58307,7 +58307,7 @@
   {
     "goodId": 11662,
     "marketHashName": "StatTrak™ AK-47 | Rat Rod (Well-Worn)",
-    "yyypSellPrice": 78.89
+    "yyypSellPrice": 78.88
   },
   {
     "goodId": 11663,
@@ -58352,7 +58352,7 @@
   {
     "goodId": 11671,
     "marketHashName": "AWP | Containment Breach (Factory New)",
-    "yyypSellPrice": 2399.99
+    "yyypSellPrice": 2399.49
   },
   {
     "goodId": 11672,
@@ -58492,7 +58492,7 @@
   {
     "goodId": 11699,
     "marketHashName": "★ Skeleton Knife",
-    "yyypSellPrice": 1408.5
+    "yyypSellPrice": 1407.0
   },
   {
     "goodId": 11700,
@@ -58667,7 +58667,7 @@
   {
     "goodId": 11734,
     "marketHashName": "Desert Eagle | Emerald Jörmungandr (Minimal Wear)",
-    "yyypSellPrice": 2662.19
+    "yyypSellPrice": 2662.0
   },
   {
     "goodId": 11735,
@@ -58727,7 +58727,7 @@
   {
     "goodId": 11746,
     "marketHashName": "MP9 | Wild Lily (Factory New)",
-    "yyypSellPrice": 15295.49
+    "yyypSellPrice": 15295.5
   },
   {
     "goodId": 11747,
@@ -58757,7 +58757,7 @@
   {
     "goodId": 11752,
     "marketHashName": "★ Survival Knife",
-    "yyypSellPrice": 288.5
+    "yyypSellPrice": 289.0
   },
   {
     "goodId": 11753,
@@ -58942,12 +58942,12 @@
   {
     "goodId": 11789,
     "marketHashName": "★ Nomad Knife",
-    "yyypSellPrice": 792.5
+    "yyypSellPrice": 792.0
   },
   {
     "goodId": 11790,
     "marketHashName": "Glock-18 | Synth Leaf (Factory New)",
-    "yyypSellPrice": 2106.69
+    "yyypSellPrice": 2106.5
   },
   {
     "goodId": 11791,
@@ -59027,7 +59027,7 @@
   {
     "goodId": 11806,
     "marketHashName": "★ Survival Knife | Scorched (Field-Tested)",
-    "yyypSellPrice": 266.99
+    "yyypSellPrice": 270.0
   },
   {
     "goodId": 11807,
@@ -59082,7 +59082,7 @@
   {
     "goodId": 11817,
     "marketHashName": "★ Skeleton Knife | Fade (Factory New)",
-    "yyypSellPrice": 3070.0
+    "yyypSellPrice": 3069.0
   },
   {
     "goodId": 11818,
@@ -59242,7 +59242,7 @@
   {
     "goodId": 11849,
     "marketHashName": "★ Survival Knife | Safari Mesh (Field-Tested)",
-    "yyypSellPrice": 239.5
+    "yyypSellPrice": 245.0
   },
   {
     "goodId": 11850,
@@ -59297,7 +59297,7 @@
   {
     "goodId": 11860,
     "marketHashName": "★ Nomad Knife | Safari Mesh (Field-Tested)",
-    "yyypSellPrice": 400.0
+    "yyypSellPrice": 406.0
   },
   {
     "goodId": 11861,
@@ -59532,12 +59532,12 @@
   {
     "goodId": 11907,
     "marketHashName": "★ Nomad Knife | Stained (Minimal Wear)",
-    "yyypSellPrice": 780.0
+    "yyypSellPrice": 787.91
   },
   {
     "goodId": 11908,
     "marketHashName": "★ Skeleton Knife | Blue Steel (Battle-Scarred)",
-    "yyypSellPrice": 1217.91
+    "yyypSellPrice": 1250.0
   },
   {
     "goodId": 11909,
@@ -59587,7 +59587,7 @@
   {
     "goodId": 11918,
     "marketHashName": "★ Nomad Knife | Boreal Forest (Field-Tested)",
-    "yyypSellPrice": 429.9
+    "yyypSellPrice": 430.4
   },
   {
     "goodId": 11919,
@@ -59627,7 +59627,7 @@
   {
     "goodId": 11926,
     "marketHashName": "★ Paracord Knife | Slaughter (Minimal Wear)",
-    "yyypSellPrice": 710.0
+    "yyypSellPrice": 709.5
   },
   {
     "goodId": 11927,
@@ -59822,7 +59822,7 @@
   {
     "goodId": 11965,
     "marketHashName": "★ Survival Knife | Scorched (Well-Worn)",
-    "yyypSellPrice": 285.6
+    "yyypSellPrice": 287.5
   },
   {
     "goodId": 11966,
@@ -59917,7 +59917,7 @@
   {
     "goodId": 11984,
     "marketHashName": "★ Nomad Knife | Crimson Web (Battle-Scarred)",
-    "yyypSellPrice": 817.4
+    "yyypSellPrice": 825.41
   },
   {
     "goodId": 11985,
@@ -60927,7 +60927,7 @@
   {
     "goodId": 12186,
     "marketHashName": "Prisma 2 Case",
-    "yyypSellPrice": 6.95
+    "yyypSellPrice": 6.94
   },
   {
     "goodId": 12187,
@@ -61027,7 +61027,7 @@
   {
     "goodId": 12206,
     "marketHashName": "M4A1-S | Player Two (Field-Tested)",
-    "yyypSellPrice": 351.0
+    "yyypSellPrice": 350.0
   },
   {
     "goodId": 12207,
@@ -61262,7 +61262,7 @@
   {
     "goodId": 12253,
     "marketHashName": "MAC-10 | Disco Tech (Factory New)",
-    "yyypSellPrice": 108.5
+    "yyypSellPrice": 110.0
   },
   {
     "goodId": 12254,
@@ -61477,7 +61477,7 @@
   {
     "goodId": 12296,
     "marketHashName": "M4A1-S | Player Two (Battle-Scarred)",
-    "yyypSellPrice": 367.8
+    "yyypSellPrice": 367.79
   },
   {
     "goodId": 12297,
@@ -61497,7 +61497,7 @@
   {
     "goodId": 12300,
     "marketHashName": "StatTrak™ M4A1-S | Player Two (Field-Tested)",
-    "yyypSellPrice": 362.49
+    "yyypSellPrice": 362.0
   },
   {
     "goodId": 12301,
@@ -61697,7 +61697,7 @@
   {
     "goodId": 12340,
     "marketHashName": "Music Kit | Daniel Sadowski, Eye of the Dragon",
-    "yyypSellPrice": 8.19
+    "yyypSellPrice": 8.18
   },
   {
     "goodId": 12341,
@@ -61792,7 +61792,7 @@
   {
     "goodId": 12359,
     "marketHashName": "Sticker | Tyranids Hive Tyrant (Holo)",
-    "yyypSellPrice": 5.99
+    "yyypSellPrice": 6.0
   },
   {
     "goodId": 12360,
@@ -61977,7 +61977,7 @@
   {
     "goodId": 12396,
     "marketHashName": "Galil AR | Connexion (Field-Tested)",
-    "yyypSellPrice": 2.98
+    "yyypSellPrice": 3.0
   },
   {
     "goodId": 12397,
@@ -62027,7 +62027,7 @@
   {
     "goodId": 12406,
     "marketHashName": "MAC-10 | Allure (Minimal Wear)",
-    "yyypSellPrice": 4.65
+    "yyypSellPrice": 4.66
   },
   {
     "goodId": 12407,
@@ -62137,7 +62137,7 @@
   {
     "goodId": 12428,
     "marketHashName": "StatTrak™ Desert Eagle | Printstream (Field-Tested)",
-    "yyypSellPrice": 390.0
+    "yyypSellPrice": 389.5
   },
   {
     "goodId": 12429,
@@ -62192,7 +62192,7 @@
   {
     "goodId": 12439,
     "marketHashName": "StatTrak™ Glock-18 | Vogue (Field-Tested)",
-    "yyypSellPrice": 35.34
+    "yyypSellPrice": 35.26
   },
   {
     "goodId": 12440,
@@ -62322,7 +62322,7 @@
   {
     "goodId": 12465,
     "marketHashName": "StatTrak™ M4A4 | Tooth Fairy (Minimal Wear)",
-    "yyypSellPrice": 65.67
+    "yyypSellPrice": 65.68
   },
   {
     "goodId": 12466,
@@ -62472,7 +62472,7 @@
   {
     "goodId": 12495,
     "marketHashName": "StatTrak™ Glock-18 | Vogue (Battle-Scarred)",
-    "yyypSellPrice": 41.81
+    "yyypSellPrice": 41.71
   },
   {
     "goodId": 12496,
@@ -62567,7 +62567,7 @@
   {
     "goodId": 12514,
     "marketHashName": "Number K | The Professionals",
-    "yyypSellPrice": 270.5
+    "yyypSellPrice": 271.0
   },
   {
     "goodId": 12515,
@@ -62602,7 +62602,7 @@
   {
     "goodId": 12521,
     "marketHashName": "R8 Revolver | Night (Field-Tested)",
-    "yyypSellPrice": 1.84
+    "yyypSellPrice": 1.83
   },
   {
     "goodId": 12522,
@@ -62652,7 +62652,7 @@
   {
     "goodId": 12531,
     "marketHashName": "Sir Bloody Loudmouth Darryl | The Professionals",
-    "yyypSellPrice": 331.5
+    "yyypSellPrice": 331.0
   },
   {
     "goodId": 12532,
@@ -62662,7 +62662,7 @@
   {
     "goodId": 12533,
     "marketHashName": "P250 | Forest Night (Minimal Wear)",
-    "yyypSellPrice": 7.49
+    "yyypSellPrice": 7.47
   },
   {
     "goodId": 12534,
@@ -62697,12 +62697,12 @@
   {
     "goodId": 12540,
     "marketHashName": "R8 Revolver | Night (Well-Worn)",
-    "yyypSellPrice": 19.9
+    "yyypSellPrice": 19.89
   },
   {
     "goodId": 12541,
     "marketHashName": "SG 553 | Lush Ruins (Minimal Wear)",
-    "yyypSellPrice": 4.08
+    "yyypSellPrice": 4.07
   },
   {
     "goodId": 12542,
@@ -62742,7 +62742,7 @@
   {
     "goodId": 12549,
     "marketHashName": "PP-Bizon | Death Rattle (Battle-Scarred)",
-    "yyypSellPrice": 4.91
+    "yyypSellPrice": 4.9
   },
   {
     "goodId": 12550,
@@ -62917,7 +62917,7 @@
   {
     "goodId": 12584,
     "marketHashName": "Dual Berettas | Heist (Minimal Wear)",
-    "yyypSellPrice": 6.7
+    "yyypSellPrice": 6.68
   },
   {
     "goodId": 12585,
@@ -62987,7 +62987,7 @@
   {
     "goodId": 12598,
     "marketHashName": "Cmdr. Mae 'Dead Cold' Jamison | SWAT",
-    "yyypSellPrice": 83.5
+    "yyypSellPrice": 83.6
   },
   {
     "goodId": 12599,
@@ -63002,7 +63002,7 @@
   {
     "goodId": 12601,
     "marketHashName": "StatTrak™ CZ75-Auto | Vendetta (Field-Tested)",
-    "yyypSellPrice": 5.61
+    "yyypSellPrice": 5.59
   },
   {
     "goodId": 12602,
@@ -63162,7 +63162,7 @@
   {
     "goodId": 12633,
     "marketHashName": "Five-SeveN | Berries And Cherries (Factory New)",
-    "yyypSellPrice": 523.87
+    "yyypSellPrice": 522.82
   },
   {
     "goodId": 12634,
@@ -63372,7 +63372,7 @@
   {
     "goodId": 12675,
     "marketHashName": "P90 | Cocoa Rampage (Battle-Scarred)",
-    "yyypSellPrice": 4.76
+    "yyypSellPrice": 4.77
   },
   {
     "goodId": 12676,
@@ -63552,7 +63552,7 @@
   {
     "goodId": 12711,
     "marketHashName": "SG 553 | Lush Ruins (Factory New)",
-    "yyypSellPrice": 12.99
+    "yyypSellPrice": 12.97
   },
   {
     "goodId": 12712,
@@ -63957,7 +63957,7 @@
   {
     "goodId": 12792,
     "marketHashName": "StatTrak™ M4A1-S | Printstream (Factory New)",
-    "yyypSellPrice": 6480.0
+    "yyypSellPrice": 6479.0
   },
   {
     "goodId": 12793,
@@ -64062,12 +64062,12 @@
   {
     "goodId": 12813,
     "marketHashName": "Sticker | Hello MAC-10 (Gold)",
-    "yyypSellPrice": 8.79
+    "yyypSellPrice": 8.8
   },
   {
     "goodId": 12814,
     "marketHashName": "MP7 | Vault Heist (Well-Worn)",
-    "yyypSellPrice": 27.98
+    "yyypSellPrice": 27.9
   },
   {
     "goodId": 12815,
@@ -64117,7 +64117,7 @@
   {
     "goodId": 12824,
     "marketHashName": "StatTrak™ AWP | Exoskeleton (Minimal Wear)",
-    "yyypSellPrice": 89.0
+    "yyypSellPrice": 88.0
   },
   {
     "goodId": 12825,
@@ -64127,7 +64127,7 @@
   {
     "goodId": 12826,
     "marketHashName": "StatTrak™ MP5-SD | Condition Zero (Battle-Scarred)",
-    "yyypSellPrice": 4.12
+    "yyypSellPrice": 4.13
   },
   {
     "goodId": 12827,
@@ -64237,7 +64237,7 @@
   {
     "goodId": 12848,
     "marketHashName": "USP-S | Monster Mashup (Well-Worn)",
-    "yyypSellPrice": 148.7
+    "yyypSellPrice": 148.2
   },
   {
     "goodId": 12849,
@@ -64357,7 +64357,7 @@
   {
     "goodId": 12872,
     "marketHashName": "Sticker | Hello MP9 (Gold)",
-    "yyypSellPrice": 10.04
+    "yyypSellPrice": 10.03
   },
   {
     "goodId": 12873,
@@ -64367,7 +64367,7 @@
   {
     "goodId": 12874,
     "marketHashName": "★ Broken Fang Gloves | Jade (Field-Tested)",
-    "yyypSellPrice": 419.0
+    "yyypSellPrice": 418.5
   },
   {
     "goodId": 12875,
@@ -64547,7 +64547,7 @@
   {
     "goodId": 12910,
     "marketHashName": "M4A1-S | Printstream (Well-Worn)",
-    "yyypSellPrice": 1140.99
+    "yyypSellPrice": 1140.48
   },
   {
     "goodId": 12911,
@@ -64767,7 +64767,7 @@
   {
     "goodId": 12954,
     "marketHashName": "★ Moto Gloves | 3rd Commando Company (Minimal Wear)",
-    "yyypSellPrice": 525.0
+    "yyypSellPrice": 540.0
   },
   {
     "goodId": 12955,
@@ -64887,7 +64887,7 @@
   {
     "goodId": 12978,
     "marketHashName": "P250 | Bengal Tiger (Factory New)",
-    "yyypSellPrice": 299.9
+    "yyypSellPrice": 298.7
   },
   {
     "goodId": 12979,
@@ -65087,7 +65087,7 @@
   {
     "goodId": 13018,
     "marketHashName": "★ Broken Fang Gloves | Unhinged (Minimal Wear)",
-    "yyypSellPrice": 478.0
+    "yyypSellPrice": 477.5
   },
   {
     "goodId": 13019,
@@ -65122,7 +65122,7 @@
   {
     "goodId": 13025,
     "marketHashName": "★ Moto Gloves | Finish Line (Factory New)",
-    "yyypSellPrice": 2587.5
+    "yyypSellPrice": 2550.0
   },
   {
     "goodId": 13026,
@@ -65142,7 +65142,7 @@
   {
     "goodId": 13029,
     "marketHashName": "★ Broken Fang Gloves | Yellow-banded (Factory New)",
-    "yyypSellPrice": 2560.0
+    "yyypSellPrice": 1988.5
   },
   {
     "goodId": 13030,
@@ -65627,7 +65627,7 @@
   {
     "goodId": 13126,
     "marketHashName": "Sticker | Fnatic (Foil) | 2020 RMR",
-    "yyypSellPrice": 5.94
+    "yyypSellPrice": 5.92
   },
   {
     "goodId": 13127,
@@ -65652,7 +65652,7 @@
   {
     "goodId": 13131,
     "marketHashName": "Sticker | ESPADA (Gold) | 2020 RMR",
-    "yyypSellPrice": 12.91
+    "yyypSellPrice": 12.9
   },
   {
     "goodId": 13132,
@@ -65852,7 +65852,7 @@
   {
     "goodId": 13171,
     "marketHashName": "Sticker | Poorly Drawn SAS",
-    "yyypSellPrice": 2.8
+    "yyypSellPrice": 2.7
   },
   {
     "goodId": 13172,
@@ -66157,7 +66157,7 @@
   {
     "goodId": 13232,
     "marketHashName": "USP-S | The Traitor (Field-Tested)",
-    "yyypSellPrice": 202.0
+    "yyypSellPrice": 201.5
   },
   {
     "goodId": 13233,
@@ -66412,7 +66412,7 @@
   {
     "goodId": 13283,
     "marketHashName": "M4A4 | In Living Color (Factory New)",
-    "yyypSellPrice": 517.99
+    "yyypSellPrice": 517.49
   },
   {
     "goodId": 13284,
@@ -66497,7 +66497,7 @@
   {
     "goodId": 13300,
     "marketHashName": "StatTrak™ USP-S | The Traitor (Well-Worn)",
-    "yyypSellPrice": 264.39
+    "yyypSellPrice": 263.89
   },
   {
     "goodId": 13301,
@@ -66722,7 +66722,7 @@
   {
     "goodId": 13345,
     "marketHashName": "P90 | Desert DDPAT (Field-Tested)",
-    "yyypSellPrice": 0.99
+    "yyypSellPrice": 0.98
   },
   {
     "goodId": 13346,
@@ -66922,7 +66922,7 @@
   {
     "goodId": 13385,
     "marketHashName": "Sticker | Blood Moon Wave Rider",
-    "yyypSellPrice": 3.27
+    "yyypSellPrice": 3.26
   },
   {
     "goodId": 13386,
@@ -67302,7 +67302,7 @@
   {
     "goodId": 13461,
     "marketHashName": "FAMAS | Meltdown (Factory New)",
-    "yyypSellPrice": 456.31
+    "yyypSellPrice": 455.4
   },
   {
     "goodId": 13462,
@@ -67342,7 +67342,7 @@
   {
     "goodId": 13469,
     "marketHashName": "USP-S | Whiteout (Battle-Scarred)",
-    "yyypSellPrice": 219.3
+    "yyypSellPrice": 219.29
   },
   {
     "goodId": 13470,
@@ -67692,7 +67692,7 @@
   {
     "goodId": 13539,
     "marketHashName": "MAC-10 | Toybox (Factory New)",
-    "yyypSellPrice": 306.85
+    "yyypSellPrice": 306.24
   },
   {
     "goodId": 13540,
@@ -67747,7 +67747,7 @@
   {
     "goodId": 13550,
     "marketHashName": "Dual Berettas | Drift Wood (Battle-Scarred)",
-    "yyypSellPrice": 2.12
+    "yyypSellPrice": 2.11
   },
   {
     "goodId": 13551,
@@ -67797,7 +67797,7 @@
   {
     "goodId": 13560,
     "marketHashName": "Bloody Darryl The Strapped | The Professionals",
-    "yyypSellPrice": 176.0
+    "yyypSellPrice": 177.5
   },
   {
     "goodId": 13561,
@@ -67872,7 +67872,7 @@
   {
     "goodId": 13575,
     "marketHashName": "AK-47 | Leet Museo (Field-Tested)",
-    "yyypSellPrice": 1094.0
+    "yyypSellPrice": 1089.0
   },
   {
     "goodId": 13576,
@@ -67892,7 +67892,7 @@
   {
     "goodId": 13579,
     "marketHashName": "Trapper | Guerrilla Warfare",
-    "yyypSellPrice": 181.99
+    "yyypSellPrice": 182.5
   },
   {
     "goodId": 13580,
@@ -67912,7 +67912,7 @@
   {
     "goodId": 13583,
     "marketHashName": "Dual Berettas | Oil Change (Minimal Wear)",
-    "yyypSellPrice": 6.59
+    "yyypSellPrice": 6.58
   },
   {
     "goodId": 13584,
@@ -68227,7 +68227,7 @@
   {
     "goodId": 13646,
     "marketHashName": "AUG | Spalted Wood (Battle-Scarred)",
-    "yyypSellPrice": 15.98
+    "yyypSellPrice": 15.97
   },
   {
     "goodId": 13647,
@@ -68257,7 +68257,7 @@
   {
     "goodId": 13652,
     "marketHashName": "FAMAS | Faulty Wiring (Minimal Wear)",
-    "yyypSellPrice": 4.75
+    "yyypSellPrice": 4.73
   },
   {
     "goodId": 13653,
@@ -68282,7 +68282,7 @@
   {
     "goodId": 13657,
     "marketHashName": "Sticker | Blood Moon Tentaskull",
-    "yyypSellPrice": 8.09
+    "yyypSellPrice": 8.1
   },
   {
     "goodId": 13658,
@@ -68307,7 +68307,7 @@
   {
     "goodId": 13662,
     "marketHashName": "Trapper Aggressor | Guerrilla Warfare",
-    "yyypSellPrice": 148.0
+    "yyypSellPrice": 147.0
   },
   {
     "goodId": 13663,
@@ -68347,7 +68347,7 @@
   {
     "goodId": 13670,
     "marketHashName": "AWP | POP AWP (Minimal Wear)",
-    "yyypSellPrice": 43.19
+    "yyypSellPrice": 43.2
   },
   {
     "goodId": 13671,
@@ -68722,7 +68722,7 @@
   {
     "goodId": 13745,
     "marketHashName": "D Squadron Officer | NZSAS",
-    "yyypSellPrice": 420.0
+    "yyypSellPrice": 420.9
   },
   {
     "goodId": 13746,
@@ -68807,7 +68807,7 @@
   {
     "goodId": 13762,
     "marketHashName": "StatTrak™ PP-Bizon | Lumen (Factory New)",
-    "yyypSellPrice": 38.25
+    "yyypSellPrice": 38.23
   },
   {
     "goodId": 13763,
@@ -68862,7 +68862,7 @@
   {
     "goodId": 13773,
     "marketHashName": "Glock-18 | Snack Attack (Factory New)",
-    "yyypSellPrice": 596.72
+    "yyypSellPrice": 595.53
   },
   {
     "goodId": 13774,
@@ -68957,7 +68957,7 @@
   {
     "goodId": 13792,
     "marketHashName": "StatTrak™ Five-SeveN | Boost Protocol (Field-Tested)",
-    "yyypSellPrice": 42.69
+    "yyypSellPrice": 42.59
   },
   {
     "goodId": 13793,
@@ -69002,7 +69002,7 @@
   {
     "goodId": 13801,
     "marketHashName": "AWP | POP AWP (Well-Worn)",
-    "yyypSellPrice": 43.68
+    "yyypSellPrice": 43.59
   },
   {
     "goodId": 13802,
@@ -69277,7 +69277,7 @@
   {
     "goodId": 13856,
     "marketHashName": "★ Falchion Knife | Bright Water (Field-Tested)",
-    "yyypSellPrice": 372.4
+    "yyypSellPrice": 373.0
   },
   {
     "goodId": 13857,
@@ -69347,7 +69347,7 @@
   {
     "goodId": 13870,
     "marketHashName": "★ Falchion Knife | Gamma Doppler (Factory New)",
-    "yyypSellPrice": 1287.8
+    "yyypSellPrice": 1287.5
   },
   {
     "goodId": 13871,
@@ -69427,7 +69427,7 @@
   {
     "goodId": 13886,
     "marketHashName": "★ StatTrak™ Butterfly Knife | Black Laminate (Battle-Scarred)",
-    "yyypSellPrice": 3600.0
+    "yyypSellPrice": 3610.0
   },
   {
     "goodId": 13887,
@@ -69442,7 +69442,7 @@
   {
     "goodId": 13889,
     "marketHashName": "★ Butterfly Knife | Black Laminate (Minimal Wear)",
-    "yyypSellPrice": 4139.96
+    "yyypSellPrice": 4139.0
   },
   {
     "goodId": 13890,
@@ -69487,7 +69487,7 @@
   {
     "goodId": 13898,
     "marketHashName": "StatTrak™ Desert Eagle | Ocean Drive (Minimal Wear)",
-    "yyypSellPrice": 880.6
+    "yyypSellPrice": 880.59
   },
   {
     "goodId": 13899,
@@ -69507,7 +69507,7 @@
   {
     "goodId": 13902,
     "marketHashName": "★ Butterfly Knife | Bright Water (Minimal Wear)",
-    "yyypSellPrice": 3525.0
+    "yyypSellPrice": 3524.0
   },
   {
     "goodId": 13903,
@@ -69522,7 +69522,7 @@
   {
     "goodId": 13905,
     "marketHashName": "★ Bowie Knife | Autotronic (Factory New)",
-    "yyypSellPrice": 897.49
+    "yyypSellPrice": 897.3
   },
   {
     "goodId": 13906,
@@ -69557,7 +69557,7 @@
   {
     "goodId": 13912,
     "marketHashName": "Five-SeveN | Fall Hazard (Minimal Wear)",
-    "yyypSellPrice": 1359.0
+    "yyypSellPrice": 1358.5
   },
   {
     "goodId": 13913,
@@ -69597,7 +69597,7 @@
   {
     "goodId": 13920,
     "marketHashName": "★ Bowie Knife | Lore (Field-Tested)",
-    "yyypSellPrice": 470.16
+    "yyypSellPrice": 469.22
   },
   {
     "goodId": 13921,
@@ -69772,7 +69772,7 @@
   {
     "goodId": 13955,
     "marketHashName": "★ Huntsman Knife | Bright Water (Field-Tested)",
-    "yyypSellPrice": 324.0
+    "yyypSellPrice": 320.0
   },
   {
     "goodId": 13956,
@@ -69952,7 +69952,7 @@
   {
     "goodId": 13991,
     "marketHashName": "★ StatTrak™ Falchion Knife | Gamma Doppler (Factory New)",
-    "yyypSellPrice": 1712.68
+    "yyypSellPrice": 1709.25
   },
   {
     "goodId": 13992,
@@ -70152,7 +70152,7 @@
   {
     "goodId": 14031,
     "marketHashName": "★ StatTrak™ Falchion Knife | Bright Water (Field-Tested)",
-    "yyypSellPrice": 460.4
+    "yyypSellPrice": 460.39
   },
   {
     "goodId": 14032,
@@ -70402,7 +70402,7 @@
   {
     "goodId": 14081,
     "marketHashName": "★ Bowie Knife | Freehand (Battle-Scarred)",
-    "yyypSellPrice": 510.89
+    "yyypSellPrice": 510.7
   },
   {
     "goodId": 14082,
@@ -70777,7 +70777,7 @@
   {
     "goodId": 14156,
     "marketHashName": "Sticker | Gambit Gaming (Foil) | Stockholm 2021",
-    "yyypSellPrice": 7.0
+    "yyypSellPrice": 6.98
   },
   {
     "goodId": 14157,
@@ -71072,7 +71072,7 @@
   {
     "goodId": 14215,
     "marketHashName": "Sticker | GODSENT (Gold) | Stockholm 2021",
-    "yyypSellPrice": 45.89
+    "yyypSellPrice": 45.88
   },
   {
     "goodId": 14216,
@@ -71372,7 +71372,7 @@
   {
     "goodId": 14275,
     "marketHashName": "Souvenir CZ75-Auto | Midnight Palm (Minimal Wear)",
-    "yyypSellPrice": 3.77
+    "yyypSellPrice": 3.75
   },
   {
     "goodId": 14276,
@@ -71712,7 +71712,7 @@
   {
     "goodId": 14343,
     "marketHashName": "Souvenir P250 | Digital Architect (Factory New)",
-    "yyypSellPrice": 173.63
+    "yyypSellPrice": 173.62
   },
   {
     "goodId": 14344,
@@ -71927,7 +71927,7 @@
   {
     "goodId": 14386,
     "marketHashName": "Souvenir P2000 | Panther Camo (Well-Worn)",
-    "yyypSellPrice": 11.95
+    "yyypSellPrice": 11.94
   },
   {
     "goodId": 14387,
@@ -72277,7 +72277,7 @@
   {
     "goodId": 14456,
     "marketHashName": "Souvenir R8 Revolver | Desert Brush (Factory New)",
-    "yyypSellPrice": 1.31
+    "yyypSellPrice": 1.3
   },
   {
     "goodId": 14457,
@@ -72722,7 +72722,7 @@
   {
     "goodId": 14545,
     "marketHashName": "Sticker | s1mple (Gold) | Stockholm 2021",
-    "yyypSellPrice": 169.48
+    "yyypSellPrice": 170.0
   },
   {
     "goodId": 14546,
@@ -72912,7 +72912,7 @@
   {
     "goodId": 14583,
     "marketHashName": "Sticker | Perfecto (Gold) | Stockholm 2021",
-    "yyypSellPrice": 14.3
+    "yyypSellPrice": 14.29
   },
   {
     "goodId": 14584,
@@ -72977,7 +72977,7 @@
   {
     "goodId": 14596,
     "marketHashName": "Sticker | b1t (Gold) | Stockholm 2021",
-    "yyypSellPrice": 29.27
+    "yyypSellPrice": 29.25
   },
   {
     "goodId": 14597,
@@ -73187,7 +73187,7 @@
   {
     "goodId": 14638,
     "marketHashName": "Sticker | misutaaa (Gold) | Stockholm 2021",
-    "yyypSellPrice": 19.79
+    "yyypSellPrice": 19.8
   },
   {
     "goodId": 14639,
@@ -73217,7 +73217,7 @@
   {
     "goodId": 14644,
     "marketHashName": "Sticker | Qikert (Gold) | Stockholm 2021",
-    "yyypSellPrice": 17.68
+    "yyypSellPrice": 17.67
   },
   {
     "goodId": 14645,
@@ -73267,7 +73267,7 @@
   {
     "goodId": 14654,
     "marketHashName": "Sticker | No Pats",
-    "yyypSellPrice": 5.63
+    "yyypSellPrice": 5.62
   },
   {
     "goodId": 14655,
@@ -73277,7 +73277,7 @@
   {
     "goodId": 14656,
     "marketHashName": "Sticker | BF 2042",
-    "yyypSellPrice": 1.68
+    "yyypSellPrice": 1.67
   },
   {
     "goodId": 14657,
@@ -73372,12 +73372,12 @@
   {
     "goodId": 14675,
     "marketHashName": "Dreams & Nightmares Case",
-    "yyypSellPrice": 6.43
+    "yyypSellPrice": 6.41
   },
   {
     "goodId": 14676,
     "marketHashName": "MAC-10 | Ensnared (Field-Tested)",
-    "yyypSellPrice": 0.37
+    "yyypSellPrice": 0.38
   },
   {
     "goodId": 14677,
@@ -73392,7 +73392,7 @@
   {
     "goodId": 14679,
     "marketHashName": "MP7 | Abyssal Apparition (Field-Tested)",
-    "yyypSellPrice": 40.49
+    "yyypSellPrice": 40.0
   },
   {
     "goodId": 14680,
@@ -73422,7 +73422,7 @@
   {
     "goodId": 14685,
     "marketHashName": "G3SG1 | Dream Glade (Minimal Wear)",
-    "yyypSellPrice": 6.06
+    "yyypSellPrice": 6.05
   },
   {
     "goodId": 14686,
@@ -73627,7 +73627,7 @@
   {
     "goodId": 14726,
     "marketHashName": "MP5-SD | Necro Jr. (Well-Worn)",
-    "yyypSellPrice": 0.36
+    "yyypSellPrice": 0.35
   },
   {
     "goodId": 14727,
@@ -73687,7 +73687,7 @@
   {
     "goodId": 14738,
     "marketHashName": "AK-47 | Nightwish (Field-Tested)",
-    "yyypSellPrice": 398.66
+    "yyypSellPrice": 395.5
   },
   {
     "goodId": 14739,
@@ -73777,7 +73777,7 @@
   {
     "goodId": 14756,
     "marketHashName": "StatTrak™ MP5-SD | Necro Jr. (Field-Tested)",
-    "yyypSellPrice": 0.4
+    "yyypSellPrice": 0.43
   },
   {
     "goodId": 14757,
@@ -73802,7 +73802,7 @@
   {
     "goodId": 14761,
     "marketHashName": "Dual Berettas | Melondrama (Minimal Wear)",
-    "yyypSellPrice": 44.41
+    "yyypSellPrice": 44.24
   },
   {
     "goodId": 14762,
@@ -73867,7 +73867,7 @@
   {
     "goodId": 14774,
     "marketHashName": "StatTrak™ M4A1-S | Night Terror (Battle-Scarred)",
-    "yyypSellPrice": 13.4
+    "yyypSellPrice": 13.26
   },
   {
     "goodId": 14775,
@@ -74397,7 +74397,7 @@
   {
     "goodId": 14880,
     "marketHashName": "Sticker | arT (Holo) | Antwerp 2022",
-    "yyypSellPrice": 19.78
+    "yyypSellPrice": 19.77
   },
   {
     "goodId": 14881,
@@ -74462,7 +74462,7 @@
   {
     "goodId": 14893,
     "marketHashName": "Sticker | BIG (Gold) | Antwerp 2022",
-    "yyypSellPrice": 6.75
+    "yyypSellPrice": 6.73
   },
   {
     "goodId": 14894,
@@ -74702,7 +74702,7 @@
   {
     "goodId": 14941,
     "marketHashName": "Sticker | Team Liquid (Glitter) | Antwerp 2022",
-    "yyypSellPrice": 0.8
+    "yyypSellPrice": 0.79
   },
   {
     "goodId": 14942,
@@ -75102,7 +75102,7 @@
   {
     "goodId": 15021,
     "marketHashName": "Sticker | Plopski (Holo) | Antwerp 2022",
-    "yyypSellPrice": 3.9
+    "yyypSellPrice": 3.88
   },
   {
     "goodId": 15022,
@@ -75127,7 +75127,7 @@
   {
     "goodId": 15026,
     "marketHashName": "Sticker | Perfecto (Holo) | Antwerp 2022",
-    "yyypSellPrice": 4.97
+    "yyypSellPrice": 4.96
   },
   {
     "goodId": 15027,
@@ -75317,7 +75317,7 @@
   {
     "goodId": 15064,
     "marketHashName": "Sticker | TeSeS (Glitter) | Antwerp 2022",
-    "yyypSellPrice": 1.03
+    "yyypSellPrice": 1.01
   },
   {
     "goodId": 15065,
@@ -75457,7 +75457,7 @@
   {
     "goodId": 15092,
     "marketHashName": "Sticker | Hobbit (Holo) | Antwerp 2022",
-    "yyypSellPrice": 17.17
+    "yyypSellPrice": 17.16
   },
   {
     "goodId": 15093,
@@ -75582,7 +75582,7 @@
   {
     "goodId": 15117,
     "marketHashName": "Sticker | Bad News Eagles (Gold) | Antwerp 2022",
-    "yyypSellPrice": 13.08
+    "yyypSellPrice": 13.07
   },
   {
     "goodId": 15118,
@@ -75867,7 +75867,7 @@
   {
     "goodId": 15174,
     "marketHashName": "Sticker | G2 Esports (Gold) | Antwerp 2022",
-    "yyypSellPrice": 17.23
+    "yyypSellPrice": 17.24
   },
   {
     "goodId": 15175,
@@ -75897,7 +75897,7 @@
   {
     "goodId": 15180,
     "marketHashName": "Sticker | huNter (Holo) | Antwerp 2022",
-    "yyypSellPrice": 6.08
+    "yyypSellPrice": 6.06
   },
   {
     "goodId": 15181,
@@ -76077,7 +76077,7 @@
   {
     "goodId": 15216,
     "marketHashName": "Sticker | Copenhagen Flames (Gold) | Antwerp 2022",
-    "yyypSellPrice": 18.19
+    "yyypSellPrice": 18.18
   },
   {
     "goodId": 15217,
@@ -76112,7 +76112,7 @@
   {
     "goodId": 15223,
     "marketHashName": "Sticker | Zyphon (Holo) | Antwerp 2022",
-    "yyypSellPrice": 4.84
+    "yyypSellPrice": 4.83
   },
   {
     "goodId": 15224,
@@ -76207,7 +76207,7 @@
   {
     "goodId": 15242,
     "marketHashName": "Sticker | tiziaN (Holo) | Antwerp 2022",
-    "yyypSellPrice": 1.3
+    "yyypSellPrice": 1.29
   },
   {
     "goodId": 15243,
@@ -76427,7 +76427,7 @@
   {
     "goodId": 15286,
     "marketHashName": "Sticker | Brollan (Gold) | Antwerp 2022",
-    "yyypSellPrice": 8.77
+    "yyypSellPrice": 8.76
   },
   {
     "goodId": 15287,
@@ -76467,7 +76467,7 @@
   {
     "goodId": 15294,
     "marketHashName": "Sticker | huNter (Gold) | Antwerp 2022",
-    "yyypSellPrice": 31.64
+    "yyypSellPrice": 31.63
   },
   {
     "goodId": 15295,
@@ -76542,7 +76542,7 @@
   {
     "goodId": 15309,
     "marketHashName": "Sticker | junior (Holo) | Antwerp 2022",
-    "yyypSellPrice": 8.76
+    "yyypSellPrice": 8.74
   },
   {
     "goodId": 15310,
@@ -76582,7 +76582,7 @@
   {
     "goodId": 15317,
     "marketHashName": "Sticker | shox (Holo) | Antwerp 2022",
-    "yyypSellPrice": 8.68
+    "yyypSellPrice": 8.67
   },
   {
     "goodId": 15318,
@@ -76907,7 +76907,7 @@
   {
     "goodId": 15382,
     "marketHashName": "Sticker | Magisk (Gold) | Antwerp 2022",
-    "yyypSellPrice": 9.94
+    "yyypSellPrice": 9.93
   },
   {
     "goodId": 15383,
@@ -77012,7 +77012,7 @@
   {
     "goodId": 15403,
     "marketHashName": "Sticker | floppy (Gold) | Antwerp 2022",
-    "yyypSellPrice": 11.41
+    "yyypSellPrice": 11.4
   },
   {
     "goodId": 15404,
@@ -77067,7 +77067,7 @@
   {
     "goodId": 15414,
     "marketHashName": "Sticker | Calyx (Gold) | Antwerp 2022",
-    "yyypSellPrice": 11.03
+    "yyypSellPrice": 11.02
   },
   {
     "goodId": 15415,
@@ -77232,7 +77232,7 @@
   {
     "goodId": 15447,
     "marketHashName": "Recoil Case",
-    "yyypSellPrice": 1.49
+    "yyypSellPrice": 1.5
   },
   {
     "goodId": 15448,
@@ -77252,7 +77252,7 @@
   {
     "goodId": 15451,
     "marketHashName": "P90 | Vent Rush (Factory New)",
-    "yyypSellPrice": 7.44
+    "yyypSellPrice": 7.43
   },
   {
     "goodId": 15452,
@@ -77297,7 +77297,7 @@
   {
     "goodId": 15460,
     "marketHashName": "FAMAS | Meow 36 (Field-Tested)",
-    "yyypSellPrice": 0.45
+    "yyypSellPrice": 0.44
   },
   {
     "goodId": 15461,
@@ -77327,7 +77327,7 @@
   {
     "goodId": 15466,
     "marketHashName": "USP-S | Printstream (Field-Tested)",
-    "yyypSellPrice": 235.9
+    "yyypSellPrice": 240.0
   },
   {
     "goodId": 15467,
@@ -77462,7 +77462,7 @@
   {
     "goodId": 15493,
     "marketHashName": "StatTrak™ Dual Berettas | Flora Carnivora (Field-Tested)",
-    "yyypSellPrice": 4.47
+    "yyypSellPrice": 4.46
   },
   {
     "goodId": 15494,
@@ -77512,7 +77512,7 @@
   {
     "goodId": 15503,
     "marketHashName": "Glock-18 | Winterized (Minimal Wear)",
-    "yyypSellPrice": 0.94
+    "yyypSellPrice": 0.96
   },
   {
     "goodId": 15504,
@@ -78042,7 +78042,7 @@
   {
     "goodId": 15609,
     "marketHashName": "Sticker | Go Boom (Glitter)",
-    "yyypSellPrice": 2.29
+    "yyypSellPrice": 2.3
   },
   {
     "goodId": 15610,
@@ -78242,7 +78242,7 @@
   {
     "goodId": 15649,
     "marketHashName": "Sticker | Skin Lover (Lenticular)",
-    "yyypSellPrice": 7.57
+    "yyypSellPrice": 7.55
   },
   {
     "goodId": 15650,
@@ -78502,7 +78502,7 @@
   {
     "goodId": 15701,
     "marketHashName": "Sticker | Brollan (Gold) | Rio 2022",
-    "yyypSellPrice": 15.95
+    "yyypSellPrice": 15.93
   },
   {
     "goodId": 15702,
@@ -78547,7 +78547,7 @@
   {
     "goodId": 15710,
     "marketHashName": "Sticker | MOUZ (Glitter) | Rio 2022",
-    "yyypSellPrice": 0.4
+    "yyypSellPrice": 0.41
   },
   {
     "goodId": 15711,
@@ -79222,7 +79222,7 @@
   {
     "goodId": 15845,
     "marketHashName": "Sticker | es3tag (Gold) | Rio 2022",
-    "yyypSellPrice": 86.17
+    "yyypSellPrice": 86.16
   },
   {
     "goodId": 15846,
@@ -79492,7 +79492,7 @@
   {
     "goodId": 15899,
     "marketHashName": "Sticker | Sprout Esports (Holo) | Rio 2022",
-    "yyypSellPrice": 10.63
+    "yyypSellPrice": 10.61
   },
   {
     "goodId": 15900,
@@ -79502,7 +79502,7 @@
   {
     "goodId": 15901,
     "marketHashName": "Sticker | Ax1Le (Glitter) | Rio 2022",
-    "yyypSellPrice": 0.89
+    "yyypSellPrice": 0.88
   },
   {
     "goodId": 15902,
@@ -79542,7 +79542,7 @@
   {
     "goodId": 15909,
     "marketHashName": "Sticker | ANNIHILATION | Rio 2022",
-    "yyypSellPrice": 0.12
+    "yyypSellPrice": 0.11
   },
   {
     "goodId": 15910,
@@ -79652,7 +79652,7 @@
   {
     "goodId": 15931,
     "marketHashName": "Sticker | jabbi (Holo) | Rio 2022",
-    "yyypSellPrice": 4.07
+    "yyypSellPrice": 4.09
   },
   {
     "goodId": 15932,
@@ -79907,7 +79907,7 @@
   {
     "goodId": 15982,
     "marketHashName": "Sticker | k1to (Glitter) | Rio 2022",
-    "yyypSellPrice": 0.48
+    "yyypSellPrice": 0.49
   },
   {
     "goodId": 15983,
@@ -79947,7 +79947,7 @@
   {
     "goodId": 15990,
     "marketHashName": "Sticker | degster (Glitter) | Rio 2022",
-    "yyypSellPrice": 0.57
+    "yyypSellPrice": 0.58
   },
   {
     "goodId": 15991,
@@ -80042,7 +80042,7 @@
   {
     "goodId": 16009,
     "marketHashName": "Sticker | Jame (Glitter) | Rio 2022",
-    "yyypSellPrice": 2.07
+    "yyypSellPrice": 2.06
   },
   {
     "goodId": 16010,
@@ -80117,7 +80117,7 @@
   {
     "goodId": 16024,
     "marketHashName": "Sticker | ZywOo (Holo) | Rio 2022",
-    "yyypSellPrice": 18.44
+    "yyypSellPrice": 18.42
   },
   {
     "goodId": 16025,
@@ -80137,7 +80137,7 @@
   {
     "goodId": 16028,
     "marketHashName": "Sticker | drop (Glitter) | Rio 2022",
-    "yyypSellPrice": 0.25
+    "yyypSellPrice": 0.24
   },
   {
     "goodId": 16029,
@@ -80342,7 +80342,7 @@
   {
     "goodId": 16069,
     "marketHashName": "Sticker | torzsi (Holo) | Rio 2022",
-    "yyypSellPrice": 4.84
+    "yyypSellPrice": 4.82
   },
   {
     "goodId": 16070,
@@ -80532,7 +80532,7 @@
   {
     "goodId": 16107,
     "marketHashName": "Sticker | fer (Holo) | Rio 2022",
-    "yyypSellPrice": 14.9
+    "yyypSellPrice": 14.89
   },
   {
     "goodId": 16108,
@@ -80672,7 +80672,7 @@
   {
     "goodId": 16135,
     "marketHashName": "Sticker | Ninjas in Pyjamas (Gold) | Rio 2022",
-    "yyypSellPrice": 9.54
+    "yyypSellPrice": 9.52
   },
   {
     "goodId": 16136,
@@ -81437,7 +81437,7 @@
   {
     "goodId": 16288,
     "marketHashName": "Espionage Sticker Capsule",
-    "yyypSellPrice": 3.93
+    "yyypSellPrice": 3.94
   },
   {
     "goodId": 16289,
@@ -81597,7 +81597,7 @@
   {
     "goodId": 16320,
     "marketHashName": "SCAR-20 | Fragments (Minimal Wear)",
-    "yyypSellPrice": 0.72
+    "yyypSellPrice": 0.7
   },
   {
     "goodId": 16321,
@@ -81707,7 +81707,7 @@
   {
     "goodId": 16342,
     "marketHashName": "StatTrak™ M4A4 | Temukau (Factory New)",
-    "yyypSellPrice": 1038.0
+    "yyypSellPrice": 1037.5
   },
   {
     "goodId": 16343,
@@ -81717,7 +81717,7 @@
   {
     "goodId": 16344,
     "marketHashName": "Glock-18 | Umbral Rabbit (Field-Tested)",
-    "yyypSellPrice": 2.63
+    "yyypSellPrice": 2.67
   },
   {
     "goodId": 16345,
@@ -81857,7 +81857,7 @@
   {
     "goodId": 16372,
     "marketHashName": "P2000 | Wicked Sick (Field-Tested)",
-    "yyypSellPrice": 22.41
+    "yyypSellPrice": 20.0
   },
   {
     "goodId": 16373,
@@ -81982,7 +81982,7 @@
   {
     "goodId": 16397,
     "marketHashName": "StatTrak™ P2000 | Wicked Sick (Well-Worn)",
-    "yyypSellPrice": 17.72
+    "yyypSellPrice": 17.63
   },
   {
     "goodId": 16398,
@@ -82072,7 +82072,7 @@
   {
     "goodId": 16415,
     "marketHashName": "M4A4 | Temukau (Field-Tested)",
-    "yyypSellPrice": 194.8
+    "yyypSellPrice": 189.5
   },
   {
     "goodId": 16416,
@@ -82202,12 +82202,12 @@
   {
     "goodId": 16441,
     "marketHashName": "StatTrak™ UMP-45 | Wild Child (Minimal Wear)",
-    "yyypSellPrice": 40.67
+    "yyypSellPrice": 40.26
   },
   {
     "goodId": 16442,
     "marketHashName": "M4A4 | Temukau (Well-Worn)",
-    "yyypSellPrice": 190.89
+    "yyypSellPrice": 190.7
   },
   {
     "goodId": 16443,
@@ -82227,7 +82227,7 @@
   {
     "goodId": 16446,
     "marketHashName": "StatTrak™ R8 Revolver | Banana Cannon (Factory New)",
-    "yyypSellPrice": 26.47
+    "yyypSellPrice": 26.46
   },
   {
     "goodId": 16447,
@@ -82512,7 +82512,7 @@
   {
     "goodId": 16503,
     "marketHashName": "MAC-10 | Echoing Sands (Battle-Scarred)",
-    "yyypSellPrice": 1.16
+    "yyypSellPrice": 1.17
   },
   {
     "goodId": 16504,
@@ -82527,7 +82527,7 @@
   {
     "goodId": 16506,
     "marketHashName": "MP7 | Sunbaked (Factory New)",
-    "yyypSellPrice": 8.84
+    "yyypSellPrice": 8.85
   },
   {
     "goodId": 16507,
@@ -82732,7 +82732,7 @@
   {
     "goodId": 16547,
     "marketHashName": "FAMAS | Waters of Nephthys (Factory New)",
-    "yyypSellPrice": 875.16
+    "yyypSellPrice": 873.41
   },
   {
     "goodId": 16548,
@@ -82757,7 +82757,7 @@
   {
     "goodId": 16552,
     "marketHashName": "Nova | Sobek's Bite (Factory New)",
-    "yyypSellPrice": 83.0
+    "yyypSellPrice": 82.99
   },
   {
     "goodId": 16553,
@@ -84257,7 +84257,7 @@
   {
     "goodId": 16852,
     "marketHashName": "Sticker | Woro2k (Glitter) | Paris 2023",
-    "yyypSellPrice": 0.15
+    "yyypSellPrice": 0.16
   },
   {
     "goodId": 16853,
@@ -84712,7 +84712,7 @@
   {
     "goodId": 16943,
     "marketHashName": "Sticker | KRIMZ (Holo) | Paris 2023",
-    "yyypSellPrice": 1.99
+    "yyypSellPrice": 2.0
   },
   {
     "goodId": 16944,
@@ -85482,7 +85482,7 @@
   {
     "goodId": 17097,
     "marketHashName": "Sticker | JT (Gold) | Paris 2023",
-    "yyypSellPrice": 4.53
+    "yyypSellPrice": 4.51
   },
   {
     "goodId": 17098,
@@ -85497,7 +85497,7 @@
   {
     "goodId": 17100,
     "marketHashName": "Sticker | Techno4K (Gold) | Paris 2023",
-    "yyypSellPrice": 7.76
+    "yyypSellPrice": 7.75
   },
   {
     "goodId": 17101,
@@ -85512,7 +85512,7 @@
   {
     "goodId": 17103,
     "marketHashName": "Sticker | SENER1 (Gold) | Paris 2023",
-    "yyypSellPrice": 4.2
+    "yyypSellPrice": 4.18
   },
   {
     "goodId": 17104,
@@ -85552,7 +85552,7 @@
   {
     "goodId": 17111,
     "marketHashName": "Sticker | rigoN (Gold) | Paris 2023",
-    "yyypSellPrice": 4.99
+    "yyypSellPrice": 5.34
   },
   {
     "goodId": 17112,
@@ -85617,7 +85617,7 @@
   {
     "goodId": 17124,
     "marketHashName": "Sticker | Liazz (Gold) | Paris 2023",
-    "yyypSellPrice": 5.3
+    "yyypSellPrice": 5.41
   },
   {
     "goodId": 17125,
@@ -85807,7 +85807,7 @@
   {
     "goodId": 17162,
     "marketHashName": "Souvenir AWP | Black Nile (Field-Tested)",
-    "yyypSellPrice": 34.74
+    "yyypSellPrice": 34.73
   },
   {
     "goodId": 17163,
@@ -85857,7 +85857,7 @@
   {
     "goodId": 17172,
     "marketHashName": "Souvenir MAC-10 | Echoing Sands (Minimal Wear)",
-    "yyypSellPrice": 3.54
+    "yyypSellPrice": 3.52
   },
   {
     "goodId": 17173,
@@ -86352,7 +86352,7 @@
   {
     "goodId": 17271,
     "marketHashName": "Patch | Metal The Global Elite ★",
-    "yyypSellPrice": 97.79
+    "yyypSellPrice": 97.77
   },
   {
     "goodId": 17272,
@@ -86442,7 +86442,7 @@
   {
     "goodId": 17289,
     "marketHashName": "Patch | Shattered Web",
-    "yyypSellPrice": 2.7
+    "yyypSellPrice": 2.52
   },
   {
     "goodId": 17290,
@@ -86467,7 +86467,7 @@
   {
     "goodId": 17294,
     "marketHashName": "Patch | PGL (Gold) | Stockholm 2021",
-    "yyypSellPrice": 17.66
+    "yyypSellPrice": 17.64
   },
   {
     "goodId": 17295,
@@ -86492,7 +86492,7 @@
   {
     "goodId": 17299,
     "marketHashName": "Patch | Vigilance",
-    "yyypSellPrice": 3.24
+    "yyypSellPrice": 3.19
   },
   {
     "goodId": 17300,
@@ -86682,7 +86682,7 @@
   {
     "goodId": 17337,
     "marketHashName": "Patch | Team Liquid (Gold) | Stockholm 2021",
-    "yyypSellPrice": 51.99
+    "yyypSellPrice": 52.0
   },
   {
     "goodId": 17338,
@@ -87007,7 +87007,7 @@
   {
     "goodId": 17402,
     "marketHashName": "Operation Bloodhound Access Pass",
-    "yyypSellPrice": 164.5
+    "yyypSellPrice": 164.0
   },
   {
     "goodId": 17403,
@@ -87207,7 +87207,7 @@
   {
     "goodId": 17442,
     "marketHashName": "XM1014 | Black Tie (Minimal Wear)",
-    "yyypSellPrice": 10.18
+    "yyypSellPrice": 10.17
   },
   {
     "goodId": 17443,
@@ -87287,12 +87287,12 @@
   {
     "goodId": 17458,
     "marketHashName": "XM1014 | XOXO (Factory New)",
-    "yyypSellPrice": 84.38
+    "yyypSellPrice": 84.35
   },
   {
     "goodId": 17459,
     "marketHashName": "StatTrak™ XM1014 | XOXO (Field-Tested)",
-    "yyypSellPrice": 25.79
+    "yyypSellPrice": 25.89
   },
   {
     "goodId": 17460,
@@ -87302,7 +87302,7 @@
   {
     "goodId": 17461,
     "marketHashName": "StatTrak™ XM1014 | Scumbria (Field-Tested)",
-    "yyypSellPrice": 3.42
+    "yyypSellPrice": 3.41
   },
   {
     "goodId": 17462,
@@ -87412,7 +87412,7 @@
   {
     "goodId": 17483,
     "marketHashName": "XM1014 | Scumbria (Field-Tested)",
-    "yyypSellPrice": 1.82
+    "yyypSellPrice": 1.81
   },
   {
     "goodId": 17484,
@@ -87427,7 +87427,7 @@
   {
     "goodId": 17486,
     "marketHashName": "StatTrak™ XM1014 | Seasons (Field-Tested)",
-    "yyypSellPrice": 14.8
+    "yyypSellPrice": 14.73
   },
   {
     "goodId": 17487,
@@ -87557,7 +87557,7 @@
   {
     "goodId": 17512,
     "marketHashName": "XM1014 | Bone Machine (Field-Tested)",
-    "yyypSellPrice": 79.97
+    "yyypSellPrice": 79.96
   },
   {
     "goodId": 17513,
@@ -87802,7 +87802,7 @@
   {
     "goodId": 17561,
     "marketHashName": "XM1014 | Red Python (Field-Tested)",
-    "yyypSellPrice": 14.23
+    "yyypSellPrice": 14.21
   },
   {
     "goodId": 17562,
@@ -87942,7 +87942,7 @@
   {
     "goodId": 17589,
     "marketHashName": "StatTrak™ XM1014 | Slipstream (Well-Worn)",
-    "yyypSellPrice": 2.19
+    "yyypSellPrice": 2.18
   },
   {
     "goodId": 17590,
@@ -88062,7 +88062,7 @@
   {
     "goodId": 17613,
     "marketHashName": "XM1014 | Seasons (Well-Worn)",
-    "yyypSellPrice": 8.48
+    "yyypSellPrice": 8.47
   },
   {
     "goodId": 17614,
@@ -88332,7 +88332,7 @@
   {
     "goodId": 17667,
     "marketHashName": "Souvenir XM1014 | Ancient Lore (Battle-Scarred)",
-    "yyypSellPrice": 148.93
+    "yyypSellPrice": 148.92
   },
   {
     "goodId": 17668,
@@ -88452,7 +88452,7 @@
   {
     "goodId": 17691,
     "marketHashName": "XM1014 | Blue Steel (Battle-Scarred)",
-    "yyypSellPrice": 0.16
+    "yyypSellPrice": 0.17
   },
   {
     "goodId": 17692,
@@ -88487,7 +88487,7 @@
   {
     "goodId": 17698,
     "marketHashName": "Souvenir XM1014 | Urban Perforated (Field-Tested)",
-    "yyypSellPrice": 4.04
+    "yyypSellPrice": 4.03
   },
   {
     "goodId": 17699,
@@ -88532,7 +88532,7 @@
   {
     "goodId": 17707,
     "marketHashName": "StatTrak™ Sawed-Off | Spirit Board (Minimal Wear)",
-    "yyypSellPrice": 0.88
+    "yyypSellPrice": 0.83
   },
   {
     "goodId": 17708,
@@ -88652,7 +88652,7 @@
   {
     "goodId": 17731,
     "marketHashName": "Sawed-Off | Black Sand (Factory New)",
-    "yyypSellPrice": 6.71
+    "yyypSellPrice": 6.69
   },
   {
     "goodId": 17732,
@@ -88752,12 +88752,12 @@
   {
     "goodId": 17751,
     "marketHashName": "Sawed-Off | Devourer (Field-Tested)",
-    "yyypSellPrice": 28.53
+    "yyypSellPrice": 28.49
   },
   {
     "goodId": 17752,
     "marketHashName": "Sawed-Off | Amber Fade (Well-Worn)",
-    "yyypSellPrice": 2.85
+    "yyypSellPrice": 2.84
   },
   {
     "goodId": 17753,
@@ -88802,7 +88802,7 @@
   {
     "goodId": 17761,
     "marketHashName": "Sawed-Off | Wasteland Princess (Factory New)",
-    "yyypSellPrice": 299.46
+    "yyypSellPrice": 298.86
   },
   {
     "goodId": 17762,
@@ -89082,7 +89082,7 @@
   {
     "goodId": 17819,
     "marketHashName": "Sawed-Off | Serenity (Well-Worn)",
-    "yyypSellPrice": 17.88
+    "yyypSellPrice": 17.87
   },
   {
     "goodId": 17820,
@@ -89127,7 +89127,7 @@
   {
     "goodId": 17828,
     "marketHashName": "Sawed-Off | Jungle Thicket (Minimal Wear)",
-    "yyypSellPrice": 31.2
+    "yyypSellPrice": 31.19
   },
   {
     "goodId": 17829,
@@ -89222,7 +89222,7 @@
   {
     "goodId": 17847,
     "marketHashName": "StatTrak™ Sawed-Off | Limelight (Well-Worn)",
-    "yyypSellPrice": 9.42
+    "yyypSellPrice": 9.41
   },
   {
     "goodId": 17848,
@@ -89717,7 +89717,7 @@
   {
     "goodId": 17946,
     "marketHashName": "Sawed-Off | Spirit Board (Well-Worn)",
-    "yyypSellPrice": 0.37
+    "yyypSellPrice": 0.38
   },
   {
     "goodId": 17947,
@@ -90022,7 +90022,7 @@
   {
     "goodId": 18007,
     "marketHashName": "Nova | Walnut (Field-Tested)",
-    "yyypSellPrice": 18.78
+    "yyypSellPrice": 18.77
   },
   {
     "goodId": 18008,
@@ -90087,7 +90087,7 @@
   {
     "goodId": 18020,
     "marketHashName": "StatTrak™ Nova | Ranger (Well-Worn)",
-    "yyypSellPrice": 2.82
+    "yyypSellPrice": 2.81
   },
   {
     "goodId": 18021,
@@ -90147,7 +90147,7 @@
   {
     "goodId": 18032,
     "marketHashName": "Nova | Plume (Factory New)",
-    "yyypSellPrice": 25.58
+    "yyypSellPrice": 25.57
   },
   {
     "goodId": 18033,
@@ -90367,7 +90367,7 @@
   {
     "goodId": 18076,
     "marketHashName": "StatTrak™ Nova | Antique (Factory New)",
-    "yyypSellPrice": 122.91
+    "yyypSellPrice": 122.89
   },
   {
     "goodId": 18077,
@@ -90427,7 +90427,7 @@
   {
     "goodId": 18088,
     "marketHashName": "StatTrak™ Nova | Hyper Beast (Minimal Wear)",
-    "yyypSellPrice": 260.79
+    "yyypSellPrice": 260.59
   },
   {
     "goodId": 18089,
@@ -90512,7 +90512,7 @@
   {
     "goodId": 18105,
     "marketHashName": "Nova | Rising Skull (Minimal Wear)",
-    "yyypSellPrice": 38.2
+    "yyypSellPrice": 38.19
   },
   {
     "goodId": 18106,
@@ -90667,7 +90667,7 @@
   {
     "goodId": 18136,
     "marketHashName": "Nova | Mandrel (Minimal Wear)",
-    "yyypSellPrice": 0.06
+    "yyypSellPrice": 0.17
   },
   {
     "goodId": 18137,
@@ -90907,7 +90907,7 @@
   {
     "goodId": 18184,
     "marketHashName": "Souvenir Nova | Predator (Battle-Scarred)",
-    "yyypSellPrice": 3.94
+    "yyypSellPrice": 3.93
   },
   {
     "goodId": 18185,
@@ -90972,7 +90972,7 @@
   {
     "goodId": 18197,
     "marketHashName": "Nova | Walnut (Factory New)",
-    "yyypSellPrice": 239.99
+    "yyypSellPrice": 240.0
   },
   {
     "goodId": 18198,
@@ -91667,7 +91667,7 @@
   {
     "goodId": 18336,
     "marketHashName": "MAG-7 | Metallic DDPAT (Minimal Wear)",
-    "yyypSellPrice": 0.65
+    "yyypSellPrice": 0.64
   },
   {
     "goodId": 18337,
@@ -92012,7 +92012,7 @@
   {
     "goodId": 18405,
     "marketHashName": "MAG-7 | Irradiated Alert (Minimal Wear)",
-    "yyypSellPrice": 67.99
+    "yyypSellPrice": 68.0
   },
   {
     "goodId": 18406,
@@ -92132,7 +92132,7 @@
   {
     "goodId": 18429,
     "marketHashName": "MAG-7 | Bulldozer (Battle-Scarred)",
-    "yyypSellPrice": 132.97
+    "yyypSellPrice": 132.98
   },
   {
     "goodId": 18430,
@@ -92192,7 +92192,7 @@
   {
     "goodId": 18441,
     "marketHashName": "MAG-7 | Silver (Minimal Wear)",
-    "yyypSellPrice": 172.12
+    "yyypSellPrice": 172.11
   },
   {
     "goodId": 18442,
@@ -92297,7 +92297,7 @@
   {
     "goodId": 18462,
     "marketHashName": "Souvenir MAG-7 | Storm (Minimal Wear)",
-    "yyypSellPrice": 3.47
+    "yyypSellPrice": 3.46
   },
   {
     "goodId": 18463,
@@ -92892,7 +92892,7 @@
   {
     "goodId": 18581,
     "marketHashName": "M249 | Contrast Spray (Field-Tested)",
-    "yyypSellPrice": 1.84
+    "yyypSellPrice": 1.83
   },
   {
     "goodId": 18582,
@@ -92972,7 +92972,7 @@
   {
     "goodId": 18597,
     "marketHashName": "StatTrak™ M249 | Deep Relief (Factory New)",
-    "yyypSellPrice": 47.43
+    "yyypSellPrice": 47.42
   },
   {
     "goodId": 18598,
@@ -93287,7 +93287,7 @@
   {
     "goodId": 18660,
     "marketHashName": "Negev | Bulkhead (Factory New)",
-    "yyypSellPrice": 1.43
+    "yyypSellPrice": 1.44
   },
   {
     "goodId": 18661,
@@ -93637,7 +93637,7 @@
   {
     "goodId": 18730,
     "marketHashName": "Negev | Terrain (Well-Worn)",
-    "yyypSellPrice": 2.51
+    "yyypSellPrice": 2.5
   },
   {
     "goodId": 18731,
@@ -94062,7 +94062,7 @@
   {
     "goodId": 18815,
     "marketHashName": "AWP | Duality (Field-Tested)",
-    "yyypSellPrice": 20.0
+    "yyypSellPrice": 20.9
   },
   {
     "goodId": 18816,
@@ -94307,12 +94307,12 @@
   {
     "goodId": 18864,
     "marketHashName": "★ Skeleton Knife | Blue Steel (Well-Worn)",
-    "yyypSellPrice": 1234.5
+    "yyypSellPrice": 1240.0
   },
   {
     "goodId": 18865,
     "marketHashName": "★ Skeleton Knife | Stained (Well-Worn)",
-    "yyypSellPrice": 1028.49
+    "yyypSellPrice": 1029.0
   },
   {
     "goodId": 18866,
@@ -96352,7 +96352,7 @@
   {
     "goodId": 19273,
     "marketHashName": "Dual Berettas | Royal Consorts (Battle-Scarred)",
-    "yyypSellPrice": 18.12
+    "yyypSellPrice": 18.11
   },
   {
     "goodId": 19274,
@@ -96562,7 +96562,7 @@
   {
     "goodId": 19315,
     "marketHashName": "Tec-9 | Brass (Well-Worn)",
-    "yyypSellPrice": 24.42
+    "yyypSellPrice": 24.4
   },
   {
     "goodId": 19316,
@@ -96597,7 +96597,7 @@
   {
     "goodId": 19322,
     "marketHashName": "CZ75-Auto | Midnight Palm (Well-Worn)",
-    "yyypSellPrice": 3.11
+    "yyypSellPrice": 3.1
   },
   {
     "goodId": 19323,
@@ -96897,7 +96897,7 @@
   {
     "goodId": 19382,
     "marketHashName": "SG 553 | Barricade (Factory New)",
-    "yyypSellPrice": 64.43
+    "yyypSellPrice": 64.41
   },
   {
     "goodId": 19383,
@@ -96937,7 +96937,7 @@
   {
     "goodId": 19390,
     "marketHashName": "M4A1-S | Welcome to the Jungle (Minimal Wear)",
-    "yyypSellPrice": 6824.88
+    "yyypSellPrice": 6820.0
   },
   {
     "goodId": 19391,
@@ -97592,7 +97592,7 @@
   {
     "goodId": 19521,
     "marketHashName": "Kilowatt Case",
-    "yyypSellPrice": 0.7
+    "yyypSellPrice": 0.69
   },
   {
     "goodId": 19522,
@@ -97702,7 +97702,7 @@
   {
     "goodId": 19543,
     "marketHashName": "MP7 | Just Smile (Minimal Wear)",
-    "yyypSellPrice": 4.95
+    "yyypSellPrice": 4.96
   },
   {
     "goodId": 19544,
@@ -97887,7 +97887,7 @@
   {
     "goodId": 19580,
     "marketHashName": "USP-S | Jawbreaker (Field-Tested)",
-    "yyypSellPrice": 21.28
+    "yyypSellPrice": 21.18
   },
   {
     "goodId": 19581,
@@ -97912,7 +97912,7 @@
   {
     "goodId": 19585,
     "marketHashName": "M4A1-S | Black Lotus (Field-Tested)",
-    "yyypSellPrice": 23.4
+    "yyypSellPrice": 23.49
   },
   {
     "goodId": 19586,
@@ -97952,7 +97952,7 @@
   {
     "goodId": 19593,
     "marketHashName": "Zeus x27 | Olympus (Factory New)",
-    "yyypSellPrice": 41.0
+    "yyypSellPrice": 41.49
   },
   {
     "goodId": 19594,
@@ -97972,7 +97972,7 @@
   {
     "goodId": 19597,
     "marketHashName": "StatTrak™ M4A1-S | Black Lotus (Field-Tested)",
-    "yyypSellPrice": 65.0
+    "yyypSellPrice": 65.1
   },
   {
     "goodId": 19598,
@@ -98107,7 +98107,7 @@
   {
     "goodId": 19624,
     "marketHashName": "★ Kukri Knife | Urban Masked (Well-Worn)",
-    "yyypSellPrice": 285.49
+    "yyypSellPrice": 285.5
   },
   {
     "goodId": 19625,
@@ -98172,7 +98172,7 @@
   {
     "goodId": 19637,
     "marketHashName": "★ StatTrak™ Kukri Knife | Safari Mesh (Battle-Scarred)",
-    "yyypSellPrice": 309.0
+    "yyypSellPrice": 308.8
   },
   {
     "goodId": 19638,
@@ -98247,7 +98247,7 @@
   {
     "goodId": 19652,
     "marketHashName": "★ Kukri Knife | Stained (Battle-Scarred)",
-    "yyypSellPrice": 333.0
+    "yyypSellPrice": 332.5
   },
   {
     "goodId": 19653,
@@ -98542,7 +98542,7 @@
   {
     "goodId": 19711,
     "marketHashName": "Music Kit | DRYDEN, Feel The Power",
-    "yyypSellPrice": 8.55
+    "yyypSellPrice": 8.66
   },
   {
     "goodId": 19712,
@@ -98557,7 +98557,7 @@
   {
     "goodId": 19714,
     "marketHashName": "Music Kit | ISOxo, inhuman",
-    "yyypSellPrice": 31.0
+    "yyypSellPrice": 31.19
   },
   {
     "goodId": 19715,
@@ -99362,7 +99362,7 @@
   {
     "goodId": 19875,
     "marketHashName": "Sticker | Krad (Glitter) | Copenhagen 2024",
-    "yyypSellPrice": 0.14
+    "yyypSellPrice": 0.25
   },
   {
     "goodId": 19876,
@@ -100022,7 +100022,7 @@
   {
     "goodId": 20007,
     "marketHashName": "Sticker | n1ssim (Holo) | Copenhagen 2024",
-    "yyypSellPrice": 4.05
+    "yyypSellPrice": 4.04
   },
   {
     "goodId": 20008,
@@ -100292,7 +100292,7 @@
   {
     "goodId": 20061,
     "marketHashName": "Sticker | noway (Holo) | Copenhagen 2024",
-    "yyypSellPrice": 4.51
+    "yyypSellPrice": 4.5
   },
   {
     "goodId": 20062,
@@ -100392,7 +100392,7 @@
   {
     "goodId": 20081,
     "marketHashName": "Sticker | NEKiZ (Gold) | Copenhagen 2024",
-    "yyypSellPrice": 6.66
+    "yyypSellPrice": 6.67
   },
   {
     "goodId": 20082,
@@ -100562,7 +100562,7 @@
   {
     "goodId": 20115,
     "marketHashName": "Sticker | Queenix (Gold) | Copenhagen 2024",
-    "yyypSellPrice": 8.8
+    "yyypSellPrice": 9.81
   },
   {
     "goodId": 20116,
@@ -100837,7 +100837,7 @@
   {
     "goodId": 20170,
     "marketHashName": "Sticker | Imperial Esports (Gold) | Copenhagen 2024",
-    "yyypSellPrice": 8.97
+    "yyypSellPrice": 8.96
   },
   {
     "goodId": 20171,
@@ -100992,7 +100992,7 @@
   {
     "goodId": 20201,
     "marketHashName": "Sticker | 910 (Gold) | Copenhagen 2024",
-    "yyypSellPrice": 14.2
+    "yyypSellPrice": 14.19
   },
   {
     "goodId": 20202,
@@ -101062,7 +101062,7 @@
   {
     "goodId": 20215,
     "marketHashName": "Sticker | huNter- (Gold) | Copenhagen 2024",
-    "yyypSellPrice": 25.21
+    "yyypSellPrice": 25.2
   },
   {
     "goodId": 20216,
@@ -101172,7 +101172,7 @@
   {
     "goodId": 20237,
     "marketHashName": "Sticker | G2 Esports (Gold) | Copenhagen 2024",
-    "yyypSellPrice": 18.76
+    "yyypSellPrice": 18.75
   },
   {
     "goodId": 20238,
@@ -101287,7 +101287,7 @@
   {
     "goodId": 20260,
     "marketHashName": "Sticker | Spinx (Gold) | Copenhagen 2024",
-    "yyypSellPrice": 6.52
+    "yyypSellPrice": 6.51
   },
   {
     "goodId": 20261,
@@ -101322,7 +101322,7 @@
   {
     "goodId": 20267,
     "marketHashName": "Sticker | KSCERATO (Gold) | Copenhagen 2024",
-    "yyypSellPrice": 43.55
+    "yyypSellPrice": 43.53
   },
   {
     "goodId": 20268,
@@ -101392,7 +101392,7 @@
   {
     "goodId": 20281,
     "marketHashName": "Sticker | Ax1Le (Gold) | Copenhagen 2024",
-    "yyypSellPrice": 69.58
+    "yyypSellPrice": 69.57
   },
   {
     "goodId": 20282,
@@ -101407,7 +101407,7 @@
   {
     "goodId": 20284,
     "marketHashName": "Sticker | Jimpphat (Gold) | Copenhagen 2024",
-    "yyypSellPrice": 10.51
+    "yyypSellPrice": 10.5
   },
   {
     "goodId": 20285,
@@ -101727,7 +101727,7 @@
   {
     "goodId": 20348,
     "marketHashName": "UMP-45 | Neo-Noir (Battle-Scarred)",
-    "yyypSellPrice": 21.0
+    "yyypSellPrice": 20.99
   },
   {
     "goodId": 20349,
@@ -102132,7 +102132,7 @@
   {
     "goodId": 20429,
     "marketHashName": "StatTrak™ R8 Revolver | Tango (Well-Worn)",
-    "yyypSellPrice": 2.98
+    "yyypSellPrice": 2.99
   },
   {
     "goodId": 20430,
@@ -102152,7 +102152,7 @@
   {
     "goodId": 20433,
     "marketHashName": "SCAR-20 | Trail Blazer (Well-Worn)",
-    "yyypSellPrice": 1.87
+    "yyypSellPrice": 1.88
   },
   {
     "goodId": 20434,
@@ -102237,7 +102237,7 @@
   {
     "goodId": 20450,
     "marketHashName": "Desert Eagle | Calligraffiti (Minimal Wear)",
-    "yyypSellPrice": 2.96
+    "yyypSellPrice": 2.95
   },
   {
     "goodId": 20451,
@@ -102292,7 +102292,7 @@
   {
     "goodId": 20461,
     "marketHashName": "AWP | CMYK (Field-Tested)",
-    "yyypSellPrice": 846.0
+    "yyypSellPrice": 845.99
   },
   {
     "goodId": 20462,
@@ -102342,12 +102342,12 @@
   {
     "goodId": 20471,
     "marketHashName": "Desert Eagle | Starcade (Field-Tested)",
-    "yyypSellPrice": 200.0
+    "yyypSellPrice": 209.0
   },
   {
     "goodId": 20472,
     "marketHashName": "Desert Eagle | Starcade (Well-Worn)",
-    "yyypSellPrice": 246.77
+    "yyypSellPrice": 246.76
   },
   {
     "goodId": 20473,
@@ -102512,7 +102512,7 @@
   {
     "goodId": 20505,
     "marketHashName": "XM1014 | Halftone Shift (Well-Worn)",
-    "yyypSellPrice": 8.15
+    "yyypSellPrice": 8.14
   },
   {
     "goodId": 20506,
@@ -102707,7 +102707,7 @@
   {
     "goodId": 20544,
     "marketHashName": "AWP | Crakow! (Battle-Scarred)",
-    "yyypSellPrice": 108.95
+    "yyypSellPrice": 108.45
   },
   {
     "goodId": 20545,
@@ -103037,7 +103037,7 @@
   {
     "goodId": 20610,
     "marketHashName": "Desert Eagle | Tilted (Well-Worn)",
-    "yyypSellPrice": 1.32
+    "yyypSellPrice": 1.34
   },
   {
     "goodId": 20611,
@@ -103087,7 +103087,7 @@
   {
     "goodId": 20620,
     "marketHashName": "Glock-18 | AXIA (Well-Worn)",
-    "yyypSellPrice": 129.0
+    "yyypSellPrice": 128.5
   },
   {
     "goodId": 20621,
@@ -103122,7 +103122,7 @@
   {
     "goodId": 20627,
     "marketHashName": "MP9 | Arctic Tri-Tone (Minimal Wear)",
-    "yyypSellPrice": 20.28
+    "yyypSellPrice": 20.19
   },
   {
     "goodId": 20628,
@@ -103247,7 +103247,7 @@
   {
     "goodId": 20652,
     "marketHashName": "Nova | Yorkshire (Battle-Scarred)",
-    "yyypSellPrice": 1.44
+    "yyypSellPrice": 1.43
   },
   {
     "goodId": 20653,
@@ -103982,7 +103982,7 @@
   {
     "goodId": 20799,
     "marketHashName": "StatTrak™ M4A4 | Turbine (Well-Worn)",
-    "yyypSellPrice": 21.31
+    "yyypSellPrice": 21.3
   },
   {
     "goodId": 20800,
@@ -103997,7 +103997,7 @@
   {
     "goodId": 20806,
     "marketHashName": "Copenhagen 2024 Viewer Pass",
-    "yyypSellPrice": 155.49
+    "yyypSellPrice": 155.47
   },
   {
     "goodId": 20807,
@@ -105287,7 +105287,7 @@
   {
     "goodId": 21064,
     "marketHashName": "Sticker | KSCERATO (Gold) | Shanghai 2024",
-    "yyypSellPrice": 93.65
+    "yyypSellPrice": 93.63
   },
   {
     "goodId": 21065,
@@ -105557,7 +105557,7 @@
   {
     "goodId": 21118,
     "marketHashName": "Sticker | chelo (Holo) | Shanghai 2024",
-    "yyypSellPrice": 3.9
+    "yyypSellPrice": 3.89
   },
   {
     "goodId": 21119,
@@ -105712,7 +105712,7 @@
   {
     "goodId": 21149,
     "marketHashName": "Sticker | Senzu (Glitter) | Shanghai 2024",
-    "yyypSellPrice": 0.82
+    "yyypSellPrice": 0.81
   },
   {
     "goodId": 21150,
@@ -106112,7 +106112,7 @@
   {
     "goodId": 21229,
     "marketHashName": "Sticker | Rare Atom (Holo) | Shanghai 2024",
-    "yyypSellPrice": 31.2
+    "yyypSellPrice": 35.5
   },
   {
     "goodId": 21230,
@@ -106237,7 +106237,7 @@
   {
     "goodId": 21254,
     "marketHashName": "Sticker | JBa (Gold) | Shanghai 2024",
-    "yyypSellPrice": 26.92
+    "yyypSellPrice": 26.9
   },
   {
     "goodId": 21255,
@@ -106327,7 +106327,7 @@
   {
     "goodId": 21273,
     "marketHashName": "Sticker | jackasmo (Gold) | Shanghai 2024",
-    "yyypSellPrice": 16.86
+    "yyypSellPrice": 16.85
   },
   {
     "goodId": 21274,
@@ -106412,7 +106412,7 @@
   {
     "goodId": 21290,
     "marketHashName": "Sticker | Heavygod (Holo) | Shanghai 2024",
-    "yyypSellPrice": 4.82
+    "yyypSellPrice": 4.81
   },
   {
     "goodId": 21291,
@@ -106472,7 +106472,7 @@
   {
     "goodId": 21303,
     "marketHashName": "Sticker | aNdu (Holo) | Shanghai 2024",
-    "yyypSellPrice": 4.21
+    "yyypSellPrice": 4.2
   },
   {
     "goodId": 21304,
@@ -106522,7 +106522,7 @@
   {
     "goodId": 21313,
     "marketHashName": "Sticker | jambo (Holo) | Shanghai 2024",
-    "yyypSellPrice": 1.56
+    "yyypSellPrice": 1.55
   },
   {
     "goodId": 21314,
@@ -106532,7 +106532,7 @@
   {
     "goodId": 21315,
     "marketHashName": "Sticker | phzy (Holo) | Shanghai 2024",
-    "yyypSellPrice": 3.11
+    "yyypSellPrice": 3.1
   },
   {
     "goodId": 21316,
@@ -106992,7 +106992,7 @@
   {
     "goodId": 21409,
     "marketHashName": "Sticker | brnz4n (Holo) | Shanghai 2024",
-    "yyypSellPrice": 1.83
+    "yyypSellPrice": 1.82
   },
   {
     "goodId": 21410,
@@ -107152,7 +107152,7 @@
   {
     "goodId": 21441,
     "marketHashName": "★ StatTrak™ Kukri Knife | Blue Steel (Well-Worn)",
-    "yyypSellPrice": 494.05
+    "yyypSellPrice": 493.65
   },
   {
     "goodId": 21442,
@@ -107457,7 +107457,7 @@
   {
     "goodId": 21502,
     "marketHashName": "MAC-10 | Poplar Thicket (Field-Tested)",
-    "yyypSellPrice": 0.67
+    "yyypSellPrice": 0.66
   },
   {
     "goodId": 21503,
@@ -107497,7 +107497,7 @@
   {
     "goodId": 21510,
     "marketHashName": "USP-S | Tropical Breeze (Factory New)",
-    "yyypSellPrice": 6.53
+    "yyypSellPrice": 6.55
   },
   {
     "goodId": 21511,
@@ -107812,7 +107812,7 @@
   {
     "goodId": 21573,
     "marketHashName": "Zeus x27 | Swamp DDPAT (Factory New)",
-    "yyypSellPrice": 0.15
+    "yyypSellPrice": 0.16
   },
   {
     "goodId": 21574,
@@ -107877,7 +107877,7 @@
   {
     "goodId": 21586,
     "marketHashName": "Desert Eagle | Mint Fan (Factory New)",
-    "yyypSellPrice": 5.55
+    "yyypSellPrice": 5.53
   },
   {
     "goodId": 21587,
@@ -108017,7 +108017,7 @@
   {
     "goodId": 21614,
     "marketHashName": "MP9 | Buff Blue (Minimal Wear)",
-    "yyypSellPrice": 0.11
+    "yyypSellPrice": 0.12
   },
   {
     "goodId": 21615,
@@ -108242,7 +108242,7 @@
   {
     "goodId": 21659,
     "marketHashName": "Five-SeveN | Autumn Thicket (Factory New)",
-    "yyypSellPrice": 0.18
+    "yyypSellPrice": 0.17
   },
   {
     "goodId": 21660,
@@ -108307,7 +108307,7 @@
   {
     "goodId": 21672,
     "marketHashName": "MP7 | Short Ochre (Minimal Wear)",
-    "yyypSellPrice": 0.07
+    "yyypSellPrice": 0.06
   },
   {
     "goodId": 21673,
@@ -108367,7 +108367,7 @@
   {
     "goodId": 21684,
     "marketHashName": "SCAR-20 | Short Ochre (Factory New)",
-    "yyypSellPrice": 0.2
+    "yyypSellPrice": 0.19
   },
   {
     "goodId": 21685,
@@ -108407,7 +108407,7 @@
   {
     "goodId": 21692,
     "marketHashName": "AWP | LongDog (Minimal Wear)",
-    "yyypSellPrice": 776.0
+    "yyypSellPrice": 775.5
   },
   {
     "goodId": 21693,
@@ -108542,7 +108542,7 @@
   {
     "goodId": 21719,
     "marketHashName": "Galil AR | Green Apple (Minimal Wear)",
-    "yyypSellPrice": 0.37
+    "yyypSellPrice": 0.38
   },
   {
     "goodId": 21720,
@@ -108572,7 +108572,7 @@
   {
     "goodId": 21725,
     "marketHashName": "AWP | Printstream (Field-Tested)",
-    "yyypSellPrice": 287.9
+    "yyypSellPrice": 288.0
   },
   {
     "goodId": 21726,
@@ -108587,7 +108587,7 @@
   {
     "goodId": 21728,
     "marketHashName": "FAMAS | Bad Trip (Field-Tested)",
-    "yyypSellPrice": 285.9
+    "yyypSellPrice": 288.0
   },
   {
     "goodId": 21729,
@@ -108622,7 +108622,7 @@
   {
     "goodId": 21735,
     "marketHashName": "Glock-18 | Shinobu (Factory New)",
-    "yyypSellPrice": 102.0
+    "yyypSellPrice": 101.5
   },
   {
     "goodId": 21736,
@@ -108852,7 +108852,7 @@
   {
     "goodId": 21781,
     "marketHashName": "★ Nomad Knife | Marble Fade (Factory New)",
-    "yyypSellPrice": 1380.0
+    "yyypSellPrice": 1394.49
   },
   {
     "goodId": 21782,
@@ -108982,7 +108982,7 @@
   {
     "goodId": 21807,
     "marketHashName": "★ Skeleton Knife | Tiger Tooth (Factory New)",
-    "yyypSellPrice": 1911.0
+    "yyypSellPrice": 1910.0
   },
   {
     "goodId": 21808,
@@ -109022,7 +109022,7 @@
   {
     "goodId": 21815,
     "marketHashName": "Galil AR | Acid Dart (Minimal Wear)",
-    "yyypSellPrice": 0.31
+    "yyypSellPrice": 0.35
   },
   {
     "goodId": 21816,
@@ -109062,7 +109062,7 @@
   {
     "goodId": 21823,
     "marketHashName": "Galil AR | Acid Dart (Battle-Scarred)",
-    "yyypSellPrice": 0.14
+    "yyypSellPrice": 0.13
   },
   {
     "goodId": 21824,
@@ -109147,7 +109147,7 @@
   {
     "goodId": 21840,
     "marketHashName": "FAMAS | Palm (Minimal Wear)",
-    "yyypSellPrice": 0.05
+    "yyypSellPrice": 0.06
   },
   {
     "goodId": 21841,
@@ -109387,7 +109387,7 @@
   {
     "goodId": 21888,
     "marketHashName": "G3SG1 | Green Cell (Minimal Wear)",
-    "yyypSellPrice": 0.05
+    "yyypSellPrice": 0.06
   },
   {
     "goodId": 21889,
@@ -109527,12 +109527,12 @@
   {
     "goodId": 21916,
     "marketHashName": "SG 553 | Basket Halftone (Minimal Wear)",
-    "yyypSellPrice": 0.23
+    "yyypSellPrice": 0.24
   },
   {
     "goodId": 21917,
     "marketHashName": "SG 553 | Basket Halftone (Field-Tested)",
-    "yyypSellPrice": 0.28
+    "yyypSellPrice": 0.25
   },
   {
     "goodId": 21918,
@@ -109587,7 +109587,7 @@
   {
     "goodId": 21928,
     "marketHashName": "AWP | Printstream (Well-Worn)",
-    "yyypSellPrice": 253.0
+    "yyypSellPrice": 254.49
   },
   {
     "goodId": 21929,
@@ -110022,7 +110022,7 @@
   {
     "goodId": 22015,
     "marketHashName": "M4A1-S | Glitched Paint (Field-Tested)",
-    "yyypSellPrice": 7.59
+    "yyypSellPrice": 7.55
   },
   {
     "goodId": 22016,
@@ -110152,7 +110152,7 @@
   {
     "goodId": 22041,
     "marketHashName": "Tec-9 | Citric Acid (Battle-Scarred)",
-    "yyypSellPrice": 0.1
+    "yyypSellPrice": 0.09
   },
   {
     "goodId": 22042,
@@ -110172,7 +110172,7 @@
   {
     "goodId": 22045,
     "marketHashName": "Galil AR | O-Ranger (Battle-Scarred)",
-    "yyypSellPrice": 0.1
+    "yyypSellPrice": 0.09
   },
   {
     "goodId": 22046,
@@ -110352,7 +110352,7 @@
   {
     "goodId": 22081,
     "marketHashName": "Glock-18 | Green Line (Battle-Scarred)",
-    "yyypSellPrice": 0.99
+    "yyypSellPrice": 0.98
   },
   {
     "goodId": 22082,
@@ -110412,7 +110412,7 @@
   {
     "goodId": 22093,
     "marketHashName": "P90 | Straight Dimes (Well-Worn)",
-    "yyypSellPrice": 0.1
+    "yyypSellPrice": 0.09
   },
   {
     "goodId": 22094,
@@ -110517,7 +110517,7 @@
   {
     "goodId": 22114,
     "marketHashName": "UMP-45 | K.O. Factory (Battle-Scarred)",
-    "yyypSellPrice": 25.09
+    "yyypSellPrice": 24.99
   },
   {
     "goodId": 22115,
@@ -110552,7 +110552,7 @@
   {
     "goodId": 22121,
     "marketHashName": "Glock-18 | Shinobu (Field-Tested)",
-    "yyypSellPrice": 30.29
+    "yyypSellPrice": 30.35
   },
   {
     "goodId": 22122,
@@ -110702,7 +110702,7 @@
   {
     "goodId": 22151,
     "marketHashName": "StatTrak™ Zeus x27 | Tosai (Field-Tested)",
-    "yyypSellPrice": 3.95
+    "yyypSellPrice": 3.94
   },
   {
     "goodId": 22152,
@@ -110737,7 +110737,7 @@
   {
     "goodId": 22158,
     "marketHashName": "Desert Eagle | Serpent Strike (Field-Tested)",
-    "yyypSellPrice": 3.28
+    "yyypSellPrice": 3.34
   },
   {
     "goodId": 22159,
@@ -110972,7 +110972,7 @@
   {
     "goodId": 22205,
     "marketHashName": "StatTrak™ USP-S | PC-GRN (Field-Tested)",
-    "yyypSellPrice": 1.39
+    "yyypSellPrice": 1.38
   },
   {
     "goodId": 22206,
@@ -111137,7 +111137,7 @@
   {
     "goodId": 22238,
     "marketHashName": "★ StatTrak™ Paracord Knife | Damascus Steel (Minimal Wear)",
-    "yyypSellPrice": 449.99
+    "yyypSellPrice": 0.0
   },
   {
     "goodId": 22239,
@@ -111157,12 +111157,12 @@
   {
     "goodId": 22242,
     "marketHashName": "★ Paracord Knife | Ultraviolet (Field-Tested)",
-    "yyypSellPrice": 359.5
+    "yyypSellPrice": 360.0
   },
   {
     "goodId": 22243,
     "marketHashName": "★ Paracord Knife | Ultraviolet (Well-Worn)",
-    "yyypSellPrice": 649.89
+    "yyypSellPrice": 649.9
   },
   {
     "goodId": 22244,
@@ -111322,7 +111322,7 @@
   {
     "goodId": 22275,
     "marketHashName": "Sticker | Heavygod (Gold) | Austin 2025",
-    "yyypSellPrice": 8.96
+    "yyypSellPrice": 8.95
   },
   {
     "goodId": 22276,
@@ -111347,7 +111347,7 @@
   {
     "goodId": 22280,
     "marketHashName": "Sticker | Senzu (Gold) | Austin 2025",
-    "yyypSellPrice": 17.4
+    "yyypSellPrice": 17.39
   },
   {
     "goodId": 22281,
@@ -111432,7 +111432,7 @@
   {
     "goodId": 22297,
     "marketHashName": "Sticker | jottAAA (Gold) | Austin 2025",
-    "yyypSellPrice": 5.57
+    "yyypSellPrice": 5.56
   },
   {
     "goodId": 22298,
@@ -111562,7 +111562,7 @@
   {
     "goodId": 22323,
     "marketHashName": "Sticker | Techno4K (Holo) | Austin 2025",
-    "yyypSellPrice": 1.98
+    "yyypSellPrice": 1.99
   },
   {
     "goodId": 22324,
@@ -112112,7 +112112,7 @@
   {
     "goodId": 22433,
     "marketHashName": "Sticker | FL1T (Gold) | Austin 2025",
-    "yyypSellPrice": 9.73
+    "yyypSellPrice": 9.72
   },
   {
     "goodId": 22434,
@@ -112132,7 +112132,7 @@
   {
     "goodId": 22437,
     "marketHashName": "Sticker | ICY (Gold) | Austin 2025",
-    "yyypSellPrice": 8.79
+    "yyypSellPrice": 8.78
   },
   {
     "goodId": 22438,
@@ -112162,7 +112162,7 @@
   {
     "goodId": 22443,
     "marketHashName": "Sticker | Maka (Gold) | Austin 2025",
-    "yyypSellPrice": 18.56
+    "yyypSellPrice": 18.55
   },
   {
     "goodId": 22444,
@@ -112277,7 +112277,7 @@
   {
     "goodId": 22466,
     "marketHashName": "Sticker | skullz (Gold) | Austin 2025",
-    "yyypSellPrice": 8.99
+    "yyypSellPrice": 8.98
   },
   {
     "goodId": 22467,
@@ -112312,7 +112312,7 @@
   {
     "goodId": 22473,
     "marketHashName": "Sticker | FL4MUS (Holo) | Austin 2025",
-    "yyypSellPrice": 1.54
+    "yyypSellPrice": 1.53
   },
   {
     "goodId": 22474,
@@ -113212,7 +113212,7 @@
   {
     "goodId": 22657,
     "marketHashName": "Sticker | alex666 (Gold) | Austin 2025",
-    "yyypSellPrice": 19.09
+    "yyypSellPrice": 19.08
   },
   {
     "goodId": 22658,
@@ -113422,7 +113422,7 @@
   {
     "goodId": 22699,
     "marketHashName": "Sticker | z4KR (Gold) | Austin 2025",
-    "yyypSellPrice": 32.68
+    "yyypSellPrice": 32.67
   },
   {
     "goodId": 22700,
@@ -113487,7 +113487,7 @@
   {
     "goodId": 22712,
     "marketHashName": "Sticker | EmiliaQAQ (Holo) | Austin 2025",
-    "yyypSellPrice": 3.77
+    "yyypSellPrice": 3.75
   },
   {
     "goodId": 22713,
@@ -113697,7 +113697,7 @@
   {
     "goodId": 22754,
     "marketHashName": "Sticker | kye (Holo) | Austin 2025",
-    "yyypSellPrice": 12.64
+    "yyypSellPrice": 12.62
   },
   {
     "goodId": 22755,
@@ -113712,7 +113712,7 @@
   {
     "goodId": 22757,
     "marketHashName": "Sticker | mlhzin (Holo) | Austin 2025",
-    "yyypSellPrice": 2.87
+    "yyypSellPrice": 2.86
   },
   {
     "goodId": 22758,
@@ -113777,7 +113777,7 @@
   {
     "goodId": 22770,
     "marketHashName": "Sticker | saadzin (Holo) | Austin 2025",
-    "yyypSellPrice": 2.9
+    "yyypSellPrice": 2.89
   },
   {
     "goodId": 22771,
@@ -113792,7 +113792,7 @@
   {
     "goodId": 22773,
     "marketHashName": "Sticker | susp (Holo) | Austin 2025",
-    "yyypSellPrice": 3.31
+    "yyypSellPrice": 3.3
   },
   {
     "goodId": 22774,
@@ -113832,7 +113832,7 @@
   {
     "goodId": 22781,
     "marketHashName": "Sticker | zorte (Holo) | Austin 2025",
-    "yyypSellPrice": 2.64
+    "yyypSellPrice": 2.63
   },
   {
     "goodId": 22782,
@@ -114152,7 +114152,7 @@
   {
     "goodId": 22845,
     "marketHashName": "Sticker | oSee (Foil) | Austin 2025",
-    "yyypSellPrice": 1.16
+    "yyypSellPrice": 1.15
   },
   {
     "goodId": 22846,
@@ -114817,7 +114817,7 @@
   {
     "goodId": 22982,
     "marketHashName": "Sticker | Chinggis Warriors (Gold) | Austin 2025",
-    "yyypSellPrice": 6.87
+    "yyypSellPrice": 6.86
   },
   {
     "goodId": 22983,
@@ -114842,7 +114842,7 @@
   {
     "goodId": 22987,
     "marketHashName": "Sticker | Imperial Esports (Gold) | Austin 2025",
-    "yyypSellPrice": 10.24
+    "yyypSellPrice": 10.23
   },
   {
     "goodId": 22988,
@@ -114867,12 +114867,12 @@
   {
     "goodId": 22992,
     "marketHashName": "Sticker | Nemiga (Gold) | Austin 2025",
-    "yyypSellPrice": 8.35
+    "yyypSellPrice": 8.34
   },
   {
     "goodId": 22993,
     "marketHashName": "Sticker | OG (Gold) | Austin 2025",
-    "yyypSellPrice": 5.93
+    "yyypSellPrice": 5.94
   },
   {
     "goodId": 22994,
@@ -114957,7 +114957,7 @@
   {
     "goodId": 23010,
     "marketHashName": "Sticker | OG (Holo) | Austin 2025",
-    "yyypSellPrice": 15.6
+    "yyypSellPrice": 16.0
   },
   {
     "goodId": 23011,
@@ -115612,7 +115612,7 @@
   {
     "goodId": 23141,
     "marketHashName": "Souvenir MP9 | Latte Rush (Field-Tested)",
-    "yyypSellPrice": 194.14
+    "yyypSellPrice": 194.13
   },
   {
     "goodId": 23142,
@@ -115752,7 +115752,7 @@
   {
     "goodId": 23169,
     "marketHashName": "Souvenir Glock-18 | Green Line (Factory New)",
-    "yyypSellPrice": 98.97
+    "yyypSellPrice": 98.96
   },
   {
     "goodId": 23170,
@@ -115772,7 +115772,7 @@
   {
     "goodId": 23173,
     "marketHashName": "Souvenir Glock-18 | Green Line (Battle-Scarred)",
-    "yyypSellPrice": 4.94
+    "yyypSellPrice": 4.93
   },
   {
     "goodId": 23174,
@@ -115847,7 +115847,7 @@
   {
     "goodId": 23188,
     "marketHashName": "Souvenir P90 | Straight Dimes (Factory New)",
-    "yyypSellPrice": 9.29
+    "yyypSellPrice": 9.28
   },
   {
     "goodId": 23189,
@@ -115902,7 +115902,7 @@
   {
     "goodId": 23199,
     "marketHashName": "Souvenir CZ75-Auto | Copper Fiber (Minimal Wear)",
-    "yyypSellPrice": 0.72
+    "yyypSellPrice": 0.71
   },
   {
     "goodId": 23200,
@@ -116197,7 +116197,7 @@
   {
     "goodId": 23263,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | Spinx Dust II Triple Kill",
-    "yyypSellPrice": 1.26
+    "yyypSellPrice": 1.25
   },
   {
     "goodId": 23264,
@@ -116332,7 +116332,7 @@
   {
     "goodId": 23290,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | donk Ace",
-    "yyypSellPrice": 27.3
+    "yyypSellPrice": 27.2
   },
   {
     "goodId": 23291,
@@ -116517,7 +116517,7 @@
   {
     "goodId": 23327,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | apEX: Help Is Here",
-    "yyypSellPrice": 0.56
+    "yyypSellPrice": 0.55
   },
   {
     "goodId": 23328,
@@ -116807,7 +116807,7 @@
   {
     "goodId": 23385,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | Techno4K: The Cowboy vs Vitality",
-    "yyypSellPrice": 0.61
+    "yyypSellPrice": 0.62
   },
   {
     "goodId": 23386,
@@ -116977,7 +116977,7 @@
   {
     "goodId": 23419,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | Galil Power",
-    "yyypSellPrice": 1.71
+    "yyypSellPrice": 1.7
   },
   {
     "goodId": 23420,
@@ -117247,7 +117247,7 @@
   {
     "goodId": 23473,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | Focused But Fallen",
-    "yyypSellPrice": 3.18
+    "yyypSellPrice": 3.12
   },
   {
     "goodId": 23474,
@@ -117292,7 +117292,7 @@
   {
     "goodId": 23482,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | Parkour Deagle",
-    "yyypSellPrice": 4.97
+    "yyypSellPrice": 4.96
   },
   {
     "goodId": 23483,
@@ -117487,7 +117487,7 @@
   {
     "goodId": 23521,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | Smoke Breaker",
-    "yyypSellPrice": 0.53
+    "yyypSellPrice": 0.52
   },
   {
     "goodId": 23522,
@@ -117622,7 +117622,7 @@
   {
     "goodId": 23548,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | mezii Clean Sweep",
-    "yyypSellPrice": 3.18
+    "yyypSellPrice": 3.17
   },
   {
     "goodId": 23549,
@@ -117827,7 +117827,7 @@
   {
     "goodId": 23589,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | Smoke Ambush",
-    "yyypSellPrice": 0.93
+    "yyypSellPrice": 0.92
   },
   {
     "goodId": 23590,
@@ -117882,7 +117882,7 @@
   {
     "goodId": 23600,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | Brollan Double Deagle",
-    "yyypSellPrice": 1.19
+    "yyypSellPrice": 1.2
   },
   {
     "goodId": 23601,
@@ -117937,7 +117937,7 @@
   {
     "goodId": 23611,
     "marketHashName": "Souvenir Charm | Austin 2025 Highlight | Opener",
-    "yyypSellPrice": 0.94
+    "yyypSellPrice": 0.93
   },
   {
     "goodId": 23612,
@@ -118487,12 +118487,12 @@
   {
     "goodId": 23721,
     "marketHashName": "M4A1-S | Solitude (Well-Worn)",
-    "yyypSellPrice": 11.67
+    "yyypSellPrice": 11.68
   },
   {
     "goodId": 23722,
     "marketHashName": "M4A1-S | Solitude (Battle-Scarred)",
-    "yyypSellPrice": 7.57
+    "yyypSellPrice": 7.0
   },
   {
     "goodId": 23723,
@@ -118742,7 +118742,7 @@
   {
     "goodId": 23774,
     "marketHashName": "Sticker | TeSeS (Gold) | Copenhagen 2024",
-    "yyypSellPrice": 69.99
+    "yyypSellPrice": 70.0
   },
   {
     "goodId": 23775,
@@ -119212,7 +119212,7 @@
   {
     "goodId": 23868,
     "marketHashName": "StatTrak™ Music Kit | Ghost, Skeletá",
-    "yyypSellPrice": 24.0
+    "yyypSellPrice": 23.9
   },
   {
     "goodId": 23869,
@@ -119222,7 +119222,7 @@
   {
     "goodId": 23870,
     "marketHashName": "Sealed Genesis Terminal",
-    "yyypSellPrice": 0.3
+    "yyypSellPrice": 0.29
   },
   {
     "goodId": 23871,
@@ -119357,7 +119357,7 @@
   {
     "goodId": 23897,
     "marketHashName": "StatTrak™ AWP | Ice Coaled (Factory New)",
-    "yyypSellPrice": 398.05
+    "yyypSellPrice": 393.8
   },
   {
     "goodId": 23898,
@@ -119392,7 +119392,7 @@
   {
     "goodId": 23904,
     "marketHashName": "M4A1-S | Liquidation (Minimal Wear)",
-    "yyypSellPrice": 26.38
+    "yyypSellPrice": 26.48
   },
   {
     "goodId": 23905,
@@ -119472,7 +119472,7 @@
   {
     "goodId": 23920,
     "marketHashName": "StatTrak™ M4A4 | Full Throttle (Well-Worn)",
-    "yyypSellPrice": 357.5
+    "yyypSellPrice": 357.0
   },
   {
     "goodId": 23921,
@@ -119712,7 +119712,7 @@
   {
     "goodId": 23968,
     "marketHashName": "StatTrak™ MP9 | Broken Record (Battle-Scarred)",
-    "yyypSellPrice": 0.99
+    "yyypSellPrice": 0.97
   },
   {
     "goodId": 23969,
@@ -119722,7 +119722,7 @@
   {
     "goodId": 23970,
     "marketHashName": "StatTrak™ MP9 | Broken Record (Well-Worn)",
-    "yyypSellPrice": 1.3
+    "yyypSellPrice": 1.29
   },
   {
     "goodId": 23971,
@@ -119942,7 +119942,7 @@
   {
     "goodId": 24014,
     "marketHashName": "Dual Berettas | Angel Eyes (Minimal Wear)",
-    "yyypSellPrice": 7.83
+    "yyypSellPrice": 7.84
   },
   {
     "goodId": 24015,
@@ -120132,7 +120132,7 @@
   {
     "goodId": 24052,
     "marketHashName": "Charm | Lil' Goop",
-    "yyypSellPrice": 9.87
+    "yyypSellPrice": 9.86
   },
   {
     "goodId": 24053,
@@ -120737,12 +120737,12 @@
   {
     "goodId": 24173,
     "marketHashName": "Sticker | kensizor (Gold) | Budapest 2025",
-    "yyypSellPrice": 17.87
+    "yyypSellPrice": 17.86
   },
   {
     "goodId": 24174,
     "marketHashName": "Sticker | kye (Gold) | Budapest 2025",
-    "yyypSellPrice": 66.39
+    "yyypSellPrice": 66.3
   },
   {
     "goodId": 24175,
@@ -120787,7 +120787,7 @@
   {
     "goodId": 24183,
     "marketHashName": "Sticker | npl (Gold) | Budapest 2025",
-    "yyypSellPrice": 23.2
+    "yyypSellPrice": 23.19
   },
   {
     "goodId": 24184,
@@ -120867,7 +120867,7 @@
   {
     "goodId": 24199,
     "marketHashName": "Sticker | z4KR (Gold) | Budapest 2025",
-    "yyypSellPrice": 48.8
+    "yyypSellPrice": 48.79
   },
   {
     "goodId": 24200,
@@ -120922,7 +120922,7 @@
   {
     "goodId": 24210,
     "marketHashName": "Sticker | History (Holo) | Budapest 2025",
-    "yyypSellPrice": 2.73
+    "yyypSellPrice": 2.72
   },
   {
     "goodId": 24211,
@@ -120967,7 +120967,7 @@
   {
     "goodId": 24219,
     "marketHashName": "Sticker | PR (Holo) | Budapest 2025",
-    "yyypSellPrice": 7.9
+    "yyypSellPrice": 7.89
   },
   {
     "goodId": 24220,
@@ -120992,7 +120992,7 @@
   {
     "goodId": 24224,
     "marketHashName": "Sticker | Summer (Holo) | Budapest 2025",
-    "yyypSellPrice": 4.93
+    "yyypSellPrice": 4.92
   },
   {
     "goodId": 24225,
@@ -121122,7 +121122,7 @@
   {
     "goodId": 24250,
     "marketHashName": "Sticker | jks (Holo) | Budapest 2025",
-    "yyypSellPrice": 9.35
+    "yyypSellPrice": 9.34
   },
   {
     "goodId": 24251,
@@ -121157,7 +121157,7 @@
   {
     "goodId": 24257,
     "marketHashName": "Sticker | n1ssim (Holo) | Budapest 2025",
-    "yyypSellPrice": 3.89
+    "yyypSellPrice": 3.88
   },
   {
     "goodId": 24258,
@@ -121932,7 +121932,7 @@
   {
     "goodId": 24412,
     "marketHashName": "Sticker | kauez | Budapest 2025",
-    "yyypSellPrice": 0.04
+    "yyypSellPrice": 0.03
   },
   {
     "goodId": 24413,
@@ -122242,7 +122242,7 @@
   {
     "goodId": 24474,
     "marketHashName": "Sticker | mzinho (Gold) | Budapest 2025",
-    "yyypSellPrice": 6.63
+    "yyypSellPrice": 6.62
   },
   {
     "goodId": 24475,
@@ -123102,7 +123102,7 @@
   {
     "goodId": 24646,
     "marketHashName": "Sticker | HooXi (Holo) | Budapest 2025",
-    "yyypSellPrice": 4.76
+    "yyypSellPrice": 4.75
   },
   {
     "goodId": 24647,
@@ -123137,7 +123137,7 @@
   {
     "goodId": 24653,
     "marketHashName": "Sticker | Magisk (Holo) | Budapest 2025",
-    "yyypSellPrice": 3.39
+    "yyypSellPrice": 3.36
   },
   {
     "goodId": 24654,
@@ -123357,7 +123357,7 @@
   {
     "goodId": 24697,
     "marketHashName": "Sticker | NAF (Embroidered) | Budapest 2025",
-    "yyypSellPrice": 0.37
+    "yyypSellPrice": 0.36
   },
   {
     "goodId": 24698,
@@ -123422,7 +123422,7 @@
   {
     "goodId": 24710,
     "marketHashName": "Sticker | jabbi (Embroidered) | Budapest 2025",
-    "yyypSellPrice": 0.3
+    "yyypSellPrice": 0.29
   },
   {
     "goodId": 24711,
@@ -123747,7 +123747,7 @@
   {
     "goodId": 24775,
     "marketHashName": "Sticker | The Mongolz (Holo) | Budapest 2025",
-    "yyypSellPrice": 5.39
+    "yyypSellPrice": 5.38
   },
   {
     "goodId": 24776,
@@ -124012,7 +124012,7 @@
   {
     "goodId": 24828,
     "marketHashName": "Sticker | B8 (Gold) | Budapest 2025",
-    "yyypSellPrice": 8.74
+    "yyypSellPrice": 8.73
   },
   {
     "goodId": 24829,
@@ -124497,7 +124497,7 @@
   {
     "goodId": 24925,
     "marketHashName": "Galil AR | Sky Mandala (Field-Tested)",
-    "yyypSellPrice": 1.44
+    "yyypSellPrice": 1.43
   },
   {
     "goodId": 24926,
@@ -124547,7 +124547,7 @@
   {
     "goodId": 24935,
     "marketHashName": "MP5-SD | Picnic (Field-Tested)",
-    "yyypSellPrice": 0.11
+    "yyypSellPrice": 0.13
   },
   {
     "goodId": 24936,
@@ -124817,12 +124817,12 @@
   {
     "goodId": 24989,
     "marketHashName": "AWP | The End (Factory New)",
-    "yyypSellPrice": 292.0
+    "yyypSellPrice": 292.5
   },
   {
     "goodId": 24990,
     "marketHashName": "AWP | The End (Minimal Wear)",
-    "yyypSellPrice": 103.88
+    "yyypSellPrice": 103.38
   },
   {
     "goodId": 24991,
@@ -124832,7 +124832,7 @@
   {
     "goodId": 24992,
     "marketHashName": "AWP | The End (Well-Worn)",
-    "yyypSellPrice": 52.73
+    "yyypSellPrice": 52.67
   },
   {
     "goodId": 24993,
@@ -124857,7 +124857,7 @@
   {
     "goodId": 24997,
     "marketHashName": "AK-47 | Breakthrough (Well-Worn)",
-    "yyypSellPrice": 15.79
+    "yyypSellPrice": 15.71
   },
   {
     "goodId": 24998,
@@ -125012,7 +125012,7 @@
   {
     "goodId": 25028,
     "marketHashName": "M4A4 | Aeolian Dark (Battle-Scarred)",
-    "yyypSellPrice": 0.12
+    "yyypSellPrice": 0.14
   },
   {
     "goodId": 25029,
@@ -125192,7 +125192,7 @@
   {
     "goodId": 25064,
     "marketHashName": "PP-Bizon | Bizoom (Factory New)",
-    "yyypSellPrice": 0.11
+    "yyypSellPrice": 0.1
   },
   {
     "goodId": 25065,
@@ -125327,7 +125327,7 @@
   {
     "goodId": 25091,
     "marketHashName": "AK-47 | Aphrodite (Field-Tested)",
-    "yyypSellPrice": 92.3
+    "yyypSellPrice": 92.4
   },
   {
     "goodId": 25092,
@@ -125362,7 +125362,7 @@
   {
     "goodId": 25098,
     "marketHashName": "Sealed Dead Hand Terminal",
-    "yyypSellPrice": 2.17
+    "yyypSellPrice": 2.16
   },
   {
     "goodId": 25099,
@@ -125477,12 +125477,12 @@
   {
     "goodId": 25121,
     "marketHashName": "AK-47 | Crane Flight (Field-Tested)",
-    "yyypSellPrice": 76.9
+    "yyypSellPrice": 77.0
   },
   {
     "goodId": 25122,
     "marketHashName": "AK-47 | Crane Flight (Well-Worn)",
-    "yyypSellPrice": 57.0
+    "yyypSellPrice": 56.9
   },
   {
     "goodId": 25123,
@@ -125587,7 +125587,7 @@
   {
     "goodId": 25143,
     "marketHashName": "P90 | Deathgaze (Battle-Scarred)",
-    "yyypSellPrice": 23.6
+    "yyypSellPrice": 23.7
   },
   {
     "goodId": 25144,
@@ -125667,7 +125667,7 @@
   {
     "goodId": 25159,
     "marketHashName": "MP7 | Amberline (Factory New)",
-    "yyypSellPrice": 22.9
+    "yyypSellPrice": 23.2
   },
   {
     "goodId": 25160,
@@ -125867,7 +125867,7 @@
   {
     "goodId": 25199,
     "marketHashName": "Five-SeveN | Dark Polymer (Factory New)",
-    "yyypSellPrice": 5.06
+    "yyypSellPrice": 5.0
   },
   {
     "goodId": 25200,
@@ -125882,7 +125882,7 @@
   {
     "goodId": 25202,
     "marketHashName": "Five-SeveN | Dark Polymer (Well-Worn)",
-    "yyypSellPrice": 0.44
+    "yyypSellPrice": 0.45
   },
   {
     "goodId": 25203,
@@ -126127,7 +126127,7 @@
   {
     "goodId": 25251,
     "marketHashName": "USP-S | Silent Shot (Field-Tested)",
-    "yyypSellPrice": 1.73
+    "yyypSellPrice": 1.75
   },
   {
     "goodId": 25252,
@@ -126227,7 +126227,7 @@
   {
     "goodId": 25271,
     "marketHashName": "★ Specialist Gloves | Big Swell (Field-Tested)",
-    "yyypSellPrice": 1142.6
+    "yyypSellPrice": 1140.31
   },
   {
     "goodId": 25272,
@@ -126287,7 +126287,7 @@
   {
     "goodId": 25283,
     "marketHashName": "★ Specialist Gloves | Cloud Chaser (Factory New)",
-    "yyypSellPrice": 10999.0
+    "yyypSellPrice": 10900.0
   },
   {
     "goodId": 25284,
@@ -126562,7 +126562,7 @@
   {
     "goodId": 25338,
     "marketHashName": "★ Driver Gloves | Brocade Flowers (Minimal Wear)",
-    "yyypSellPrice": 2447.5
+    "yyypSellPrice": 2448.0
   },
   {
     "goodId": 25339,
@@ -126702,7 +126702,7 @@
   {
     "goodId": 25366,
     "marketHashName": "★ Driver Gloves | Wave Chaser (Field-Tested)",
-    "yyypSellPrice": 995.8
+    "yyypSellPrice": 995.0
   },
   {
     "goodId": 25367,
@@ -126712,7 +126712,7 @@
   {
     "goodId": 25368,
     "marketHashName": "★ Driver Gloves | Wave Chaser (Battle-Scarred)",
-    "yyypSellPrice": 840.0
+    "yyypSellPrice": 839.5
   },
   {
     "goodId": 25369,
